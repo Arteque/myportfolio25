@@ -1,0 +1,106 @@
+$clrs:(
+    prime:(
+        100:hsl(216, 72%, 17%),
+        200:hsl(216, 72%, 27%),
+        300:hsl(216, 72%, 37%),
+        400:hsla(216, 72%, 17%, 0.726),
+        ),
+    second:(
+        100:hsl(126, 56%, 53%),
+        200:hsl(126, 56%, 63%),
+        300:hsl(126, 56%, 73%),
+        400:hsla(126, 56%, 53%, 0.719),
+        ),
+    ntr:(
+        100:hsl(260, 4%, 15%),
+        200:hsl(260, 4%, 25%),
+        300:hsl(260, 4%, 35%),
+        400:hsla(260, 4%, 15%, 0.719),
+        ),
+    light:(
+        100:hsl(0, 0%, 76%),
+        200:hsl(0, 0%, 86%),
+        300:hsl(0, 0%, 96%),
+        400:hsla(0, 0%, 76%, 0.726),
+        )
+);
+*, *::after, *::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html, body{
+  font-family: "Inter", serif;
+  font-size: 1.02em;
+}
+:root{
+    @each $clr, $vls in $clrs{
+        @each $cl, $vl in $vls{
+            --clr-#{$clr}-#{$cl}:#{$vl};
+        }
+    }
+}
+a{
+    text-decoration: none;
+}
+ul[class]{
+    list-style:none;
+}
+/*Wrapper*/
+.wrapper{
+    padding-inline: 1rem;
+}
+.main-header{
+    .wrapper{
+        .main-header__bottom-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .main-header__nav-items{
+        position:absolute;
+        padding: 1rem;
+        left: 5rem;
+        right: 0;
+        background-color: var(--clr-light-300);
+    }
+}
+/* Logo */
+.main-header__logo{
+    max-width: 50px;
+    width: 50%;
+    display:flex;
+    gap: 0.5rem;
+    align-items:center;
+    h1{
+        font-size: 1rem;
+        font-weight: 900;
+    }
+}
+/* Logo */
+
+/*Burger*/
+.main-header__main-nav-burger{
+    border: unset;
+    background-color: unset;
+    svg path{
+       fill:var(--clr-ntr-100);
+    }
+    &.close{
+        .main-header__main-nav-burger--menuisopen{
+            display:none;
+        }
+        .main-header__main-nav-burger--menuisclose{
+            display:block;
+        }
+    }
+    &.open{
+        .main-header__main-nav-burger--menuisclose{
+            display:none;
+        }
+        .main-header__main-nav-burger--menuisopen{
+            display:block;
+        }
+    }
+}
