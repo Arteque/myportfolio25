@@ -79,6 +79,10 @@ a{
 ul[class]{
     list-style:none;
 }
+button{
+    background:unset;
+    border:unset;
+}
 /*Wrapper*/
 .wrapper{
     padding-inline: 1rem;
@@ -115,8 +119,7 @@ ul[class]{
 
 /*Burger*/
 .main-header__main-nav-burger{
-    border: unset;
-    background-color: unset;
+
     svg path{
        fill:var(--clr-ntr-100);
     }
@@ -135,5 +138,16 @@ ul[class]{
         .main-header__main-nav-burger--menuisopen{
             display:block;
         }
+    }
+}
+
+.main-header__color-mode{
+    button{
+        display:block;
+        width: 1.8rem;
+        aspect-ratio: 1;
+        overflow: hidden;
+        border: 1px solid red;
+        cursor:pointer;
     }
 }

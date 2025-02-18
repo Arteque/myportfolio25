@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faTimes, faSun, faMoon  } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faInstagram, faMastodon, faYoutube, faRedditAlien } from "@fortawesome/free-brands-svg-icons"
 import { useState} from "react"
 
 const MainHeader = () => {
@@ -9,7 +10,6 @@ const MainHeader = () => {
 
     const handleBurger = () => {
         setBurger(prev => !prev)
-        console.log(burger)
     }
 
 
@@ -19,11 +19,32 @@ const MainHeader = () => {
             <div className="main-header__top-nav">
                 <div className="main-header__color-mode">
                     <button>
-
+                        <FontAwesomeIcon icon={faSun}  className="sun" />
+                        <FontAwesomeIcon icon={faMoon} className="moon" />
                     </button>
                 </div>
                 <ul className="main-header__socials">
-
+                    <li>
+                        <Link to="/" target="_blank" title="Instagram">
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/" target="_blank" title="Mastodon">
+                            <FontAwesomeIcon icon={faMastodon} />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/" target="_blank" title="Redit">
+                                 <FontAwesomeIcon icon={faRedditAlien} />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/" target="_blank" title="Youtube">
+                            <FontAwesomeIcon icon={faYoutube} />
+                        </Link>
+                    </li>
+                    
                 </ul>
             </div>
             <div className="main-header__bottom-nav">
