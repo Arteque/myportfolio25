@@ -114,6 +114,7 @@ button{
     background-color: var(--clr-light-300);
 }
 .main-header__top-nav{
+    background-color: var(--clr-bg-300);
     .wrapper{
         display:flex;
         justify-content: space-between;
@@ -152,6 +153,8 @@ body[data-color="dark"]{
     gap: 0.5rem;
 }
 .main-header__bottom-nav {
+    background-color: var(--clr-bg-200);
+    padding-block: 0.5rem;
     .wrapper{
         display: flex;
         justify-content: space-between;
