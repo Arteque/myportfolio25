@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { faBars, faTimes, faSun, faMoon  } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faMastodon, faYoutube, faRedditAlien } from "@fortawesome/free-brands-svg-icons"
-import { useState} from "react"
+import { useEffect, useState} from "react"
 
 const MainHeader = () => {
 
@@ -13,12 +13,33 @@ const MainHeader = () => {
     }
 
 
+    const [colorMode, setColorMode] = useState()
+
+    const handleColorMode = () => {
+        setColorMode(prev => !prev)
+    }
+
+    useEffect(() => {
+        if(localStorage.getItem("portfolioTheme")){
+            const darkMode = localStorage.getItem("portfolioTheme") === "dark" ? true : false
+            document.body.dataset.color = darkMode ? "dark" : "light"
+            setColorMode(darkMode)
+        }      
+    },[])
+
+    useEffect(() => {
+        const colorModeTxt = colorMode ? "dark" : "light"
+        const darkMode = localStorage.getItem("portfolioTheme") === "dark" ? true : false
+        localStorage.setItem("portfolioTheme", colorModeTxt)
+        document.body.dataset.color = darkMode ? "dark" : "light"
+    },[colorMode])
+
   return (
     <header className="main-header">
         <div className="wrapper">
             <div className="main-header__top-nav">
                 <div className="main-header__color-mode">
-                    <button>
+                    <button onClick={handleColorMode}>
                         <FontAwesomeIcon icon={faSun}  className="sun" />
                         <FontAwesomeIcon icon={faMoon} className="moon" />
                     </button>
