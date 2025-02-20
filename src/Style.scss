@@ -106,13 +106,7 @@ button{
     }
 }
 /* Logo */
-.main-header__nav-items{
-    position:absolute;
-    padding: 1rem;
-    left: 5rem;
-    right: 0;
-    background-color: var(--clr-light-300);
-}
+
 .main-header__top-nav{
     background-color: var(--clr-bg-300);
     .wrapper{
@@ -162,7 +156,16 @@ body[data-color="dark"]{
     }
 }
 
-
+.main-header__nav-items{
+    position:absolute;
+    padding: 1rem;
+    top: 6rem;
+    left: 3rem;
+    right: 1rem;
+    border-radius: 10px;
+    background-color: var(--clr-bg-300);
+    transition: all 0.5s;
+}
 /*Burger*/
 .main-header__main-nav-burger{
 
