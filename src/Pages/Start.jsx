@@ -1,6 +1,6 @@
 const Start = () => {
   return (
-    <>Start</>
+    <section></section>
   )
 }
 

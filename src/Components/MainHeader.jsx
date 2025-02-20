@@ -21,7 +21,7 @@ const MainHeader = () => {
 
     useEffect(() => {
         if(localStorage.getItem("portfolioTheme")){
-            const darkMode = localStorage.getItem("portfolioTheme") === "dark" ? true : false
+            const darkMode = localStorage.getItem("portfolioTheme") == "dark" ? true : false
             document.body.dataset.color = darkMode ? "dark" : "light"
             setColorMode(darkMode)
         }      
@@ -29,20 +29,20 @@ const MainHeader = () => {
 
     useEffect(() => {
         const colorModeTxt = colorMode ? "dark" : "light"
-        const darkMode = localStorage.getItem("portfolioTheme") === "dark" ? true : false
         localStorage.setItem("portfolioTheme", colorModeTxt)
+        const darkMode = localStorage.getItem("portfolioTheme") === "dark" ? true : false
         document.body.dataset.color = darkMode ? "dark" : "light"
     },[colorMode])
 
   return (
     <header className="main-header">
-        <div className="wrapper">
-            <div className="main-header__top-nav">
+        <div className="main-header__top-nav">
+            <div className="wrapper">
                 <div className="main-header__color-mode">
-                    <button onClick={handleColorMode}>
-                        <FontAwesomeIcon icon={faSun}  className="sun" />
-                        <FontAwesomeIcon icon={faMoon} className="moon" />
-                    </button>
+                        <button onClick={handleColorMode}>
+                            <FontAwesomeIcon icon={faSun}  className="sun" />
+                            <FontAwesomeIcon icon={faMoon} className="moon" />
+                        </button>
                 </div>
                 <ul className="main-header__socials">
                     <li>
@@ -57,7 +57,7 @@ const MainHeader = () => {
                     </li>
                     <li>
                         <Link to="/" target="_blank" title="Redit">
-                                 <FontAwesomeIcon icon={faRedditAlien} />
+                                <FontAwesomeIcon icon={faRedditAlien} />
                         </Link>
                     </li>
                     <li>
@@ -68,7 +68,9 @@ const MainHeader = () => {
                     
                 </ul>
             </div>
-            <div className="main-header__bottom-nav">
+        </div>
+        <div className="main-header__bottom-nav">
+            <div className="wrapper">
                 <div className="main-header__logo">
                     <img src="./logo.svg" alt="Ahmed Lemssiah | Webdesigner" />
                     <h1 className="website-title">Ahmed Lemssiah</h1>
@@ -95,6 +97,7 @@ const MainHeader = () => {
                 </nav>
             </div>
         </div>
+       
     </header>
   )
 }

@@ -114,10 +114,12 @@ button{
     background-color: var(--clr-light-300);
 }
 .main-header__top-nav{
-    display:flex;
-    justify-content: space-between;
-    align-items:center;
-    padding-block:0.5rem;
+    .wrapper{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        padding-block:0.5rem;
+    }
 }
 .main-header__color-mode{
     button{
@@ -126,8 +128,13 @@ button{
         aspect-ratio: 1;
         overflow: hidden;
         cursor:pointer;
+        
         .sun, .moon{
+           
             transition: all 0.5s;
+            path{
+                fill: var(--clr-txt-100);
+            }
         }
     }
 }
@@ -145,9 +152,11 @@ body[data-color="dark"]{
     gap: 0.5rem;
 }
 .main-header__bottom-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 
@@ -155,7 +164,7 @@ body[data-color="dark"]{
 .main-header__main-nav-burger{
 
     svg path{
-       fill:var(--clr-ntr-100);
+       fill:var(--clr-txt-100);
     }
     &.close{
         .main-header__main-nav-burger--menuisopen{
@@ -179,5 +188,7 @@ body[data-color="dark"]{
 
 /*##################################### Main Header##############*/
 
-
+section{
+    min-height: 100svh;
+}
 
