@@ -6,10 +6,10 @@ $clrsLight:(
         400:hsla(216, 72%, 17%, 0.726),
         ),
     call:(
-        100:hsl(126, 56%, 53%),
-        200:hsl(126, 56%, 63%),
-        300:hsl(126, 56%, 73%),
-        400:hsla(126, 56%, 53%, 0.719),
+        100:hsl(126, 50%, 33%),
+        200:hsl(126, 50%, 43%),
+        300:hsl(126, 50%, 53%),
+        400:hsla(126, 50%, 33%, 0.774),
         ),
     ntr:(
         100:hsl(260, 4%, 15%),
@@ -50,6 +50,8 @@ $clrsDark:(
         400:hsla(0, 0%, 76%, 0.726),
         )
 );
+
+
 *, *::after, *::before{
     margin:0;
     padding:0;
@@ -69,13 +71,36 @@ html, body{
         }
     }
 }
+@each $clr, $vls in $clrsLight{
+    @each $cl, $vl in $vls{
+        .txt-#{$clr}-#{$cl}{
+            color:  var(--clr-#{$clr}-#{$cl});
+        }
+        .bg-#{$clr}-#{$cl}{
+            color:  var(--clr-#{$clr}-#{$cl});
+        }
+    }
+}
 body[data-color="dark"]{
     @each $clr, $vls in $clrsDark{
         @each $cl, $vl in $vls{
             --clr-#{$clr}-#{$cl}:#{$vl};
         }
     }
+    @each $clr, $vls in $clrsDark{
+        @each $cl, $vl in $vls{
+            .txt-#{$clr}-#{$cl}{
+                color:  var(--clr-#{$clr}-#{$cl});
+            }
+            .bg-#{$clr}-#{$cl}{
+                color:  var(--clr-#{$clr}-#{$cl});
+            }
+        }
+    }
 }
+
+
+
 a{
     text-decoration: none;
     color: var(--clr-prime-100);
@@ -87,11 +112,18 @@ button{
     background:unset;
     border:unset;
 }
+img{
+    display:block;
+    width:100%;
+}
 /*Wrapper*/
 .wrapper{
     padding-inline: 1rem;
 }
 /*Wrapper*/
+.uppercase{
+    text-transform: uppercase;
+}
 /*##################################### Main Header##############*/
 /* Logo */
 .main-header__logo{
@@ -202,8 +234,9 @@ body{
 .main-header__nav-items{
     position:absolute;
     top: 6rem;
-    left: 3rem;
     right: 1rem;
+    width: 80%;
+    max-width:300px;
     border-radius: 10px;
     background-color: var(--clr-bg-300);
     transition: all 0.5s;
@@ -229,13 +262,6 @@ body{
     }
 }
 
-
-/*##################################### Main Header##############*/
-
-section{
-    min-height: 100svh;
-}
-
 @media screen and ( min-width:748px){
     .main-header__main-nav-burger{
         display:none;
@@ -246,6 +272,7 @@ section{
         left: unset;
         right: unset;
         width: unset;
+        max-width: unset;
         top: unset;
         background: transparent;
         border-radius: unset;
@@ -260,4 +287,49 @@ section{
             }
         }
     }
+    body[data-menu]{
+        &::after{
+            display:none;
+        }
+    }
+}
+
+/*##################################### Main Header##############*/
+// Hero 
+body[data-color="dark"]{
+    .hero{
+        background:url("./Bg/customBG__Night--mobile.png");
+        background-size: cover;
+        background-repeat:no-repeat;
+    }
+}
+.hero{
+    min-height: 70svh;
+    background:url("./Bg/customBG__Day--mobile.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    justify-content: center;
+    .wrapper{
+        display:flex;
+        flex-flow:column nowrap;
+        justify-content: flex-end;
+        text-align:center;
+    }
+}
+.hero__text{
+    background:var(--clr-bg-100);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align:center;
+    .top{
+        font-size: 0.8rem;
+    }
+}
+.hero__media{
+    width: 80%;
+    max-width: 350px;
+    margin-inline:auto;
 }

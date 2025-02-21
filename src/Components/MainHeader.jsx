@@ -13,11 +13,19 @@ const MainHeader = () => {
         document.body.dataset.menu = burger ? "close" : "open"
     }
 
+    const checkColorMode = () => {
+        if(localStorage.getItem("portfolioTheme")){
+            localStorage.getItem("portfolioTheme") === "dark" ? true : false
+        }else{
 
-    const [colorMode, setColorMode] = useState()
+        }
+    }
+
+    const [colorMode, setColorMode] = useState(checkColorMode)
 
     const handleColorMode = () => {
         setColorMode(prev => !prev)
+        localStorage.setItem("portfolioTheme", colorMode ? "dark" : "light")
     }
 
     useEffect(() => {
@@ -30,7 +38,7 @@ const MainHeader = () => {
 
     useEffect(() => {
         const colorModeTxt = colorMode ? "dark" : "light"
-        localStorage.setItem("portfolioTheme", colorModeTxt)
+        // localStorage.setItem("portfolioTheme", colorModeTxt)
         const darkMode = localStorage.getItem("portfolioTheme") === "dark" ? true : false
         document.body.dataset.color = darkMode ? "dark" : "light"
     },[colorMode])
