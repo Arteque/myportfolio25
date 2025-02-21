@@ -10,6 +10,7 @@ const MainHeader = () => {
 
     const handleBurger = () => {
         setBurger(prev => !prev)
+        document.body.dataset.menu = burger ? "close" : "open"
     }
 
 
@@ -82,7 +83,7 @@ const MainHeader = () => {
                     </button>
                     <ul className={`main-header__nav-items  ${burger ? 'open' : 'close'}`}>
                         <li className="main-header__nav-item">
-                            <Link to="/">Start</Link>
+                            <Link to="/" className="current">Start</Link>
                         </li>
                         <li className="main-header__nav-item">
                             <Link to="/about">About</Link>
