@@ -26,22 +26,11 @@ const MainHeader = () => {
     const handleColorMode = () => {
         setColorMode(prev => !prev)
         localStorage.setItem("portfolioTheme", colorMode ? "dark" : "light")
+        document.body.dataset.color =  colorMode ? "dark" : "light"
     }
 
-    useEffect(() => {
-        if(localStorage.getItem("portfolioTheme")){
-            const darkMode = localStorage.getItem("portfolioTheme") == "dark" ? true : false
-            document.body.dataset.color = darkMode ? "dark" : "light"
-            setColorMode(darkMode)
-        }      
-    },[])
+    
 
-    useEffect(() => {
-        const colorModeTxt = colorMode ? "dark" : "light"
-        // localStorage.setItem("portfolioTheme", colorModeTxt)
-        const darkMode = localStorage.getItem("portfolioTheme") === "dark" ? true : false
-        document.body.dataset.color = darkMode ? "dark" : "light"
-    },[colorMode])
 
   return (
     <header className="main-header">
