@@ -13,20 +13,16 @@ const MainHeader = () => {
         document.body.dataset.menu = burger ? "close" : "open"
     }
 
-    const checkColorMode = () => {
-        if(localStorage.getItem("portfolioTheme")){
-            localStorage.getItem("portfolioTheme") === "dark" ? true : false
-        }else{
 
-        }
+    const [colorMode, setColorMode] = useState()
+
+
+    const getLocalSotrageThemeColor = () => {
+        !localStorage.getItem("themeColor") ? "system" : localStorage.getItem("themeColor")
     }
 
-    const [colorMode, setColorMode] = useState(checkColorMode)
-
     const handleColorMode = () => {
-        setColorMode(prev => !prev)
-        localStorage.setItem("portfolioTheme", colorMode ? "dark" : "light")
-        document.body.dataset.color =  colorMode ? "dark" : "light"
+      
     }
 
     
