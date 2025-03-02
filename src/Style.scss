@@ -81,7 +81,7 @@ html, body{
         }
     }
 }
-body[data-color="dark"]{
+body[data-mode="dark"]{
     @each $clr, $vls in $clrsDark{
         @each $cl, $vl in $vls{
             --clr-#{$clr}-#{$cl}:#{$vl};
@@ -165,7 +165,7 @@ img{
         }
     }
 }
-body[data-color="dark"]{
+body[data-mode="dark"]{
     .main-header__color-mode{
         button{
            .sun, .moon{
@@ -296,7 +296,7 @@ body{
 
 /*##################################### Main Header##############*/
 // Hero 
-body[data-color="dark"]{
+body[data-mode="dark"]{
     .hero{
         background:url("./Bg/customBG__Night--mobile.png");
         background-size: cover;

@@ -13,20 +13,49 @@ const MainHeader = () => {
         document.body.dataset.menu = burger ? "close" : "open"
     }
 
+    /*
+        Color mode
+    */
 
-    const [colorMode, setColorMode] = useState()
-
+        const isSystemDarkmodeEnabeld = window.matchMedia && window.matchMedia(`(prefers-color-scheme: dark)`).matches
+    
 
     const getLocalSotrageThemeColor = () => {
-        !localStorage.getItem("themeColor") ? "system" : localStorage.getItem("themeColor")
+        if(localStorage.getItem("themeMode")){
+            return localStorage.getItem("themeMode")
+          }else{
+            isSystemDarkmodeEnabeld ? "dark" : "light"
+          }
     }
 
+    const [colorMode, setColorMode] = useState(getLocalSotrageThemeColor)
+    const [isDarkmode, setIsDarkmode] = useState()
+
+   
+
+
     const handleColorMode = () => {
-      
+        
     }
 
     
 
+
+    useEffect(()=>{
+        const localStorageDarkmodeEnabeld = localStorage.getItem("themeMode") === "dark" ? true : false
+        if(!localStorageDarkmodeEnabeld){
+            if(!isSystemDarkmodeEnabeld){     
+                setColorMode("light")
+            }else{
+                
+                setColorMode("dark")
+            }
+        }
+    },[])
+
+    useEffect(() => {
+        document.body.dataset.mode = colorMode === "dark" ? "dark" : "light"
+    },[colorMode])
 
   return (
     <header className="main-header">
