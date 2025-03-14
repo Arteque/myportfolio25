@@ -1,0 +1,57 @@
+@use "../../../Vars";
+
+// Hero 
+body[data-mode="dark"]{
+    .hero{
+        background:url("./Bg/customBG__Night--mobile.png");
+        background-size: cover;
+        background-repeat:no-repeat;
+        @include mid{
+            background: url("./Bg/customBG__Night.png")
+        };
+    }
+}
+.hero{
+    min-height: 95svh;
+    background:url("./Bg/customBG__Day--mobile.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+    @include mid{
+        background: url("./Bg/customBG__Day.png")
+    };
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    justify-content: center;
+    .wrapper{
+        display:flex;
+        flex-flow:column nowrap;
+        justify-content: flex-end;
+    }
+    transition: all 0.5s;
+}
+.hero__text{
+    background:var(--clr-txt-400);
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    padding: var(--gap);
+    h2{
+       
+        text-shadow: 1px 0 0 var(--clr-bg-400), 
+                    -1px 0 0 var(--clr-bg-400), 
+                    0 -1px 0 var(--clr-bg-400),
+                    0 1px 0 var(--clr-bg-400);
+        font-weight: 900;
+        font-size: 1.3rem;
+    }
+    p{
+        font-size: 1.2rem;
+        padding-block: var(--gap);
+    }
+}
+
+.hero__media{
+    width: 80%;
+    max-width: 350px;
+    margin-inline:auto;
+}

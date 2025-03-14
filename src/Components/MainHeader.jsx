@@ -1,126 +1,97 @@
 import { Link } from "react-router-dom"
-import { faBars, faTimes, faSun, faMoon  } from "@fortawesome/free-solid-svg-icons"
+import { faSun, faMoon  } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faInstagram, faMastodon, faYoutube, faRedditAlien } from "@fortawesome/free-brands-svg-icons"
+import { faInstagram, faMastodon, faYoutube} from "@fortawesome/free-brands-svg-icons"
 import { useEffect, useState} from "react"
 
 const MainHeader = () => {
-
-    const [burger, setBurger] = useState(false)
-
-    const handleBurger = () => {
-        setBurger(prev => !prev)
-        document.body.dataset.menu = burger ? "close" : "open"
-    }
-
     /*
         Color mode
     */
 
         const isSystemDarkmodeEnabeld = window.matchMedia && window.matchMedia(`(prefers-color-scheme: dark)`).matches
     
-
-    const getLocalSotrageThemeColor = () => {
-        if(localStorage.getItem("themeMode")){
-            return localStorage.getItem("themeMode")
-          }else{
-            isSystemDarkmodeEnabeld ? "dark" : "light"
-          }
-    }
-
-    const [colorMode, setColorMode] = useState(getLocalSotrageThemeColor)
-    const [isDarkmode, setIsDarkmode] = useState()
-
-   
-
-
-    const handleColorMode = () => {
-        
-    }
-
+        const [colorMode, setColorMode] = useState()
     
 
-
-    useEffect(()=>{
-        const localStorageDarkmodeEnabeld = localStorage.getItem("themeMode") === "dark" ? true : false
-        if(!localStorageDarkmodeEnabeld){
-            if(!isSystemDarkmodeEnabeld){     
-                setColorMode("light")
-            }else{
-                
-                setColorMode("dark")
-            }
+        const darkOrLight = () => {
+            let clrMode = ""
+            isSystemDarkmodeEnabeld ? clrMode = "dark" : clrMode = "light"
+            return clrMode
         }
-    },[])
 
-    useEffect(() => {
-        document.body.dataset.mode = colorMode === "dark" ? "dark" : "light"
-    },[colorMode])
+        const handleColorMode = () => {
+            let clrMode = ""
+            //check if localstorage has themeMode
+            if(localStorage.getItem("themeMode")){
+                localStorage.getItem("themeMode") == "dark" ? clrMode = "light" : clrMode = "dark"
+            }else{
+                // if no themeMode found
+                clrMode = darkOrLight() == "dark" ? "light" : "dark"
+            }
 
-  return (
+            // after the check add the value to the localstorage themeMode item
+            localStorage.setItem("themeMode", clrMode)
+
+            // after the check change the state. this will trigger the useeffect at the end
+            setColorMode(() => {
+                return localStorage.getItem("themeMode") == "dark" ? true : false
+            })
+        }
+
+        // Run the first time calling the app. 
+        useEffect(() => {
+            if(localStorage.getItem("themeMode")){
+                document.body.dataset.mode = localStorage.getItem("themeMode")
+                setColorMode(() => {
+                    return localStorage.getItem("themeMode") == "dark" ? true : false
+                })
+            }else{
+                document.body.dataset.mode = darkOrLight()
+                setColorMode(() => {
+                    return darkOrLight() == "dark" ? true : false
+                })
+            }
+        },[])
+
+        // run evrytime the color mode is changed and adding the data-mode to the body tag
+        useEffect(() => {
+          document.body.dataset.mode = colorMode ? "dark" : "light"
+        },[colorMode])
+
+    return (
     <header className="main-header">
-        <div className="main-header__top-nav">
-            <div className="wrapper">
-                <div className="main-header__color-mode">
-                        <button onClick={handleColorMode}>
-                            <FontAwesomeIcon icon={faSun}  className="sun" />
-                            <FontAwesomeIcon icon={faMoon} className="moon" />
-                        </button>
-                </div>
-                <ul className="main-header__socials">
-                    <li>
-                        <Link to="/" target="_blank" title="Instagram">
-                            <FontAwesomeIcon icon={faInstagram} />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/" target="_blank" title="Mastodon">
-                            <FontAwesomeIcon icon={faMastodon} />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/" target="_blank" title="Redit">
-                                <FontAwesomeIcon icon={faRedditAlien} />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/" target="_blank" title="Youtube">
-                            <FontAwesomeIcon icon={faYoutube} />
-                        </Link>
-                    </li>
-                    
-                </ul>
+        <div className="wrapper">
+            <div className="main-header__logo">
+                <h1 className="website-title">Ahmed <span className="uppercase">Lemssiah</span></h1>
+            </div>
+            
+            <ul className="main-header__socials">
+                <li>
+                    <Link to="/" target="_blank" title="Instagram">
+                        <FontAwesomeIcon icon={faInstagram} />
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/" target="_blank" title="Mastodon">
+                        <FontAwesomeIcon icon={faMastodon} />
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/" target="_blank" title="Youtube">
+                        <FontAwesomeIcon icon={faYoutube} />
+                    </Link>
+                </li>
+                
+            </ul>
+
+            <div className="main-header__color-mode">
+                <button onClick={handleColorMode}>
+                    <FontAwesomeIcon icon={faSun}  className="sun" />
+                    <FontAwesomeIcon icon={faMoon} className="moon" />
+                </button>
             </div>
         </div>
-        <div className="main-header__bottom-nav">
-            <div className="wrapper">
-                <div className="main-header__logo">
-                    <img src="./logo.svg" alt="Ahmed Lemssiah | Webdesigner" />
-                    <h1 className="website-title">Ahmed Lemssiah</h1>
-                </div>
-                <nav className="main-header__main-nav">
-                    <button className={`main-header__main-nav-burger ${burger ? 'open' : 'close'}`} onClick={handleBurger}>
-                        <FontAwesomeIcon icon={faBars} className="main-header__main-nav-burger--menuisclose" size="2x"/>
-                        <FontAwesomeIcon icon={faTimes} className="main-header__main-nav-burger--menuisopen" size="2x"/>
-                    </button>
-                    <ul className={`main-header__nav-items  ${burger ? 'open' : 'close'}`}>
-                        <li className="main-header__nav-item">
-                            <Link to="/" className="current">Start</Link>
-                        </li>
-                        <li className="main-header__nav-item">
-                            <Link to="/about">About</Link>
-                        </li>
-                        <li className="main-header__nav-item">
-                            <Link to="/portfolio">Portfolio</Link>
-                        </li>
-                        <li className="main-header__nav-item">
-                            <Link to="/kontakt">Kontakt</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-       
     </header>
   )
 }
