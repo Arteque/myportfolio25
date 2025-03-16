@@ -1,5 +1,98 @@
-@use "./Vars";
+$clrsLight:(
+    txt:(
+        100:hsl(216, 72%, 17%),
+        200:hsl(216, 72%, 27%),
+        300:hsl(216, 72%, 37%),
+        400:hsla(216, 72%, 17%, 0.2),
+        ),
+    call:(
+        100:hsl(83, 87%, 50%),
+        200:hsl(83, 87%, 60%),
+        300:hsl(83, 87%, 70%),
+        400:hsl(83, 87%, 50%,0.2),
+        ),
+    ntr:(
+        100:hsl(260, 4%, 15%),
+        200:hsl(260, 4%, 25%),
+        300:hsl(260, 4%, 35%),
+        400:hsla(260, 4%, 15%, 0.2),
+        ),
+    bg:(
+        100:hsl(0, 0%, 76%),
+        200:hsl(0, 0%, 86%),
+        300:hsl(0, 0%, 96%),
+        400:hsla(0, 0%, 76%, 0.2),
+        )
+);
+$clrsDark:(
+    bg:(
+        100:hsl(216, 72%, 17%),
+        200:hsl(216, 72%, 27%),
+        300:hsl(216, 72%, 37%),
+        400:hsla(216, 72%, 17%, 0.2),
+        ),
+    call:(
+        100:hsl(83, 87%, 50%),
+        200:hsl(83, 87%, 60%),
+        300:hsl(83, 87%, 70%),
+        400:hsl(83, 87%, 50%,0.2),
+        ),
+    ntr:(
+        100:hsl(260, 4%, 15%),
+        200:hsl(260, 4%, 25%),
+        300:hsl(260, 4%, 35%),
+        400:hsla(260, 4%, 15%, 0.2),
+        ),
+    txt:(
+        100:hsl(0, 0%, 76%),
+        200:hsl(0, 0%, 86%),
+        300:hsl(0, 0%, 96%),
+        400:hsla(0, 0%, 76%, 0.2),
+        )
+);
 
+@mixin mid{
+    @media screen and ( min-width: "768px" ){@content}
+};
+
+:root{
+    @each $clr, $vls in $clrsLight{
+        @each $cl, $vl in $vls{
+            --clr-#{$clr}-#{$cl}:#{$vl};
+        }
+    }
+    --gap: 1rem;
+    --mid_gap: 0.5rem;
+}
+
+
+@each $clr, $vls in $clrsLight{
+    @each $cl, $vl in $vls{
+        .txt-#{$clr}-#{$cl}{
+            color:  var(--clr-#{$clr}-#{$cl});
+        }
+        .bg-#{$clr}-#{$cl}{
+            color:  var(--clr-#{$clr}-#{$cl});
+        }
+    }
+}
+body[data-mode="dark"]{
+    @each $clr, $vls in $clrsDark{
+        @each $cl, $vl in $vls{
+            --clr-#{$clr}-#{$cl}:#{$vl};
+        }
+    }
+    @each $clr, $vls in $clrsDark{
+        @each $cl, $vl in $vls{
+            .txt-#{$clr}-#{$cl}{
+                color:  var(--clr-#{$clr}-#{$cl});
+            }
+            .bg-#{$clr}-#{$cl}{
+                color:  var(--clr-#{$clr}-#{$cl});
+            }
+        }
+    }
+}
 *, *::after, *::before{
     margin:0;
     padding:0;
@@ -145,7 +238,7 @@ body[data-mode="dark"]{
 /*##################################### Main Header##############*/
 
 .main-header{
-    background-color: var(--clr-bg-100);
+    background-color: var(--clr-bg-200);
     .wrapper{
         display:flex;
         align-items:center;
@@ -163,6 +256,9 @@ body[data-mode="dark"]{
         display:flex;
         gap: 0.5rem;
         align-items:center;
+        img{
+            width: 20px;
+        }
         h1{
             font-size: .8rem;
         }
@@ -200,3 +296,160 @@ body[data-mode="dark"]{
 
 /*##################################### Main Header##############*/
 
+/*########### hero ##############*/
+
+
+// Hero 
+body[data-mode="dark"]{
+    .hero{
+        background:url("./Bg/customBG__Night--mobile.png");
+        background-size: cover;
+        background-repeat:no-repeat;
+        @include mid{
+            background: url("./Bg/customBG__Night.png")
+        };
+    }
+}
+.hero{
+    min-height: 95svh;
+    background:url("./Bg/customBG__Day--mobile.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    justify-content: center;
+    transition: all 0.5s;
+    @include mid{
+        background: url("./Bg/customBG__Day.png")
+    };
+
+    .wrapper{
+        display:flex;
+        flex-flow:column nowrap;
+        justify-content: flex-end;
+    }
+}
+.hero__text{
+    background:var(--clr-txt-400);
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    padding: var(--gap);
+    h2{
+       
+        text-shadow: 1px 0 0 var(--clr-bg-400), 
+                    -1px 0 0 var(--clr-bg-400), 
+                    0 -1px 0 var(--clr-bg-400),
+                    0 1px 0 var(--clr-bg-400);
+        font-weight: 900;
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.2rem;
+        padding-block: var(--gap);
+    }
+}
+
+.hero__media{
+    width: 80%;
+    max-width: 350px;
+    margin-inline:auto;
+}
+
+/*########### hero ##############*/
+
+/*########### Skills ##############*/
+.skills{
+    @include mid{
+        display: flex;
+        flex-flow:row wrap;
+        gap: var(--gap);
+    }
+}
+.skill{
+    margin-block:1rem;
+    border:1px solid var(--clr-bg-200);
+    padding: 1rem;
+    border-radius: 10px;
+    @include mid{
+        width: 45%;
+        max-width: 400px;
+    }
+    .skill__header {
+        display: flex;
+        gap: var(--gap);
+        align-items: center;
+        width: fit-content;
+        .skill__icon{
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.2rem;
+            width: 3rem;
+            height: 3rem;
+        }
+        .skill__content{
+            h3{
+                font-size: 2rem;
+                color: var(--clr-txt-200);
+                font-weight: 900;
+            }
+        }
+    }
+    .skill__description{
+        font-size:0.8rem;
+        font-family: "Inter", serif;
+        margin-block: 0.5rem;
+        color: var(--clr-txt-100);
+        text-align:right;
+    }
+}
+/*########### Skills ##############*/
+/* ####### Filter ############## */
+.projects__filter{
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border:1px solid var(--clr-bg-200);
+    border-radius:10px;
+     > svg{
+        color:var(--clr-ntr-300);
+        cursor: not-allowed;
+    }
+}
+.filter__items{
+    display:flex;
+    gap: var(--gap);
+    position:sticky;
+    top: 0;
+}
+.filter__item{
+    transition: all 0.3s;
+    &.current{
+        background:var(--clr-bg-200);
+        border-radius: 10px;
+        button{
+            svg{
+                color: var(--clr-txt-200);
+                scale: 1;
+            }
+        }
+    }
+    button{
+        cursor: pointer;
+        padding: var(--mid_gap);
+        svg{
+            color: var(--clr-txt-400);
+            scale: 0.8;
+            transition: all 0.3s cubic-bezier(0.5,1.8,0.8,1);
+        }
+        * {
+            pointer-events: none;
+            user-select: none;
+        }
+    }
+}
+/* ####### Filter ############## */

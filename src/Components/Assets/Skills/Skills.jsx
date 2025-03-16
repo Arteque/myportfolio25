@@ -11,6 +11,10 @@ import {
 
 
 import "./Skills.scss"
+import Section from '../Fragments/Section';
+import Wrapper from '../Fragments/Wrapper';
+
+
 function Skills() {
 
     const skillData = [
@@ -71,31 +75,35 @@ function Skills() {
     ]
 
  return <>
-    <div className="skills">
-        {
-            skillData && (
-                skillData.map(item => (
-                    <div className="skill scroll__fadein" key={item.id} 
-                        data-color={item.color}
-                        >
-                            <div className="skill__header">
-                                <div className="skill__icon" title={item.title} dataname={item.name} style={{background:item.color}}>
-                                    <FontAwesomeIcon icon={item.icon} size='2x'/>
-                                </div>
-                                <div className="skill__content">
-                                    <h3 className='uppercase'>{item.title}</h3>
-                                </div>
+    <Section id="skills" classname="skills">
+        <Wrapper>
+            <div className="skills">
+                {
+                    skillData && (
+                        skillData.map(item => (
+                            <div className="skill scroll__fadein" key={item.id} 
+                                data-color={item.color}
+                                >
+                                    <div className="skill__header">
+                                        <div className="skill__icon" title={item.title} dataname={item.name} style={{background:item.color}}>
+                                            <FontAwesomeIcon icon={item.icon} size='2x'/>
+                                        </div>
+                                        <div className="skill__content">
+                                            <h3 className='uppercase'>{item.title}</h3>
+                                        </div>
+                                    </div>
+                                    <div className="skill__description">
+                                        <p>
+                                            {item.description}
+                                        </p>
+                                    </div>
                             </div>
-                            <div className="skill__description">
-                                <p>
-                                    {item.description}
-                                </p>
-                            </div>
-                    </div>
-                ))
-            )
-        }
-    </div>
+                        ))
+                    )
+                }
+            </div>
+        </Wrapper>
+    </Section>
  </>
 }
 

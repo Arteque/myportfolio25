@@ -63,6 +63,7 @@ const MainHeader = () => {
     <header className="main-header">
         <div className="wrapper">
             <div className="main-header__logo">
+                <img src="./logo.svg" alt="Ahmed Lemssiah" />
                 <h1 className="website-title">Ahmed <span className="uppercase">Lemssiah</span></h1>
             </div>
             
