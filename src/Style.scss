@@ -159,6 +159,14 @@ img{
         z-index: -1;
     }
 }
+.call{
+    &:has(.call__full:nth-of-type(2)){
+        display:flex;
+        flex-flow: row wrap;
+        gap: var(--mid_gap);
+        
+    }
+}
 .call__full{
     display: block;
     color: var(--clr-txt-100);
@@ -170,6 +178,7 @@ img{
     align-items: center;
     border-radius: 5px;
     width: fit-content;
+    
 }
 body[data-mode="dark"]{
     .call__full{

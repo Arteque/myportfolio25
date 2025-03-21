@@ -20,33 +20,6 @@ function Skills() {
     const skillData = [
         {
             id:1,
-            name:"HTML",
-            url:"#html",
-            icon:faHtml5,
-            title:"HTML5",
-            color:"linear-gradient(to right, #e34c26 50%, #f06529 51%)",
-            description:"4 Jahre Erfahrung"
-        },
-        {
-            id:2,
-            name:"CSS",
-            url:"#css",
-            icon:faCss3,
-            title:"CSS3",
-            color:"linear-gradient(to right, #264de4 50%, #2965f1 50%)",
-            description:"4 Jahre Erfahrung"
-        },
-        {
-            id:3,
-            name:"Javscript",
-            url:"#javascript",
-            icon:faJsSquare,
-            title:"Javascript",
-            color:"linear-gradient(to right, #E5A126 50%,rgb(150, 119, 19) 50%)",
-            description:"4 Jahre Erfahrung"
-        },
-        {
-            id:4,
             name:"Reactjs",
             url:"#react",
             icon:faReact,
@@ -55,7 +28,7 @@ function Skills() {
             description:"4 Jahre Erfahrung"
         },
         {
-            id:5,
+            id:2,
             name:"Typo3",
             url:"#typo3",
             icon:faTypo3,
@@ -64,7 +37,7 @@ function Skills() {
             description:"4 Jahre Erfahrung"
         },
         {
-            id:6,
+            id:3,
             name:"Wordpress",
             url:"#wordpress",
             icon:faWordpress,
@@ -77,6 +50,10 @@ function Skills() {
  return <>
     <Section id="skills" classname="skills">
         <Wrapper>
+            <header className="section__header skills__header">
+                <h2>Skills</h2>
+                <p>[Small Description: the fact the basics like: HTML, CSS, and JS are the main Skills i have]</p>
+            </header>
             <div className="skills">
                 {
                     skillData && (

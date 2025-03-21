@@ -17,13 +17,17 @@ const Hero = () => {
                 </p>
                 <div className="call">
                     <Link to="/" className="call__full">
-                    <FontAwesomeIcon icon={faCaretRight} />
-                    <span className="text underline">Kontakt</span>
+                        <FontAwesomeIcon icon={faCaretRight} />
+                        <span className="text underline">Kontakt</span>
+                    </Link>
+                    <Link to="/" className="call__full">
+                        <FontAwesomeIcon icon={faCaretRight} />
+                        <span className="underline">Portfolio</span>
                     </Link>
                 </div>
             </div>
             <div className="hero__media">
-            <img src="./Main/AvatarMainAnimation_2.gif" alt="Ahmed Lemssiah Animation" />
+                <img src="./Main/AvatarMainAnimation_2.gif" alt="Ahmed Lemssiah Animation" />
             </div>
         </Wrapper>
     </Section>)
