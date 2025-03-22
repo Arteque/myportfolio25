@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { faSun, faMoon  } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faInstagram, faMastodon, faYoutube} from "@fortawesome/free-brands-svg-icons"
+import { faInstagram, faMastodon, faYoutube, faGithub} from "@fortawesome/free-brands-svg-icons"
 import { useEffect, useState} from "react"
 
 const MainHeader = () => {
@@ -69,8 +69,8 @@ const MainHeader = () => {
             
             <ul className="main-header__socials">
                 <li>
-                    <Link to="/" target="_blank" title="Instagram">
-                        <FontAwesomeIcon icon={faInstagram} />
+                    <Link to="/" target="_blank" title="Github">
+                        <FontAwesomeIcon icon={faGithub} />
                     </Link>
                 </li>
                 <li>
@@ -79,10 +79,16 @@ const MainHeader = () => {
                     </Link>
                 </li>
                 <li>
+                    <Link to="/" target="_blank" title="Instagram">
+                        <FontAwesomeIcon icon={faInstagram} />
+                    </Link>
+                </li>
+                <li>
                     <Link to="/" target="_blank" title="Youtube">
                         <FontAwesomeIcon icon={faYoutube} />
                     </Link>
                 </li>
+                
                 
             </ul>
 

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { 
     faCss3,
     faHtml5,
@@ -17,7 +18,7 @@ import Wrapper from '../Fragments/Wrapper';
 
 function Skills() {
 
-    const skillData = [
+    const webSkills = [
         {
             id:1,
             name:"Reactjs",
@@ -47,37 +48,105 @@ function Skills() {
         }
     ]
 
+
+    const designSkills = [
+        {
+            id:1,
+            name:"Adobe XD",
+            url:"#xd",
+            icon:"Icons/Xd.svg",
+            title:"Adobe XD",
+            color:"",
+            description:""
+        },
+        {
+            id:2,
+            name:"Photoshop",
+            url:"#photoshop",
+            icon:"Icons/Ps.svg",
+            title:"Photoshop",
+            color:"",
+            description:""
+        },
+        {
+            id:3,
+            name:"Illustrator",
+            url:"#illustrator",
+            icon:"Icons/Ai.svg",
+            title:"Illustrator",
+            color:"",
+            description:""
+        },
+    ]
+
+    const commSkills = [
+
+    ]
  return <>
     <Section id="skills" classname="skills">
         <Wrapper>
-            <header className="section__header skills__header">
+            <header className="section__header">
                 <h2>Skills</h2>
-                <p>[Small Description: the fact the basics like: HTML, CSS, and JS are the main Skills i have]</p>
             </header>
             <div className="skills">
-                {
-                    skillData && (
-                        skillData.map(item => (
-                            <div className="skill scroll__fadein" key={item.id} 
-                                data-color={item.color}
-                                >
+                <div className="skill skill__web">
+                    <div className="skill__header">
+                        <h3>Web</h3>
+                        <p>[Small Description: the fact, that the basics like: HTML, CSS, and JS are of course a part of my skillset]</p>
+                    </div>
+                    {
+                        webSkills && (
+                            webSkills.map(item => (
+                                <div className="skill scroll__fadein" key={item.id} 
+                                    data-color={item.color}
+                                    >
+                                        <div className="skill__header">
+                                            <div className="skill__icon" title={item.title} dataname={item.name} style={{background:item.color}}>
+                                                <FontAwesomeIcon icon={item.icon} size='2x'/>
+                                            </div>
+                                            <div className="skill__content">
+                                                <h3 className='uppercase'>{item.title}</h3>
+                                            </div>
+                                        </div>
+                                        <div className="skill__description">
+                                            <p>
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                </div>
+                            ))
+                        )
+                    }
+                </div>
+                <div className="skill skill__design">
+                    <div className="skill__header">
+                        <h3>Design</h3>
+                        <p>[Small Description]</p>
+                    </div>
+                    {
+                        designSkills && (
+                            designSkills.map(item => (
+                                <div className="skill scroll__fadein" key={item.id}>
                                     <div className="skill__header">
-                                        <div className="skill__icon" title={item.title} dataname={item.name} style={{background:item.color}}>
-                                            <FontAwesomeIcon icon={item.icon} size='2x'/>
+                                        <div className="skill__icon">
+                                            <img src={item.icon} alt={item.name} />
                                         </div>
                                         <div className="skill__content">
                                             <h3 className='uppercase'>{item.title}</h3>
                                         </div>
                                     </div>
-                                    <div className="skill__description">
-                                        <p>
-                                            {item.description}
-                                        </p>
-                                    </div>
-                            </div>
-                        ))
-                    )
-                }
+                                    {item.description && (
+                                        <div className="skill_description">
+                                            <p>
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                    )}
+                                </div>
+                            ))
+                        )
+                    }
+                </div>
             </div>
         </Wrapper>
     </Section>
