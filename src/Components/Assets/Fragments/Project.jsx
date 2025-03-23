@@ -1,23 +1,42 @@
 import { Link } from "react-router-dom"
 import Class from "./Project.module.scss"
-const Project = ({img, title, content, tags, url, urltext}) => {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCalendarAlt, faLink } from "@fortawesome/free-solid-svg-icons"
+
+const Project = ({img, title, content, tags, url, urltext, date, autor}) => {
   return (
-    <article className="skill">
-        <div className={`skill scroll__fadein ${Class.projectcard}`} style={{background:`url(${img})`}}>
+    <article className={`skill scoll__fadein ${Class.projectcontainer}`}>
+        <div className={Class.projectcard} style={{background:`url(${img})`}}>
         </div>
         <header className={Class.project__head}>
-          <h3 className="project__title">
-              {title}
-          </h3>
+          {
+            date && (
+              <p className={Class.projectdate}>
+                <small>
+                  <FontAwesomeIcon icon={faCalendarAlt}/> {date}
+                </small>
+              </p>
+            )
+          }
+          <h4 className={Class.project__title}>
+              {title} <FontAwesomeIcon icon={faLink} className={Class.icon}/>
+          </h4>
+          <ul className={Class.tags}>
+              {tags}
+           </ul>
         </header>
         <div className={`${Class.content}`}>
-          <Link to={url} title={urltext}>{urltext}</Link>
+          <Link to={url} title={urltext} className={Class.projectLink} target="_blank"><span>{urltext}</span></Link>
            <p>
               {content}
            </p>
-           <ul>
-              {tags}
-           </ul>
+           {
+            autor && (
+              <ul className={Class.tags} style={{marginBlockStart:'0.5rem', opacity:'0.5'}}>
+                  {autor}
+              </ul>
+            )
+           }
         </div>
     </article>
   )

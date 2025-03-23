@@ -400,8 +400,8 @@ body[data-mode="dark"]{
             height: 3rem;
         }
         .skill__content{
-            h3{
-                font-size: 2rem;
+            h4{
+                font-size: 1.7rem;
                 color: var(--clr-txt-200);
                 font-weight: 900;
             }
@@ -422,10 +422,16 @@ body[data-mode="dark"]{
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    border:1px solid var(--clr-bg-200);
+    border:1px solid var(--clr-bg-400);
     border-radius:10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background:var(--clr-bg-400);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 10px #00000020;
      > svg{
-        color:var(--clr-ntr-300);
+        color:var(--clr-ntr-400);
         cursor: not-allowed;
     }
 }

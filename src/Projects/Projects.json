@@ -1,0 +1,28 @@
+[
+    {
+      "id": 0,
+      "title": "Space-tourism",
+      "subtitle": "This is just optional",
+      "type": "Web",
+      "date": "2024-02-01",
+      "url": "https://arteque.github.io/Space-tourism/",
+      "lang": "en",
+      "teaser": "Space-tourism is a Website about space travel.",
+      "thumb": "./Projects/Space-tourism/screenshot.png",
+      "tags": ["html", "Css", "Javascript"],
+      "autor": ["Ahmed LEMSSIAH"]
+    },
+    {
+      "id": 1,
+      "title": "Countries-api",
+      "subtitle": "This is just optional",
+      "type": "Web",
+      "date": "2024-02-21",
+      "url": "https://google.de",
+      "lang": "en",
+      "teaser": "This is just the place holder. The real text needs to be added later!",
+      "thumb": "./Projects/Countries-api/screenshot.png",
+      "tags": ["React"],
+      "autor": ["Ahmed LEMSSIAH"]
+    }
+]

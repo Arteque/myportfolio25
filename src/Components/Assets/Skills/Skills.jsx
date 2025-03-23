@@ -56,7 +56,7 @@ function Skills() {
             url:"#xd",
             icon:"Icons/Xd.svg",
             title:"Adobe XD",
-            color:"",
+            color:"#470137",
             description:""
         },
         {
@@ -65,7 +65,7 @@ function Skills() {
             url:"#photoshop",
             icon:"Icons/Ps.svg",
             title:"Photoshop",
-            color:"",
+            color:"#001D34",
             description:""
         },
         {
@@ -74,7 +74,7 @@ function Skills() {
             url:"#illustrator",
             icon:"Icons/Ai.svg",
             title:"Illustrator",
-            color:"",
+            color:"#330000",
             description:""
         },
     ]
@@ -105,7 +105,7 @@ function Skills() {
                                                 <FontAwesomeIcon icon={item.icon} size='2x'/>
                                             </div>
                                             <div className="skill__content">
-                                                <h3 className='uppercase'>{item.title}</h3>
+                                                <h4 className='uppercase'>{item.title}</h4>
                                             </div>
                                         </div>
                                         <div className="skill__description">
@@ -128,11 +128,11 @@ function Skills() {
                             designSkills.map(item => (
                                 <div className="skill scroll__fadein" key={item.id}>
                                     <div className="skill__header">
-                                        <div className="skill__icon">
+                                        <div className="skill__icon" style={{background:item.color}}>
                                             <img src={item.icon} alt={item.name} />
                                         </div>
                                         <div className="skill__content">
-                                            <h3 className='uppercase'>{item.title}</h3>
+                                            <h4 className='uppercase'>{item.title}</h4>
                                         </div>
                                     </div>
                                     {item.description && (
