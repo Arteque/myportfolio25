@@ -141,11 +141,10 @@ const Start = () => {
                                   project.lang.map((lan, i) => <span key={`${lan}-${i}`}> <FontAwesomeIcon icon={faLanguage} /> {lan.toUpperCase()}</span> )
                                 )}
                                 urls={project.urls && (
-                                  project.urls.map((el, i)=> <Link to={el.url} title={el.name} key={`${el.id}-${i}`}>
+                                  project.urls.map((el, i)=> <Link to={el.url} title={el.name} key={`${el.id}-${i}`} target="_blank">
                                     <img src={`./Icons/${el.icon}.svg`} alt={el.name} />
                                   </Link>)
                                 )}
-                                urltext = {project.title}
                                 content = {project.teaser}
                                 tags={project.tags.map((el, i) => <li key={i}>
                                   <FontAwesomeIcon icon={faTag} /> {el}

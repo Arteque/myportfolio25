@@ -311,17 +311,17 @@ body[data-mode="dark"]{
 // Hero 
 body[data-mode="dark"]{
     .hero{
-        background:url("./Bg/customBG__Night--mobile.png");
+        background:url("/Bg/customBG__Night--mobile.png");
         background-size: cover;
         background-repeat:no-repeat;
         @include mid{
-            background: url("./Bg/customBG__Night.png")
+            background: url("/Bg/customBG__Night.png")
         };
     }
 }
 .hero{
     min-height: 95svh;
-    background:url("./Bg/customBG__Day--mobile.png");
+    background:url("/Bg/customBG__Day--mobile.png");
     background-size: cover;
     background-repeat:no-repeat;
     position:relative;
@@ -330,7 +330,7 @@ body[data-mode="dark"]{
     justify-content: center;
     transition: all 0.5s;
     @include mid{
-        background: url("./Bg/customBG__Day.png")
+        background: url("/Bg/customBG__Day.png")
     };
 
     .wrapper{

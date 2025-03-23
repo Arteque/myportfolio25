@@ -15,7 +15,7 @@
         {
             "id":2,
             "name":"Live Website",
-            "icon":"Globe",
+            "icon":"Extern",
             "url":"https://arteque.github.io/Space-tourism/index.html"
         }
       ],
@@ -28,7 +28,7 @@
     {
       "id": 1,
       "title": "Countries-api",
-      "subtitle": "Countries Data Visualization Project",
+      "subtitle": "",
       "type": "Web",
       "date": "2024-02-21",
       "urls": [
@@ -41,20 +41,20 @@
         {
             "id":2,
             "name":"Live Website",
-            "icon":"Globe",
+            "icon":"Extern",
             "url":"https://arteque.github.io/Countries-API-One-Pager/"
         }
       ],
       "lang": ["en"],
       "teaser": "Dieses Projekt visualisiert Daten der REST Countries API, ermöglicht die Ländersuche und Filterung nach Region. Es bietet einen praktischen Farbthemen-Umschalter und nutzt HTML, CSS sowie JavaScript, um eine interaktive Webanwendung zu erstellen. Mit Leaflet.js wird zusätzlich eine Kartenansicht der Länder bereitgestellt. Die Wikimedia API ermöglicht es, wenn verfügbar, die Landeshymne im Audioformat anzuhören.",
       "thumb": "./Projects/Countries-api/screenshot.png",
-      "tags": ["HTML", "CSs", "Javascript", "API", "Leaflet"],
+      "tags": ["HTML", "Css", "Javascript", "API", "Leaflet"],
       "autor": ["Ahmed LEMSSIAH"]
     },
     {
       "id": 2,
       "title": "Ptit-Pont",
-      "subtitle": "Kindergarden",
+      "subtitle": "",
       "type": "Web",
       "date": "2022-10-03",
       "urls": [
@@ -67,7 +67,7 @@
         {
             "id":2,
             "name":"Live Website",
-            "icon":"Globe",
+            "icon":"Extern",
             "url":"https://ptit-pont.net"
         }
       ],
@@ -80,9 +80,9 @@
     {
       "id": 3,
       "title": "Dictionary",
-      "subtitle": "Livesearch Dictionary Webapp",
+      "subtitle": "",
       "type": "Web",
-      "date": "2022-10-03",
+      "date": "2024-03-09",
       "urls": [
         {
             "id":1,
@@ -93,7 +93,7 @@
         {
             "id":2,
             "name":"Live Website",
-            "icon":"Globe",
+            "icon":"Extern",
             "url":"https://arteque.github.io/dictionary-api/"
         }
       ],
@@ -104,6 +104,62 @@
         "ReactJS + Vite",
         "JSON",
         "REST API"
+      ],
+      "autor": ["Ahmed LEMSSIAH"]
+    },
+    {
+      "id": 4,
+      "title": "Designo website",
+      "subtitle": "",
+      "type": "Web",
+      "date": "2024-10-11",
+      "urls": [
+        {
+            "id":1,
+            "name":"GitHub",
+            "icon":"Github",
+            "url":"https://github.com/Arteque/dictionary-api?tab=readme-ov-file" 
+        },
+        {
+            "id":2,
+            "name":"Live Website",
+            "icon":"Extern",
+            "url":"https://designo-zeta-opal.vercel.app/"
+        }
+      ],
+      "lang": ["en"],
+      "teaser": "Designo | Award-wining custom designs and digital branding Solutions | Designo ist eine Showcase-Website für eine multinationale digitale Branding-Agentur. ",
+      "thumb": "./Projects/Designo/screenshot.png",
+      "tags": [
+        "ReactJS + Vite"
+      ],
+      "autor": ["Ahmed LEMSSIAH"]
+    },
+    {
+      "id": 5,
+      "title": "Room Homepage",
+      "subtitle": "",
+      "type": "Web",
+      "date": "2024-02-24",
+      "urls": [
+        {
+            "id":1,
+            "name":"GitHub",
+            "icon":"Github",
+            "url":"https://github.com/Arteque/room-homepage" 
+        },
+        {
+            "id":2,
+            "name":"Live Website",
+            "icon":"Extern",
+            "url":"https://arteque.github.io/room-homepage/"
+        }
+      ],
+      "lang": ["en"],
+      "teaser": "Die Herausforderung besteht darin, eine E-Commerce-Startseite basierend auf dem von Frontend Mentor heruntergeladenen Design zu erstellen und sie so nah wie möglich am Originaldesign umzusetzen.",
+      "thumb": "./Projects/Room/screenshot.png",
+      "tags": [
+        "HTML","Css / Scss", "Javascript"
       ],
       "autor": ["Ahmed LEMSSIAH"]
     }
