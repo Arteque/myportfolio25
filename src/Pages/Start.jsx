@@ -3,9 +3,10 @@ import Hero from "../Components/Assets/Hero/Hero"
 import Section from "../Components/Assets/Fragments/Section"
 import Wrapper from "../Components/Assets/Fragments/Wrapper"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowDown, faArrowDownAZ, faArrowDownZA, faArrowUp, faCalendarAlt, faCalendarTimes, faFilter, faPencil, faTag } from "@fortawesome/free-solid-svg-icons"
-import { useEffect, useState } from "react"
-import { useSearchParams } from "react-router-dom"
+import { faArrowDown, faArrowDownAZ, faArrowDownZA, faArrowUp, faCalendarAlt, faCalendarTimes, faFilter, faPencil, faTag, faGlobe, faLandmarkFlag, faSignLanguage, faLanguage } from "@fortawesome/free-solid-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { useEffect, useState} from "react"
+import { Link, useSearchParams } from "react-router-dom"
 import Project from "../Components/Assets/Fragments/Project"
 import dateFormat from "../Tools/dateFormat"
 import ProjectListing from "../Projects/Projects.json"
@@ -83,6 +84,10 @@ const Start = () => {
   },[searchParams])
 
   
+
+ 
+  
+
   return (
     <>
         <Hero />
@@ -130,18 +135,22 @@ const Start = () => {
                               <Project
                                 img = {project.thumb}
                                 title={project.title}
+                                subtitle={project.subtitle}
                                 date={dateFormat(project.date)}
-                                url={project.url}
+                                language={project.lang && (
+                                  project.lang.map((lan, i) => <span key={`${lan}-${i}`}> <FontAwesomeIcon icon={faLanguage} /> {lan.toUpperCase()}</span> )
+                                )}
+                                urls={project.urls && (
+                                  project.urls.map((el, i)=> <Link to={el.url} title={el.name} key={`${el.id}-${i}`}>
+                                    <img src={`./Icons/${el.icon}.svg`} alt={el.name} />
+                                  </Link>)
+                                )}
                                 urltext = {project.title}
                                 content = {project.teaser}
                                 tags={project.tags.map((el, i) => <li key={i}>
                                   <FontAwesomeIcon icon={faTag} /> {el}
                                 </li>)}
-                                autor={project.autor.map((el, i) => 
-                                  <li key={`${el}-${i}`}>
-                                    <FontAwesomeIcon icon={faPencil} /> <b>{el}</b>
-                                  </li>
-                                )}
+                               
                               />
                           </div> 
                         )

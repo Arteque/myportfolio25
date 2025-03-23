@@ -2,12 +2,25 @@
     {
       "id": 0,
       "title": "Space-tourism",
-      "subtitle": "This is just optional",
+      "subtitle": "",
       "type": "Web",
       "date": "2024-02-01",
-      "url": "https://arteque.github.io/Space-tourism/",
-      "lang": "en",
-      "teaser": "Space-tourism is a Website about space travel.",
+      "urls": [
+        {
+            "id":1,
+            "name":"GitHub",
+            "icon":"Github",
+            "url":"https://github.com/Arteque/Space-tourism" 
+        },
+        {
+            "id":2,
+            "name":"Live Website",
+            "icon":"Globe",
+            "url":"https://arteque.github.io/Space-tourism/index.html"
+        }
+      ],
+      "lang": ["en"],
+      "teaser": "Die Space-Tourismus-Website bietet Informationen über fiktive Reiseziele im Weltall, die Crew sowie die Raumschiffe.",
       "thumb": "./Projects/Space-tourism/screenshot.png",
       "tags": ["html", "Css", "Javascript"],
       "autor": ["Ahmed LEMSSIAH"]
@@ -15,14 +28,83 @@
     {
       "id": 1,
       "title": "Countries-api",
-      "subtitle": "This is just optional",
+      "subtitle": "Countries Data Visualization Project",
       "type": "Web",
       "date": "2024-02-21",
-      "url": "https://google.de",
-      "lang": "en",
-      "teaser": "This is just the place holder. The real text needs to be added later!",
+      "urls": [
+        {
+            "id":1,
+            "name":"GitHub",
+            "icon":"Github",
+            "url":"https://github.com/Arteque/Countries-API-One-Pager" 
+        },
+        {
+            "id":2,
+            "name":"Live Website",
+            "icon":"Globe",
+            "url":"https://arteque.github.io/Countries-API-One-Pager/"
+        }
+      ],
+      "lang": ["en"],
+      "teaser": "Dieses Projekt visualisiert Daten der REST Countries API, ermöglicht die Ländersuche und Filterung nach Region. Es bietet einen praktischen Farbthemen-Umschalter und nutzt HTML, CSS sowie JavaScript, um eine interaktive Webanwendung zu erstellen. Mit Leaflet.js wird zusätzlich eine Kartenansicht der Länder bereitgestellt. Die Wikimedia API ermöglicht es, wenn verfügbar, die Landeshymne im Audioformat anzuhören.",
       "thumb": "./Projects/Countries-api/screenshot.png",
-      "tags": ["React"],
+      "tags": ["HTML", "CSs", "Javascript", "API", "Leaflet"],
+      "autor": ["Ahmed LEMSSIAH"]
+    },
+    {
+      "id": 2,
+      "title": "Ptit-Pont",
+      "subtitle": "Kindergarden",
+      "type": "Web",
+      "date": "2022-10-03",
+      "urls": [
+        {
+            "id":1,
+            "name":"GitHub",
+            "icon":"Github",
+            "url":"https://github.com/Arteque/ptitpont" 
+        },
+        {
+            "id":2,
+            "name":"Live Website",
+            "icon":"Globe",
+            "url":"https://ptit-pont.net"
+        }
+      ],
+      "lang": ["fr", "ar"],
+      "teaser": "Die Website des Kindergartens P'tit-Pont. Ich habe diese Website entworfen, mit HTML, CSS und JavaScript codiert und das Template in WordPress integriert!",
+      "thumb": "./Projects/Ptit-pont/screenshot.png",
+      "tags": ["Wordpress"],
+      "autor": ["Ahmed LEMSSIAH"]
+    },
+    {
+      "id": 3,
+      "title": "Dictionary",
+      "subtitle": "Livesearch Dictionary Webapp",
+      "type": "Web",
+      "date": "2022-10-03",
+      "urls": [
+        {
+            "id":1,
+            "name":"GitHub",
+            "icon":"Github",
+            "url":"https://github.com/Arteque/dictionary-api?tab=readme-ov-file" 
+        },
+        {
+            "id":2,
+            "name":"Live Website",
+            "icon":"Globe",
+            "url":"https://arteque.github.io/dictionary-api/"
+        }
+      ],
+      "lang": ["en"],
+      "teaser": "Diese englische Wörterbuch-Webapp ermöglicht es den Nutzern, Wörter zu suchen. Die App ist responsiv und bietet einen Dark- und Light-Mode. Außerdem kann die Schriftart zwischen Sans- und Serif-Stilen gewechselt werden!",
+      "thumb": "./Projects/Dictionary-api/screenshot.png",
+      "tags": [
+        "ReactJS + Vite",
+        "JSON",
+        "REST API"
+      ],
       "autor": ["Ahmed LEMSSIAH"]
     }
 ]

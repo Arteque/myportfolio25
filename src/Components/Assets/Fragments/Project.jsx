@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom"
 import Class from "./Project.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCalendarAlt, faLink } from "@fortawesome/free-solid-svg-icons"
+import { faCalendarAlt, faCircleInfo, faLandmark, faLanguage } from "@fortawesome/free-solid-svg-icons"
 
-const Project = ({img, title, content, tags, url, urltext, date, autor}) => {
+const Project = ({img, title, content, tags, urls, date, autor, subtitle, language}) => {
+
+  
+
   return (
     <article className={`skill scoll__fadein ${Class.projectcontainer}`}>
         <div className={Class.projectcard} style={{background:`url(${img})`}}>
@@ -18,25 +21,40 @@ const Project = ({img, title, content, tags, url, urltext, date, autor}) => {
               </p>
             )
           }
+          
           <h4 className={Class.project__title}>
-              {title} <FontAwesomeIcon icon={faLink} className={Class.icon}/>
+            {title}
+            {
+              urls && (
+                urls
+              )
+            }
           </h4>
+          {
+            subtitle && (
+              <p className={Class.project__subtitle}>
+                <small>{subtitle}</small>
+              </p>
+            )
+          }
+          
           <ul className={Class.tags}>
               {tags}
            </ul>
         </header>
         <div className={`${Class.content}`}>
-          <Link to={url} title={urltext} className={Class.projectLink} target="_blank"><span>{urltext}</span></Link>
+          
            <p>
-              {content}
+             <FontAwesomeIcon icon={faCircleInfo} /> {content}
            </p>
            {
-            autor && (
-              <ul className={Class.tags} style={{marginBlockStart:'0.5rem', opacity:'0.5'}}>
-                  {autor}
-              </ul>
+            language && (
+              <p className={Class.projectdate}>
+                {language}   
+              </p>
             )
-           }
+          }
+           
         </div>
     </article>
   )
