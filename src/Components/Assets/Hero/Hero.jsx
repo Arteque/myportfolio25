@@ -9,8 +9,7 @@ const Hero = () => {
         <Wrapper>
             <div className="hero__text">
                 <h2>
-                    Hallo! <br />
-                    Ich heiße <br /> Ahmed <span className="uppercase">Lemssiah!</span>
+                    <span className="block small">Ich heiße</span> <span className="name">Ahmed </span> <span className="uppercase name">Lemssiah</span>
                 </h2>
                 <p>
                     Ich bin <span className="underline">Frontend Web Entwickler</span> 
@@ -30,6 +29,10 @@ const Hero = () => {
                 <img src="./Main/AvatarMainAnimation_2.gif" alt="Ahmed Lemssiah Animation" />
             </div>
         </Wrapper>
+        <div className="fixed-media">
+            <img className="sun"src="/Canvas/Hero/Sun.svg" alt="Sonne Zeichentrick" />
+            <img className="moon" src="/Canvas/Hero/Moon.svg" alt="Mond Zeichentrick" />
+        </div>
     </Section>)
 }
 

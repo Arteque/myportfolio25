@@ -2,9 +2,6 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { 
-    faCss3,
-    faHtml5,
-    faJsSquare,
     faReact,
     faTypo3,
     faWordpress,
@@ -24,7 +21,8 @@ function Skills() {
             url:"#react",
             icon:faReact,
             title:"React",
-            color:"#61DBFB",
+            color:"#08d9ff",
+            bg:"#292929",
             description:"4 Jahre Erfahrung"
         },
         {
@@ -33,7 +31,8 @@ function Skills() {
             url:"#typo3",
             icon:faTypo3,
             title:"Typo3",
-            color:"#ff8700",
+            color:"#fff",
+            bg:"#ff8700",
             description:"4 Jahre Erfahrung"
         },
         {
@@ -42,7 +41,8 @@ function Skills() {
             url:"#wordpress",
             icon:faWordpress,
             title:"Wordpress",
-            color:"#21759B",
+            color:"#fff",
+            bg:"#1790C5",
             description:"4 Jahre Erfahrung"
         }
     ]
@@ -56,6 +56,7 @@ function Skills() {
             icon:"Icons/Xd.svg",
             title:"Adobe XD",
             color:"#470137",
+            bg:"",
             description:""
         },
         {
@@ -65,6 +66,7 @@ function Skills() {
             icon:"Icons/Ps.svg",
             title:"Photoshop",
             color:"#001D34",
+            bg:"",
             description:""
         },
         {
@@ -74,6 +76,7 @@ function Skills() {
             icon:"Icons/Ai.svg",
             title:"Illustrator",
             color:"#330000",
+            bg:"",
             description:""
         },
     ]
@@ -93,15 +96,16 @@ function Skills() {
                         <h3>Web</h3>
                         <p>[Small Description: the fact, that the basics like: HTML, CSS, and JS are of course a part of my skillset]</p>
                     </div>
+                    <div className="skills__container">
                     {
                         webSkills && (
                             webSkills.map(item => (
-                                <div className="skill scroll__fadein" key={item.id} 
+                                <div className="icon-text-container border scroll__fadein" key={item.id} 
                                     data-color={item.color}
                                     >
                                         <div className="skill__header">
-                                            <div className="skill__icon" title={item.title} dataname={item.name} style={{background:item.color}}>
-                                                <FontAwesomeIcon icon={item.icon} size='2x'/>
+                                            <div className="skill__icon" title={item.title} dataname={item.name} style={{background:item.bg}}>
+                                                <FontAwesomeIcon icon={item.icon} size='2x' style={{color:item.color}}/>
                                             </div>
                                             <div className="skill__content">
                                                 <h4 className='uppercase'>{item.title}</h4>
@@ -116,16 +120,18 @@ function Skills() {
                             ))
                         )
                     }
+                    </div>
                 </div>
                 <div className="skill skill__design">
                     <div className="skill__header">
                         <h3>Design</h3>
                         <p>[Small Description]</p>
                     </div>
+                    <div className="skills__container">
                     {
                         designSkills && (
                             designSkills.map(item => (
-                                <div className="skill scroll__fadein" key={item.id}>
+                                <div className="icon-text-container border scroll__fadein" key={item.id}>
                                     <div className="skill__header">
                                         <div className="skill__icon" style={{background:item.color}}>
                                             <img src={item.icon} alt={item.name} />
@@ -145,6 +151,7 @@ function Skills() {
                             ))
                         )
                     }
+                    </div>
                 </div>
             </div>
         </Wrapper>

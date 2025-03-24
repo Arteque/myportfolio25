@@ -195,6 +195,15 @@ body[data-mode="dark"]{
         color: var(--clr-bg-100)
     }
 }
+.block{
+    display: block;
+}
+.border{
+    margin-block:1rem;
+    border:1px solid var(--clr-bg-200);
+    padding: 1rem;
+    border-radius: 10px;
+}
 /*######################Animation#########################*/
 @supports (animation-timeline: view()){
     @media (prefers-reduced-motion: no-preference){
@@ -258,6 +267,9 @@ body[data-mode="dark"]{
 
 .main-header{
     background-color: var(--clr-bg-200);
+    position: sticky;
+    top: 0;
+    z-index: 999;
     .wrapper{
         display:flex;
         align-items:center;
@@ -321,55 +333,125 @@ body[data-mode="dark"]{
 // Hero 
 body[data-mode="dark"]{
     .hero{
-        background:url("/Bg/customBG__Night--mobile.png");
-        background-size: cover;
-        background-repeat:no-repeat;
-        @include mid{
-            background: url("/Bg/customBG__Night.png")
-        };
+       &::before{
+            background:url("/Bg/customBG__Night--mobile.png");
+            background-size: cover;
+            background-repeat:no-repeat;
+            @include mid{
+                background: url("/Bg/customBG__Night.png")
+            };
+       }
+      .fixed-media{
+        .sun{
+            opacity: 0;
+            bottom: 0;
+        }
+        .moon{
+            opacity : 30%;
+            bottom: 50%;
+        }
+      }
     }
 }
+
 .hero{
     min-height: 95svh;
-    background:url("/Bg/customBG__Day--mobile.png");
-    background-size: cover;
-    background-position: center top;
-    background-repeat:no-repeat;
     position:relative;
     display:flex;
     align-items:flex-end;
     justify-content: center;
     transition: all 0.5s;
+    &::before{
+        content:"";
+        position:absolute;
+        inset: 0;
+        z-index: 50;
+        background:url("/Bg/customBG__Day--mobile.png");
+        background-size: cover;
+        background-position: center top;
+        background-repeat:no-repeat;
+    }
+    .fixed-media{
+        animation: bounce 10s infinite ease-in-out;
+        position: absolute;
+        inset: 0;
+        img{
+            position: absolute;
+            z-index: 0;
+            transition: all 0.5s;
+            transform: translate(-50%, -50%);
+        }
+        .sun{
+            opacity: 40%;
+            bottom: 40%;
+            left: 70vw;
+            max-width: 200px;
+            filter: drop-shadow(0 0 20px white);
+            @include mid{
+                max-width: 300px;
+            }
+        }
+        .moon{
+            opacity: 0;
+            bottom: 0;
+            left: 70vw;
+            max-width: 100px;
+            filter: drop-shadow(0 0 10px yellow);
+            @include mid{
+                max-width: 200px;
+            }
+        }
+
+    }
+    
+
     @include mid{
-        background: url("/Bg/customBG__Day.png");
-        
+        &::before{
+            background: url("/Bg/customBG__Day.png");
+        }
     };
     .wrapper{
         display:flex;
         flex-flow:column nowrap;
         justify-content: flex-end;
         width: 100%;
+        z-index: 100;
     }
     @include lg{
         .wrapper{
             flex-flow: row-reverse;
             align-items: center;
+            justify-content: space-between;
             .hero__text{
-                width: 100%;
-                max-width: 400px;
+                margin-inline-end:auto;
+                .small{
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+                .name{
+                    font-size:3rem;
+                    margin-block-start: 1rem;
+                    display: inline-block;
+                }
             }
             .hero__media{
                 max-width: 500px;
                 width: 100%;
+                margin-inline: unset;
             }
         }
     }
 }
+
+
+
 .hero__text{
     background:var(--clr-txt-400);
     backdrop-filter: blur(10px);
     border-radius: 0.5rem;
     padding: var(--gap);
+    max-width: fit-content;
+    margin-inline:auto;
     h2{
        
         text-shadow: 1px 0 0 var(--clr-bg-400), 
@@ -390,31 +472,49 @@ body[data-mode="dark"]{
     max-width: 350px;
     margin-inline:auto;
 }
-
+@keyframes bounce {
+    0%{
+        transform:translateY(0)
+    }
+    50%{
+        transform:translateY(20px)
+    }
+    100%{
+        transform:translateY(0)
+    }
+}
 /*########### hero ##############*/
 
 /*########### Skills ##############*/
-.skills{
+header.section__header {
+    padding: 1rem;
+    color: var(--clr-txt-100);
+    background-color: var(--clr-ntr-400);
+    border-radius: 0 0 20px 20px;
+    margin-block: 3rem 1rem;
+}
+.skills__container{
     @include mid{
         display: flex;
-        flex-flow:row wrap;
-        gap: var(--gap);
+        justify-content: space-evenly;
+        gap: 1rem;
+        .icon-text-container{
+            width: calc(100% / 4);
+            .skill__icon{
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+}
+.icon-text-container{
+    .skill__header{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
     }
 }
 .skill{
-    margin-block:1rem;
-    border:1px solid var(--clr-bg-200);
-    padding: 1rem;
-    border-radius: 10px;
-    @include mid{
-        width: 45%;
-        max-width: 400px;
-    }
-    .skill__header {
-        display: flex;
-        gap: var(--gap);
-        align-items: center;
-        width: fit-content;
         .skill__icon{
             border-radius: 10px;
             overflow: hidden;
@@ -432,9 +532,8 @@ body[data-mode="dark"]{
                 font-weight: 900;
             }
         }
-    }
     .skill__description{
-        font-size:0.8rem;
+        font-size:0.7rem;
         font-family: "Inter", serif;
         margin-block: 0.5rem;
         color: var(--clr-txt-100);
@@ -451,7 +550,7 @@ body[data-mode="dark"]{
     border:1px solid var(--clr-bg-400);
     border-radius:10px;
     position: sticky;
-    top: 0;
+    top: 28px;
     z-index: 100;
     background:var(--clr-bg-400);
     backdrop-filter: blur(15px);
