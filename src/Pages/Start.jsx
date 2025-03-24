@@ -13,7 +13,7 @@ import ProjectListing from "../Projects/Projects.json"
 
 const Start = () => {
 
-  const maxProject = 4
+  const maxProject = 3
   
 
 
@@ -95,10 +95,10 @@ const Start = () => {
         <Skills />
 
         <Section id="projects" classname="projects">
-          <header>
+          <Wrapper>
+          <header className="section__header">
             <h2>Projekte</h2>
           </header>
-          <Wrapper>
             <div className="projects__filter" >
               <FontAwesomeIcon icon={faFilter} size="1x"/>
               <ul className="filter__items" onClick={(e) => {clickedFilterHandler(e)}}>
@@ -158,6 +158,9 @@ const Start = () => {
                     <p>No Projects</p>
                   )
                 }
+            </div>
+            <div className="call">
+              <button className="call__full">showMore</button>
             </div>
           </Wrapper>
         </Section>
