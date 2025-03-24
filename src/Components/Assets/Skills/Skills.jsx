@@ -11,7 +11,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 
-import "./Skills.scss"
 import Section from '../Fragments/Section';
 import Wrapper from '../Fragments/Wrapper';
 

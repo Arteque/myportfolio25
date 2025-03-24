@@ -21,7 +21,7 @@
       ],
       "lang": ["en"],
       "teaser": "Die Space-Tourismus-Website bietet Informationen über fiktive Reiseziele im Weltall, die Crew sowie die Raumschiffe.",
-      "thumb": "./Projects/Space-tourism/screenshot.png",
+      "thumb": "/Projects/Space-tourism/screenshot.png",
       "tags": ["html", "Css", "Javascript"],
       "autor": ["Ahmed LEMSSIAH"]
     },
@@ -47,7 +47,7 @@
       ],
       "lang": ["en"],
       "teaser": "Dieses Projekt visualisiert Daten der REST Countries API, ermöglicht die Ländersuche und Filterung nach Region. Es bietet einen praktischen Farbthemen-Umschalter und nutzt HTML, CSS sowie JavaScript, um eine interaktive Webanwendung zu erstellen. Mit Leaflet.js wird zusätzlich eine Kartenansicht der Länder bereitgestellt. Die Wikimedia API ermöglicht es, wenn verfügbar, die Landeshymne im Audioformat anzuhören.",
-      "thumb": "./Projects/Countries-api/screenshot.png",
+      "thumb": "/Projects/Countries-api/screenshot.png",
       "tags": ["HTML", "Css", "Javascript", "API", "Leaflet"],
       "autor": ["Ahmed LEMSSIAH"]
     },
@@ -73,7 +73,7 @@
       ],
       "lang": ["fr", "ar"],
       "teaser": "Die Website des Kindergartens P'tit-Pont. Ich habe diese Website entworfen, mit HTML, CSS und JavaScript codiert und das Template in WordPress integriert!",
-      "thumb": "./Projects/Ptit-pont/screenshot.png",
+      "thumb": "/Projects/Ptit-pont/screenshot.png",
       "tags": ["Wordpress"],
       "autor": ["Ahmed LEMSSIAH"]
     },
@@ -99,7 +99,7 @@
       ],
       "lang": ["en"],
       "teaser": "Diese englische Wörterbuch-Webapp ermöglicht es den Nutzern, Wörter zu suchen. Die App ist responsiv und bietet einen Dark- und Light-Mode. Außerdem kann die Schriftart zwischen Sans- und Serif-Stilen gewechselt werden!",
-      "thumb": "./Projects/Dictionary-api/screenshot.png",
+      "thumb": "/Projects/Dictionary-api/screenshot.png",
       "tags": [
         "ReactJS + Vite",
         "JSON",
@@ -129,7 +129,7 @@
       ],
       "lang": ["en"],
       "teaser": "Designo | Award-wining custom designs and digital branding Solutions | Designo ist eine Showcase-Website für eine multinationale digitale Branding-Agentur. ",
-      "thumb": "./Projects/Designo/screenshot.png",
+      "thumb": "/Projects/Designo/screenshot.png",
       "tags": [
         "ReactJS + Vite"
       ],

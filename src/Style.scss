@@ -54,6 +54,12 @@ $clrsDark:(
 @mixin mid{
     @media screen and ( min-width: "768px" ){@content}
 };
+@mixin lg{
+    @media screen and ( min-width: "961px" ){@content}
+};
+@mixin xl{
+    @media screen and ( min-width: "1300px" ){@content}
+};
 
 :root{
     @each $clr, $vls in $clrsLight{
@@ -171,14 +177,18 @@ img{
     display: block;
     color: var(--clr-txt-100);
     background: var(--clr-call-100);
-    padding: 0.3rem;
+    padding: 0.5rem 1rem;
     font-weight: 900;
     display: flex;
     gap: var(--mid_gap);
     align-items: center;
     border-radius: 5px;
     width: fit-content;
-    
+    text-transform: uppercase;
+    transition: all 0.3s;
+    &:hover{
+        background: var(--clr-call-200);
+    }
 }
 body[data-mode="dark"]{
     .call__full{
@@ -323,6 +333,7 @@ body[data-mode="dark"]{
     min-height: 95svh;
     background:url("/Bg/customBG__Day--mobile.png");
     background-size: cover;
+    background-position: center top;
     background-repeat:no-repeat;
     position:relative;
     display:flex;
@@ -330,13 +341,28 @@ body[data-mode="dark"]{
     justify-content: center;
     transition: all 0.5s;
     @include mid{
-        background: url("/Bg/customBG__Day.png")
+        background: url("/Bg/customBG__Day.png");
+        
     };
-
     .wrapper{
         display:flex;
         flex-flow:column nowrap;
         justify-content: flex-end;
+        width: 100%;
+    }
+    @include lg{
+        .wrapper{
+            flex-flow: row-reverse;
+            align-items: center;
+            .hero__text{
+                width: 100%;
+                max-width: 400px;
+            }
+            .hero__media{
+                max-width: 500px;
+                width: 100%;
+            }
+        }
     }
 }
 .hero__text{
