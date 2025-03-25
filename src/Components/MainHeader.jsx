@@ -74,17 +74,17 @@ const MainHeader = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" target="_blank" title="Mastodon">
+                    <Link to="https://mastodon.social/@lemssiah" target="_blank" title="Mastodon">
                         <FontAwesomeIcon icon={faMastodon} />
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" target="_blank" title="Instagram">
+                    <Link to="https://www.instagram.com/artt3k/" target="_blank" title="Instagram">
                         <FontAwesomeIcon icon={faInstagram} />
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" target="_blank" title="Youtube">
+                    <Link to="https://www.youtube.com/@artecke99999" target="_blank" title="Youtube">
                         <FontAwesomeIcon icon={faYoutube} />
                     </Link>
                 </li>

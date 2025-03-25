@@ -2,6 +2,13 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { 
+    faCss,
+    faCss3,
+    faFigma,
+    faGit,
+    faGithub,
+    faHtml5,
+    faJsSquare,
     faReact,
     faTypo3,
     faWordpress,
@@ -10,85 +17,235 @@ import {
 
 import Section from '../Fragments/Section';
 import Wrapper from '../Fragments/Wrapper';
+import { faInbox, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 
 function Skills() {
 
+    let id = 0
     const webSkills = [
         {
-            id:1,
+            id:id++,
             name:"Reactjs",
             url:"#react",
             icon:faReact,
+            img:"",
             title:"React",
             color:"#08d9ff",
             bg:"#292929",
-            description:"4 Jahre Erfahrung"
+            description:""
         },
         {
-            id:2,
+            id:id++,
             name:"Typo3",
             url:"#typo3",
             icon:faTypo3,
+            img:"",
             title:"Typo3",
             color:"#fff",
             bg:"#ff8700",
-            description:"4 Jahre Erfahrung"
+            description:""
         },
         {
-            id:3,
+            id:id++,
             name:"Wordpress",
             url:"#wordpress",
             icon:faWordpress,
+            img:"",
             title:"Wordpress",
             color:"#fff",
             bg:"#1790C5",
-            description:"4 Jahre Erfahrung"
+            description:""
+        },
+        {
+            id:id++,
+            name:"HTML",
+            url:"#html",
+            icon:faHtml5,
+            img:"",
+            title:"HTML",
+            color:"white",
+            bg:"linear-gradient(to right, #DD4B25 50%, #E96228 50% )",
+            description:""
+        },
+        {
+            id:id++,
+            name:"Css",
+            url:"#css",
+            icon:faCss3,
+            img:"",
+            title:"Css",
+            color:"white",
+            bg:"linear-gradient(to right, #254BDD 50%, #2862E9 50% )",
+            description:""
+        },
+        {
+            id:id++,
+            name:"Javscript",
+            url:"#javscript",
+            icon:faJsSquare,
+            img:"",
+            title:"Javscript",
+            color:"black",
+            bg:"linear-gradient(to right,rgb(195, 207, 24) 50%,rgb(255, 230, 0) 50% )",
+            description:""
+        },
+        {
+            id:id++,
+            name:"Git",
+            url:"#git",
+            icon:faGit,
+            img:"",
+            title:"VCS",
+            color:"#fff",
+            bg:"orangered",
+            description:"Version Control Software"
+        },
+        {
+            id:id++,
+            name:"Tailwind",
+            url:"#tailwind",
+            icon:"",
+            img:"Icons/Tailwind.svg",
+            title:"Tailwind",
+            color:"",
+            bg:"#151C2C",
+            description:""
+        },
+        {
+            id:id++,
+            name:"Bootstrap",
+            url:"#bootstrap",
+            icon:"",
+            img:"Icons/faBootstrap.svg",
+            title:"Bootstrap",
+            color:"",
+            bg:"#7910F2",
+            description:""
         }
+        
     ]
-
 
     const designSkills = [
         {
-            id:1,
+            id:id++,
             name:"Adobe XD",
             url:"#xd",
-            icon:"Icons/Xd.svg",
+            icon:"",
+            img:"Icons/Xd.svg",
             title:"Adobe XD",
-            color:"#470137",
-            bg:"",
+            color:"",
+            bg:"#470137",
             description:""
         },
         {
-            id:2,
+            id:id++,
+            name:"Figma",
+            url:"#figma",
+            icon:faFigma,
+            img:"",
+            title:"Figma",
+            color:"",
+            bg:"black",
+            description:""
+        },
+        {
+            id:id++,
             name:"Photoshop",
             url:"#photoshop",
-            icon:"Icons/Ps.svg",
+            icon:"",
+            img:"Icons/Ps.svg",
             title:"Photoshop",
-            color:"#001D34",
-            bg:"",
+            color:"",
+            bg:"#001D34",
             description:""
         },
         {
-            id:3,
+            id:id++,
             name:"Illustrator",
             url:"#illustrator",
-            icon:"Icons/Ai.svg",
+            icon:"",
+            img:"Icons/Ai.svg",
             title:"Illustrator",
-            color:"#330000",
-            bg:"",
+            color:"",
+            bg:"#330000",
+            description:""
+        },
+        {
+            id:id++,
+            name:"Lightroom",
+            url:"#lightroom",
+            icon:faLightbulb,
+            img:"",
+            title:"Lightroom",
+            color:"",
+            bg:"#330000",
+            description:""
+        },
+        {
+            id:id++,
+            name:"InDesign",
+            url:"#indesign",
+            icon:faInbox,
+            img:"",
+            title:"InDesign",
+            color:"",
+            bg:"#330000",
             description:""
         },
     ]
 
     const commSkills = [
-
+        {
+            id:id++,
+            name:"Deutsch",
+            url:"#deutsch",
+            icon:"",
+            img:"Icons/de.svg",
+            title:"Deutsch",
+            color:"",
+            bg:"",
+            description:"in Wort und Schrift"
+        },
+        {
+            id:id++,
+            name:"Französisch",
+            url:"#französisch",
+            icon:"",
+            img:"Icons/fr.svg",
+            title:"Französisch",
+            color:"",
+            bg:"",
+            description:"in Wort und Schrift"
+        },
+        {
+            id:id++,
+            name:"Englisch",
+            url:"#englisch",
+            icon:"",
+            img:"Icons/en.svg",
+            title:"Englisch",
+            color:"",
+            bg:"",
+            description:"in Wort und Schrift"
+        },
+        {
+            id:id++,
+            name:"Arabisch",
+            url:"#arabisch",
+            icon:"",
+            img:"Icons/ar.svg",
+            title:"Arabisch",
+            color:"",
+            bg:"",
+            description:"in Wort und Schrift"
+        },
     ]
  return <>
     <Section id="skills" classname="skills">
         <Wrapper>
             <header className="section__header">
-                <h2>Skills</h2>
+                {/* <h2>Skills</h2> */}
             </header>
             <div className="skills">
                 <div className="skill skill__web">
@@ -105,7 +262,13 @@ function Skills() {
                                     >
                                         <div className="skill__header">
                                             <div className="skill__icon" title={item.title} dataname={item.name} style={{background:item.bg}}>
-                                                <FontAwesomeIcon icon={item.icon} size='2x' style={{color:item.color}}/>
+                                                {
+                                                    item.icon ?(
+                                                        <FontAwesomeIcon icon={item.icon} size='2x' style={{color:item.color}}/>
+                                                    ):(
+                                                        <img src={item.img} alt={item.title} />
+                                                    )
+                                                }
                                             </div>
                                             <div className="skill__content">
                                                 <h4 className='uppercase'>{item.title}</h4>
@@ -133,15 +296,58 @@ function Skills() {
                             designSkills.map(item => (
                                 <div className="icon-text-container border scroll__fadein" key={item.id}>
                                     <div className="skill__header">
-                                        <div className="skill__icon" style={{background:item.color}}>
-                                            <img src={item.icon} alt={item.name} />
+                                        <div className="skill__icon" style={{background:item.color ? item.color : item.bg}}>
+                                            {
+                                                item.icon ?(
+                                                    <FontAwesomeIcon icon={item.icon} size='2x' style={{color:item.color}}/>
+                                                ):(
+                                                    <img src={item.img} alt={item.title} />
+                                                )
+                                            }
                                         </div>
                                         <div className="skill__content">
                                             <h4 className='uppercase'>{item.title}</h4>
                                         </div>
                                     </div>
                                     {item.description && (
-                                        <div className="skill_description">
+                                        <div className="skill__description">
+                                            <p>
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                    )}
+                                </div>
+                            ))
+                        )
+                    }
+                    </div>
+                </div>
+                <div className="skill skill__comm">
+                    <div className="skill__header">
+                        <h3>Kommunikation</h3>
+                        <p>[Small Description]</p>
+                    </div>
+                    <div className="skills__container">
+                    {
+                        commSkills && (
+                            commSkills.map(item => (
+                                <div className="icon-text-container border scroll__fadein" key={item.id}>
+                                    <div className="skill__header">
+                                        <div className="skill__icon" style={{background:item.color ? item.color : item.bg}}>
+                                            {
+                                                item.icon ?(
+                                                    <FontAwesomeIcon icon={item.icon} size='2x' style={{color:item.color}}/>
+                                                ):(
+                                                    <img src={item.img} alt={item.title} />
+                                                )
+                                            }
+                                        </div>
+                                        <div className="skill__content">
+                                            <h4 className='uppercase'>{item.title}</h4>
+                                        </div>
+                                    </div>
+                                    {item.description && (
+                                        <div className="skill__description">
                                             <p>
                                                 {item.description}
                                             </p>

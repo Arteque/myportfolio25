@@ -496,10 +496,12 @@ header.section__header {
 .skills__container{
     @include mid{
         display: flex;
-        justify-content: space-evenly;
+        flex-flow: row wrap;
+        justify-content: flex-start;
         gap: 1rem;
         .icon-text-container{
-            width: calc(100% / 4);
+            max-width: 350px;
+            width: 50%;
             .skill__icon{
                 width: 4rem;
                 height: 4rem;
@@ -515,6 +517,7 @@ header.section__header {
     }
 }
 .skill{
+    margin-block-start: 3rem;
         .skill__icon{
             border-radius: 10px;
             overflow: hidden;

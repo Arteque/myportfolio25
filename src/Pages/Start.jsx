@@ -82,10 +82,7 @@ const Start = () => {
 
   },[searchParams])
 
-  
 
- 
-  
 
   return (
     <>
@@ -140,7 +137,7 @@ const Start = () => {
                                   project.lang.map((lan, i) => <span key={`${lan}-${i}`}> <FontAwesomeIcon icon={faLanguage} /> {lan.toUpperCase()}</span> )
                                 )}
                                 urls={project.urls && (
-                                  project.urls.map((el, i)=> <Link to={el.url} title={el.name} key={`${el.id}-${i}`} target="_blank">
+                                  project.urls.map((el, i)=> <Link className="call__full" to={el.url} title={el.name} key={`${el.id}-${i}`} target="_blank">
                                     <img src={`./Icons/${el.icon}.svg`} alt={el.name} />
                                   </Link>)
                                 )}

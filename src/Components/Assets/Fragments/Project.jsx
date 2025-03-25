@@ -8,7 +8,7 @@ const Project = ({img, title, content, tags, urls, date, autor, subtitle, langua
   
 
   return (
-    <article className={`skill scoll__fadein ${Class.projectcontainer}`}>
+    <article className={`border ${Class.projectcontainer}`}>
         <div className={Class.projectcard} style={{background:`url(${img})`}}>
         </div>
         <header className={Class.project__head}>
