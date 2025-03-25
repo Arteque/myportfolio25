@@ -45,32 +45,30 @@ const Video = () => {
     {
     youtubeData.length > 0 ? (
         youtubeData.map((item, index) => (
-          <div className={Class.cardcontainer}
-            key={index}
-            >
-            <div className={Class.cardheader}>
-              <img
-                src={item.snippet.thumbnails.high.url}
-                alt={item.snippet.title}
-              />
-              <a
-                href={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`}
-                title={item.snippet.title}
-                target="_blank"
-                onClick={(e) => openVideo(e)}
-                className={Class.playbtn}
-              >
-               <span>
-                    <FontAwesomeIcon icon={faPlay} />
-               </span>
-                
-              </a>
-            </div>
-            <div className="card__body">
-              <h3>
-                {item.snippet.title}
-              </h3>
-            </div>
+          <div className={Class.cardcontainer} key={index} >
+                <div className={Class.cardheader}>
+                <img
+                    src={item.snippet.thumbnails.high.url}
+                    alt={item.snippet.title}
+                />
+                <a
+                    href={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`}
+                    title={item.snippet.title}
+                    target="_blank"
+                    onClick={(e) => openVideo(e)}
+                    className={Class.playbtn}
+                >
+                <span>
+                        <FontAwesomeIcon icon={faPlay} />
+                </span>
+                    
+                </a>
+                </div>
+                <div className={Class.card__body}>
+                <h3>
+                    {item.snippet.title}
+                </h3>
+                </div>
           </div>
         ))
       ) : (
@@ -80,14 +78,16 @@ const Video = () => {
         </p>
       )}
         {player && (
-            <>
+          <>
             <div className={`${Class.fixedPlayer} ${player ? 'open' : null}`} onClick={(e) => videoContainerHandler(e)}>
-                <button
-                onClick={() => setPlayer(false)}
-                >
-                <FontAwesomeIcon icon={faTimes} size="xl" />
-                </button>
-                <h2 >{videoUrl.title}</h2>
+                <div className={Class.videoctrls}>
+                    <button
+                    onClick={() => setPlayer(false)}
+                    >
+                    <FontAwesomeIcon icon={faTimes} size="xl" />
+                    </button>
+                    <h2 >{videoUrl.title}</h2>
+                </div>
                 <VideoPlayer videoUrl={videoUrl.url} />
             </div>
           </>
