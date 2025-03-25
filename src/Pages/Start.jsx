@@ -9,6 +9,7 @@ import { Link, useSearchParams } from "react-router-dom"
 import Project from "../Components/Assets/Fragments/Project"
 import dateFormat from "../Tools/dateFormat"
 import ProjectListing from "../Projects/Projects.json"
+import Video from "../Components/Assets/Videos/Video"
 
 const Start = () => {
 
@@ -160,6 +161,11 @@ const Start = () => {
               <button className="call__full">showMore</button>
             </div>
           </Wrapper>
+        </Section>
+        <Section classname="media-section" id="media-section">
+                <Wrapper>
+                  <Video/>
+                </Wrapper>
         </Section>
     </>
   )
