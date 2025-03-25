@@ -90,6 +90,7 @@ function Skills() {
             bg:"linear-gradient(to right,rgb(195, 207, 24) 50%,rgb(255, 230, 0) 50% )",
             description:""
         },
+        /*
         {
             id:id++,
             name:"Git",
@@ -100,6 +101,18 @@ function Skills() {
             color:"#fff",
             bg:"orangered",
             description:"Version Control Software"
+        },
+        */
+        {
+            id:id++,
+            name:"Github",
+            url:"#git",
+            icon:faGithub,
+            img:"",
+            title:"Github",
+            color:"#fff",
+            bg:"black",
+            description:""
         },
         {
             id:id++,
@@ -175,22 +188,22 @@ function Skills() {
             id:id++,
             name:"Lightroom",
             url:"#lightroom",
-            icon:faLightbulb,
-            img:"",
+            icon:"",
+            img:"Icons/lr.svg",
             title:"Lightroom",
             color:"",
-            bg:"#330000",
+            bg:"#001D34",
             description:""
         },
         {
             id:id++,
             name:"InDesign",
             url:"#indesign",
-            icon:faInbox,
-            img:"",
+            icon:"",
+            img:"Icons/id.svg",
             title:"InDesign",
             color:"",
-            bg:"#330000",
+            bg:"#47021E",
             description:""
         },
     ]

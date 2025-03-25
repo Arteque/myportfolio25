@@ -3,13 +3,18 @@ import Class from "./Project.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarAlt, faCircleInfo, faLandmark, faLanguage } from "@fortawesome/free-solid-svg-icons"
 
-const Project = ({img, title, content, tags, urls, date, autor, subtitle, language}) => {
+const Project = ({img, title, content, tags, urls, date, autor, subtitle, language, imgUrlLiveWebsite}) => {
 
   
 
   return (
     <article className={`border ${Class.projectcontainer}`}>
-        <div className={Class.projectcard} style={{background:`url(${img})`}}>
+        <div className={`card-media ${Class.projectcard}`} style={{background:`url(${img})`}}>
+        {
+          imgUrlLiveWebsite && (
+            imgUrlLiveWebsite
+          )
+        }
         </div>
         <header className={Class.project__head}>
           {
@@ -22,7 +27,7 @@ const Project = ({img, title, content, tags, urls, date, autor, subtitle, langua
             )
           }
           
-          <h4 className={Class.project__title}>
+          <h4 className={` ${Class.project__title}`}>
             {title}
             {
               urls && (

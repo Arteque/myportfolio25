@@ -130,6 +130,7 @@ const Start = () => {
                           <div className="project" key={`${project.title}-${index}`}>
                               <Project
                                 img = {project.thumb}
+                                imgUrlLiveWebsite = {project.urls[1].url && <Link to={project.urls[1].url} title={`${project.title} extern öffnen`}  target="_blank"></Link>}
                                 title={project.title}
                                 subtitle={project.subtitle}
                                 date={dateFormat(project.date)}
@@ -137,7 +138,7 @@ const Start = () => {
                                   project.lang.map((lan, i) => <span key={`${lan}-${i}`}> <FontAwesomeIcon icon={faLanguage} /> {lan.toUpperCase()}</span> )
                                 )}
                                 urls={project.urls && (
-                                  project.urls.map((el, i)=> <Link className="call__full" to={el.url} title={el.name} key={`${el.id}-${i}`} target="_blank">
+                                  project.urls.map((el, i)=> <Link className="call__full right__fadein" to={el.url} title={el.name} key={`${el.id}-${i}`} target="_blank" style={{padding:0}}>
                                     <img src={`./Icons/${el.icon}.svg`} alt={el.name} />
                                   </Link>)
                                 )}
