@@ -18,6 +18,7 @@ import {
 import Section from '../Fragments/Section';
 import Wrapper from '../Fragments/Wrapper';
 import { faInbox, faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from 'react';
 
 
 function Skills() {
@@ -254,6 +255,40 @@ function Skills() {
             description:"in Wort und Schrift"
         },
     ]
+
+    useEffect(() => {
+        document.addEventListener("scroll", (e) => {
+            // console.log(e)
+            const sectionParent = document.querySelector("section.skills")
+            const sectionHeader = sectionParent.querySelector(".section__header h2 span")
+            const splitHead = sectionHeader.innerHTML.split(" ")
+            let newText
+            splitHead.forEach(text => {
+                text = `<span className="${text}">${text}</span>`
+            })
+            console.log(splitHead)
+
+            const sectionHeaderBox = sectionHeader.getBoundingClientRect()
+            const headerY = sectionHeaderBox.y
+            const skillHeaders = sectionParent.querySelectorAll(".skill > .skill__header")
+
+            const firstSKill = skillHeaders[0].getBoundingClientRect().y
+
+            if(firstSKill > headerY){
+                console.dir(firstSKill)
+            }
+
+            /*
+            skillHeaders.forEach(item => {
+                const itemBox = item.getBoundingClientRect()
+                if(itemBox.y > headerY){
+                    console.log(itemBox.y)
+                }
+            })
+            */
+        })
+    },[])
+
  return <>
     <Section id="skills" classname="skills">
         <Wrapper>
