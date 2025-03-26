@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import SectionHeader from '../Fragments/SectionHeader';
 import { 
     faCss,
     faCss3,
@@ -257,51 +257,11 @@ function Skills() {
  return <>
     <Section id="skills" classname="skills">
         <Wrapper>
-            <header className="section__header">
-                {/* <h2>Skills</h2> */}
-            </header>
+            <SectionHeader title1="Design, Web &amp; Kommunikation"/>
             <div className="skills">
-                <div className="skill skill__web">
-                    <div className="skill__header">
-                        <h3>Web</h3>
-                        <p>[Small Description: the fact, that the basics like: HTML, CSS, and JS are of course a part of my skillset]</p>
-                    </div>
-                    <div className="skills__container">
-                    {
-                        webSkills && (
-                            webSkills.map(item => (
-                                <div className="icon-text-container border scroll__fadein" key={item.id} 
-                                    data-color={item.color}
-                                    >
-                                        <div className="skill__header">
-                                            <div className="skill__icon" title={item.title} dataname={item.name} style={{background:item.bg}}>
-                                                {
-                                                    item.icon ?(
-                                                        <FontAwesomeIcon icon={item.icon} size='2x' style={{color:item.color}}/>
-                                                    ):(
-                                                        <img src={item.img} alt={item.title} />
-                                                    )
-                                                }
-                                            </div>
-                                            <div className="skill__content">
-                                                <h4 className='uppercase'>{item.title}</h4>
-                                            </div>
-                                        </div>
-                                        <div className="skill__description">
-                                            <p>
-                                                {item.description}
-                                            </p>
-                                        </div>
-                                </div>
-                            ))
-                        )
-                    }
-                    </div>
-                </div>
-                <div className="skill skill__design">
+            <div className="skill skill__design">
                     <div className="skill__header">
                         <h3>Design</h3>
-                        <p>[Small Description]</p>
                     </div>
                     <div className="skills__container">
                     {
@@ -335,10 +295,46 @@ function Skills() {
                     }
                     </div>
                 </div>
+                <div className="skill skill__web">
+                    <div className="skill__header">
+                        <h3>Web</h3>
+                    </div>
+                    <div className="skills__container">
+                    {
+                        webSkills && (
+                            webSkills.map(item => (
+                                <div className="icon-text-container border scroll__fadein" key={item.id} 
+                                    data-color={item.color}
+                                    >
+                                        <div className="skill__header">
+                                            <div className="skill__icon" title={item.title} dataname={item.name} style={{background:item.bg}}>
+                                                {
+                                                    item.icon ?(
+                                                        <FontAwesomeIcon icon={item.icon} size='2x' style={{color:item.color}}/>
+                                                    ):(
+                                                        <img src={item.img} alt={item.title} />
+                                                    )
+                                                }
+                                            </div>
+                                            <div className="skill__content">
+                                                <h4 className='uppercase'>{item.title}</h4>
+                                            </div>
+                                        </div>
+                                        <div className="skill__description">
+                                            <p>
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                </div>
+                            ))
+                        )
+                    }
+                    </div>
+                </div>
                 <div className="skill skill__comm">
                     <div className="skill__header">
                         <h3>Kommunikation</h3>
-                        <p>[Small Description]</p>
+                        
                     </div>
                     <div className="skills__container">
                     {

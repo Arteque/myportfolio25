@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import Class from "./Project.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarAlt, faCircleInfo, faLandmark, faLanguage } from "@fortawesome/free-solid-svg-icons"

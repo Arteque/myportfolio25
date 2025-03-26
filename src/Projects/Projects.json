@@ -72,9 +72,9 @@
         }
       ],
       "lang": ["fr", "ar"],
-      "teaser": "Die Website des Kindergartens P'tit-Pont. Ich habe diese Website entworfen, mit HTML, CSS und JavaScript codiert und das Template in WordPress integriert!",
+      "teaser": "Diese Website des Kindergartens P'tit-Pont wurde von mir entworfen, anhand von HTML, CSS und JavaScript codiert und als Template in WordPress integriert.",
       "thumb": "/Projects/Ptit-pont/screenshot.png",
-      "tags": ["Wordpress"],
+      "tags": ["HTML", "Css", "Javascript", "Wordpress", "PHP"],
       "autor": ["Ahmed LEMSSIAH"]
     },
     {

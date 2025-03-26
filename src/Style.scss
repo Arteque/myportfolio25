@@ -32,10 +32,10 @@ $clrsDark:(
         400:hsla(216, 72%, 17%, 0.2),
         ),
     call:(
-        100:hsl(83, 87%, 50%),
-        200:hsl(83, 87%, 60%),
-        300:hsl(83, 87%, 70%),
-        400:hsl(83, 87%, 50%,0.2),
+        100:hsl(126, 56%, 53%),
+        200:hsl(126, 56%, 43%),
+        300:hsl(126, 56%, 33%),
+        400:hsla(126, 56%, 53%, 0.548),
         ),
     ntr:(
         100:hsl(260, 4%, 15%),
@@ -204,6 +204,7 @@ body[data-mode="dark"]{
     padding: 1rem;
     border-radius: 10px;
 }
+
 /*######################Animation#########################*/
 @supports (animation-timeline: view()){
     @media (prefers-reduced-motion: no-preference){
@@ -218,11 +219,26 @@ body[data-mode="dark"]{
                 scale: 1;
                 box-shadow: 0 0px 0px #00000000, 0 0px 0px #00000000;
             }
+           
+        }
+        @include lg{
+            @keyframes appear { 
+                0%{
+                    opacity: 0;
+                    scale: 1.4;
+                    box-shadow: 0 -170px 100px #00000050, 0 -50px 50px #00000070;
+                }
+                100%{
+                    opacity: 1;
+                    scale: 1;
+                    box-shadow: 0 0px 0px #00000000, 0 0px 0px #00000000;
+                }
+            }
         }
         .scroll__fadein{
             animation: appear linear;
             animation-timeline: view();
-            animation-range: entry 10% cover 25%;
+            animation-range: entry 10% cover 30%;
         }
 
 
@@ -475,15 +491,19 @@ body[data-mode="dark"]{
 header.section__header {
     padding: 1rem;
     color: var(--clr-txt-100);
-    background-color: var(--clr-ntr-400);
-    border-radius: 0 0 20px 20px;
+    background-color: var(--clr-bg-100);
+    // border-radius: 0 0 20px 20px;
     margin-block: 3rem 1rem;
+    position:sticky;
+    top: 26px;
+    z-index: 10;
+    border-inline: 1px solid var(--clr-bg-200);
 }
 .skills__container{
     @include mid{
         display: flex;
         flex-flow: row wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
         gap: 1rem;
         .icon-text-container{
             max-width: 350px;
@@ -539,7 +559,7 @@ header.section__header {
     border:1px solid var(--clr-bg-400);
     border-radius:10px;
     position: sticky;
-    top: 28px;
+    top: 74px;
     z-index: 100;
     background:var(--clr-bg-400);
     backdrop-filter: blur(15px);

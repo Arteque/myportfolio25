@@ -10,14 +10,13 @@ import Project from "../Components/Assets/Fragments/Project"
 import dateFormat from "../Tools/dateFormat"
 import ProjectListing from "../Projects/Projects.json"
 import Video from "../Components/Assets/Videos/Video"
-
+import SectionHeader from "../Components/Assets/Fragments/SectionHeader"
+import Contact from "../Components/Assets/Contact/Contact"
 const Start = () => {
-
-  const maxProject = 3
-  
 
 
   const [sortProjects, setSortProjects] = useState(ProjectListing)
+  const [maxProject, setMaxProject] = useState(3)
   const [projectsFilter, setProjectsfilter] = useState({
     sort:"datedown"
   })
@@ -84,6 +83,11 @@ const Start = () => {
   },[searchParams])
 
 
+  const showProjectHandler = (e) => {
+    e.preventDefault()
+    setMaxProject(prev => prev + 1)
+    maxProject >= sortProjects.length &&  e.target.parentElement.remove()
+  }
 
   return (
     <>
@@ -93,9 +97,10 @@ const Start = () => {
 
         <Section id="projects" classname="projects">
           <Wrapper>
-          <header className="section__header">
-            <h2>Projekte</h2>
-          </header>
+          <SectionHeader 
+            title1="Meine" 
+            title2="Projekte"
+            />
             <div className="projects__filter" >
               <FontAwesomeIcon icon={faFilter} size="1x"/>
               <ul className="filter__items" onClick={(e) => {clickedFilterHandler(e)}}>
@@ -158,15 +163,27 @@ const Start = () => {
                 }
             </div>
             <div className="call">
-              <button className="call__full">showMore</button>
+              <button className="call__full" onClick={showProjectHandler}>showMore</button>
             </div>
           </Wrapper>
         </Section>
+        <Section classname="contact" id='contact'>
+                <Wrapper>
+                   <SectionHeader 
+                      title1="Überzeugt?"
+                      title2="Kontaktieren Sie mich"
+                   />
+                   <Contact />
+                </Wrapper>
+        </Section>
+        {/*
+        [Later impl.]
         <Section classname="media-section" id="media-section">
                 <Wrapper>
                   <Video/>
                 </Wrapper>
         </Section>
+        */}
     </>
   )
 }
