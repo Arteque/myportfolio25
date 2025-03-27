@@ -1,3 +1,4 @@
+import ProjectTitle from "../Fragments/ProjectTitle"
 import Section from "../Fragments/Section"
 import SectionHeader from "../Fragments/SectionHeader"
 import Wrapper from "../Fragments/Wrapper"
@@ -7,7 +8,7 @@ const Services = () => {
   return (
     <Section classname="section__services" id="section__services">
         <Wrapper>
-            <SectionHeader title1="Erfinde, designe, kodiere" title2="&amp; REPEAT &#128257;" />
+            <SectionHeader title1="Erfinde, entwerfe, kodiere" title2="&amp; REPEAT" />
             {/* Card Start */}
             <div className={Class.services__cards}>
                 <div className={Class.service__card}>
@@ -26,7 +27,9 @@ const Services = () => {
                         </div>
                     </div>
                     <div className="card__body">
-                        <h3><span>Ideen</span>-<span className="underline txt-call-100 uppercase">Erfinder</span></h3>
+                        <ProjectTitle>
+                            <span> Ideen</span>-<span className="underline txt-call-100 uppercase">Erfinder</span>
+                        </ProjectTitle>
                         <p>
                             Ich bin immer auf der Suche nach den <strong>richtigen Ideen</strong>, den <strong>passenden Lösungen</strong> und den perfekten Mischungen... <br /> 
                             Wie ein Wahnsinniger im Labor des <strong className="txt-call-100">Webdesigns</strong>! <br />
@@ -58,7 +61,42 @@ const Services = () => {
                         </div>
                     </div>
                     <div className="card__body">
-                        <h3><span>Ideen</span>-<span className="underline txt-call-100 uppercase">Erfinder</span></h3>
+                        <ProjectTitle>
+                            <span>Pixel</span>-<span className="underline txt-call-100 uppercase">Artiste</span>
+                        </ProjectTitle>
+                        <p>
+                            Ich bin immer auf der Suche nach den <strong>richtigen Ideen</strong>, den <strong>passenden Lösungen</strong> und den perfekten Mischungen... <br /> 
+                            Wie ein Wahnsinniger im Labor des <strong className="txt-call-100">Webdesigns</strong>! <br />
+                            <strong className="txt-call-100">Pixel</strong>? Mein Elixier! <strong className="txt-call-100">Code</strong>? Mein geheimnisvolles Serum! <br />
+                            Jede <strong>Webseite</strong>, die ich erschaffe, ist eine Fusion aus Logik und Chaos – exakt berechnet, aber voller kreativer Explosionen! <br />
+                            MUAHAHA! 😈💻⚡ <br></br>
+                            ... Ja! Ich bin <small><small><small>42Jahre alte</small></small></small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {/* Card end */}
+            {/* Card Start */}
+            <div className={Class.services__cards}>
+                <div className={Class.service__card}>
+                    <div className={Class.card__header} >
+                        <div className={Class.room_img}>
+                            <img src="/Entwickler/cartoonDevRoom.jpeg" alt="Hintergrund Designzimmer" />
+                        </div>
+                        <div className={Class.header__main_image}>
+                            <img src="/Entwickler/EntwicklerAvatar.svg" alt="Erfinder à la Einstein" />
+                        </div>
+                        <div className={Class.header__assets_images}>
+                            <img src="/Entwickler/keyboard.svg" alt="Piplette" />
+                            <img src="/Entwickler/mouse.svg" alt="Malpinsel" />
+                            <img src="/Entwickler/screen.svg" alt="Orangefarbe" />
+                            <img src="/Entwickler/calendar.svg" alt="Farbpallette" />
+                        </div>
+                    </div>
+                    <div className="card__body">
+                        <ProjectTitle>
+                            <span>DOM</span>-<span className="underline txt-call-100 uppercase">Dompteur</span>
+                        </ProjectTitle>
                         <p>
                             Ich bin immer auf der Suche nach den <strong>richtigen Ideen</strong>, den <strong>passenden Lösungen</strong> und den perfekten Mischungen... <br /> 
                             Wie ein Wahnsinniger im Labor des <strong className="txt-call-100">Webdesigns</strong>! <br />

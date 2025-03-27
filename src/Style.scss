@@ -477,14 +477,15 @@ body[data-mode="dark"]{
 
 /*########### Skills ##############*/
 header.section__header {
-    // color: var(--clr-txt-100);
     background-color: var(--clr-bg-100);
-    // border-radius: 0 0 20px 20px;
     margin-block: 3rem 1rem;
     position:sticky;
     top: 26px;
     z-index: 555;
     border-inline: 1px solid var(--clr-bg-200);
+    h2{
+        font-size: 1rem;
+    }
 }
 .skills__container{
     @include mid{
@@ -547,7 +548,7 @@ header.section__header {
     border-block-start: transparent;
     border-radius: 0 0 10px 10px;
     position: sticky;
-    top: 89px;
+    top: 77px;
     z-index: 100;
     background: var(--clr-bg-400);
     backdrop-filter: blur(15px);

@@ -18,28 +18,14 @@
 }
 .project__head{
     margin-block: 1rem;
-    .project__title{
-        font-size: 1.5rem;
-        font-weight: 900;
-        color:var(--clr-txt-300);
-        margin-block: 0.2rem;
-        text-transform:uppercase;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        img{
-            max-width: 30px;
-            height: 30px;
-            // background:var(--clr-bg-200);
-            padding: 0.3rem;
-        }
-    }
+    
     .project__subtitle{
         font-size: 0.8rem;
         color:var(--clr-ntr-300);
         margin-block-end: 0.5rem;
     }
 }
+
 .icon{
     color: var(--clr-txt-400);
     transition: all 0.3s;

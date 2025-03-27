@@ -10,9 +10,8 @@
     width: 100%;
     .card__header{
         position:relative;
-        min-height: 50svh;
+        min-height: 60svh;
         width: 100%;
-        // max-width: 50svw;
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -36,8 +35,8 @@
         }
         .header__assets_images{
             position: absolute;
-            inset: 0;
-            animation: rotate 150s infinite linear;
+            inset: 10%;
+            animation: rotate 100s infinite linear;
             z-index: 150;
             img{
                 position: absolute;
