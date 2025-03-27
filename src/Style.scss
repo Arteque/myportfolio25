@@ -1,3 +1,13 @@
+@mixin mid{
+    @media screen and ( min-width: "768px" ){@content}
+};
+@mixin lg{
+    @media screen and ( min-width: "961px" ){@content}
+};
+@mixin xl{
+    @media screen and ( min-width: "1300px" ){@content}
+};
+
 $clrsLight:(
     txt:(
         100:hsl(216, 72%, 17%),
@@ -51,15 +61,6 @@ $clrsDark:(
         )
 );
 
-@mixin mid{
-    @media screen and ( min-width: "768px" ){@content}
-};
-@mixin lg{
-    @media screen and ( min-width: "961px" ){@content}
-};
-@mixin xl{
-    @media screen and ( min-width: "1300px" ){@content}
-};
 
 :root{
     @each $clr, $vls in $clrsLight{

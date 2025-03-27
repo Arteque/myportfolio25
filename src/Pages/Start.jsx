@@ -12,6 +12,7 @@ import ProjectListing from "../Projects/Projects.json"
 import Video from "../Components/Assets/Videos/Video"
 import SectionHeader from "../Components/Assets/Fragments/SectionHeader"
 import Contact from "../Components/Assets/Contact/Contact"
+import Services from "../Components/Assets/Services/Services"
 const Start = () => {
 
 
@@ -94,6 +95,8 @@ const Start = () => {
         <Hero />
 
         <Skills />
+
+        <Services />
 
         <Section id="projects" classname="projects">
           <Wrapper>

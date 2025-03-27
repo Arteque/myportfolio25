@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Root } from './Template/Root'
 import Start from './Pages/Start'
+import "./_mixin.scss"
 import "./Style.scss"
 
 const router = createBrowserRouter([{
