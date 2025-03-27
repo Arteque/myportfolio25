@@ -221,20 +221,7 @@ body[data-mode="dark"]{
             }
            
         }
-        @include lg{
-            @keyframes appear { 
-                0%{
-                    opacity: 0;
-                    scale: 1.4;
-                    box-shadow: 0 -170px 100px #00000050, 0 -50px 50px #00000070;
-                }
-                100%{
-                    opacity: 1;
-                    scale: 1;
-                    box-shadow: 0 0px 0px #00000000, 0 0px 0px #00000000;
-                }
-            }
-        }
+        
         .scroll__fadein{
             animation: appear linear;
             animation-timeline: view();
@@ -489,8 +476,7 @@ body[data-mode="dark"]{
 
 /*########### Skills ##############*/
 header.section__header {
-    padding: 1rem;
-    color: var(--clr-txt-100);
+    // color: var(--clr-txt-100);
     background-color: var(--clr-bg-100);
     // border-radius: 0 0 20px 20px;
     margin-block: 3rem 1rem;
@@ -552,18 +538,19 @@ header.section__header {
 /*########### Skills ##############*/
 /* ####### Filter ############## */
 .projects__filter{
-    display:flex;
+    display: flex;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    border:1px solid var(--clr-bg-400);
-    border-radius:10px;
+    border: 1px solid var(--clr-bg-200);
+    border-block-start: transparent;
+    border-radius: 0 0 10px 10px;
     position: sticky;
-    top: 74px;
+    top: 89px;
     z-index: 100;
-    background:var(--clr-bg-400);
+    background: var(--clr-bg-400);
     backdrop-filter: blur(15px);
-    box-shadow: 0 10px 10px #00000020;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1254901961);
      > svg{
         color: var(--clr-bg-300);
         cursor: not-allowed;

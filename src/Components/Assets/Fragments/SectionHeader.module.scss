@@ -1,0 +1,31 @@
+.section__header{
+    
+    .section__title{
+        padding: 1rem;
+        position: relative;
+        width: fit-content;
+        &::after{
+            position: absolute;
+            content: "";
+            height: 100%;
+            inset-block-start: 0;
+            inset-inline: 0;
+            background-color: var(--clr-call-200);
+            z-index: 0;
+            pointer-events: none;
+            mix-blend-mode: darken;
+            animation: scrollBarWidth ease-in-out;
+            animation-timeline: view();
+            animation-range: entry 0% cover 100%;
+        }
+    }
+}
+
+@keyframes scrollBarWidth {
+    0%{
+        right: 100%;
+    }
+    100%{
+        right: 0;
+    }
+}
