@@ -1,21 +1,58 @@
+@use '../../../Vars/mixin';
 .services__cards{
-    padding: 1rem;
-    display:flex;
-    flex-flow: row wrap;
-    gap: var(--gap);
-    justify-content: center;
+    @include mixin.mid{
+        &:nth-child(odd){
+            .card__header{
+                grid-column:2;
+            }
+            .card__body{
+                grid-column:1;
+                grid-row:1;
+            }
+        }
+    }
     
+    @include mixin.lg{
+        &:nth-child(odd){
+            .service__card{
+                grid-template-columns:1fr 2fr;
+            }
+            .card__header{
+                grid-column:2;
+            }
+            .card__body{
+                grid-column:1;
+                grid-row:1;
+            }
+            
+        }
+    }
+
 }
 .service__card{
     width: 100%;
+    margin-block-end: 5rem;
+    @include mixin.mid{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:1fr;
+        gap:var(--gap);
+    }
+    @include mixin.lg{
+        grid-template-columns: 2fr 1fr;
+    }
     .card__header{
         position:relative;
-        min-height: 60svh;
+        height: 60svh;
+        max-height: 400px;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: flex-end;
         overflow: hidden;
+        @include mixin.lg{
+            max-height: 500px;
+        }
         .room_img{
             position: absolute;
             inset: 0;
@@ -30,8 +67,11 @@
         }
         .header__main_image{
             width: 70%;
-            max-width: 400px;
+            max-width: 280px;
             z-index: 20;
+            @include mixin.lg{
+                max-width: 300px;
+            }
         }
         .header__assets_images{
             position: absolute;

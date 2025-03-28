@@ -1,3 +1,4 @@
+import ProjectText from "../Fragments/ProjectText"
 import ProjectTitle from "../Fragments/ProjectTitle"
 import Section from "../Fragments/Section"
 import SectionHeader from "../Fragments/SectionHeader"
@@ -11,7 +12,7 @@ const Services = () => {
             <SectionHeader title1="Erfinde, entwerfe, kodiere" title2="&amp; REPEAT" />
             {/* Card Start */}
             <div className={Class.services__cards}>
-                <div className={Class.service__card}>
+                <div className={`border ${Class.service__card}`}>
                     <div className={Class.card__header} >
                         <div className={Class.room_img}>
                             <img src="/Erfinder/cartoonFinderRoom.jpeg" alt="Labor Cartoon style" />
@@ -26,18 +27,20 @@ const Services = () => {
                             <img src="/Erfinder/Mikroskop.svg" alt="Mikroskop" />
                         </div>
                     </div>
-                    <div className="card__body">
+                    <div className={Class.card__body}>
                         <ProjectTitle>
-                            <span> Ideen</span>-<span className="underline txt-call-100 uppercase">Erfinder</span>
+                            <span> Ideen</span>-<span className="underline txt-txt-100 uppercase">Erfinder</span>
                         </ProjectTitle>
-                        <p>
-                            Ich bin immer auf der Suche nach den <strong>richtigen Ideen</strong>, den <strong>passenden Lösungen</strong> und den perfekten Mischungen... <br /> 
-                            Wie ein Wahnsinniger im Labor des <strong className="txt-call-100">Webdesigns</strong>! <br />
-                            <strong className="txt-call-100">Pixel</strong>? Mein Elixier! <strong className="txt-call-100">Code</strong>? Mein geheimnisvolles Serum! <br />
-                            Jede <strong>Webseite</strong>, die ich erschaffe, ist eine Fusion aus Logik und Chaos – exakt berechnet, aber voller kreativer Explosionen! <br />
-                            MUAHAHA! 😈💻⚡ <br></br>
-                            ... Ja! Ich bin <small><small><small>42Jahre alte</small></small></small>
-                        </p>
+                        <ProjectText>
+                            <p>
+                                Ich bin immer auf der Suche nach den <strong>richtigen Ideen</strong>, den <strong>passenden Lösungen</strong> und den perfekten Mischungen... <br /> 
+                                Wie ein Wahnsinniger im Labor des <strong className="txt-txt-200">Webdesigns</strong>! <br />
+                                <strong className="txt-txt-200">Pixel</strong>? Mein Elixier! <strong className="txt-txt-200">Code</strong>? Mein geheimnisvolles Serum! <br />
+                                Jede <strong>Webseite</strong>, die ich erschaffe, ist eine Fusion aus Logik und Chaos – exakt berechnet, aber voller kreativer Explosionen! <br />
+                                MUAHAHA! 😈💻⚡ <br></br>
+                                ... Ja! Ich bin <small><small><small>42Jahre alte</small></small></small>
+                            </p>
+                        </ProjectText>
                     </div>
                 </div>
             </div>
@@ -45,7 +48,7 @@ const Services = () => {
 
             {/* Card Start */}
             <div className={Class.services__cards}>
-                <div className={Class.service__card}>
+                <div className={`border ${Class.service__card}`}>
                     <div className={Class.card__header} >
                         <div className={Class.room_img}>
                             <img src="/Designer/cartoonDesignerRoom.jpeg" alt="Hintergrund Designzimmer" />
@@ -60,25 +63,27 @@ const Services = () => {
                             <img src="/Designer/colorpalette.svg" alt="Farbpallette" />
                         </div>
                     </div>
-                    <div className="card__body">
+                    <div className={Class.card__body}>
                         <ProjectTitle>
-                            <span>Pixel</span>-<span className="underline txt-call-100 uppercase">Artiste</span>
+                            <span>Pixel</span>-<span className="underline txt-txt-100 uppercase">Artiste</span>
                         </ProjectTitle>
-                        <p>
-                            Ich bin immer auf der Suche nach den <strong>richtigen Ideen</strong>, den <strong>passenden Lösungen</strong> und den perfekten Mischungen... <br /> 
-                            Wie ein Wahnsinniger im Labor des <strong className="txt-call-100">Webdesigns</strong>! <br />
-                            <strong className="txt-call-100">Pixel</strong>? Mein Elixier! <strong className="txt-call-100">Code</strong>? Mein geheimnisvolles Serum! <br />
-                            Jede <strong>Webseite</strong>, die ich erschaffe, ist eine Fusion aus Logik und Chaos – exakt berechnet, aber voller kreativer Explosionen! <br />
-                            MUAHAHA! 😈💻⚡ <br></br>
-                            ... Ja! Ich bin <small><small><small>42Jahre alte</small></small></small>
-                        </p>
+                        <ProjectText>
+                            <p>
+                                Ich bin immer auf der Suche nach den <strong>richtigen Ideen</strong>, den <strong>passenden Lösungen</strong> und den perfekten Mischungen... <br /> 
+                                Wie ein Wahnsinniger im Labor des <strong className="txt-call-100">Webdesigns</strong>! <br />
+                                <strong className="txt-call-100">Pixel</strong>? Mein Elixier! <strong className="txt-call-100">Code</strong>? Mein geheimnisvolles Serum! <br />
+                                Jede <strong>Webseite</strong>, die ich erschaffe, ist eine Fusion aus Logik und Chaos – exakt berechnet, aber voller kreativer Explosionen! <br />
+                                MUAHAHA! 😈💻⚡ <br></br>
+                                ... Ja! Ich bin <small><small><small>42Jahre alte</small></small></small>
+                            </p>
+                        </ProjectText>
                     </div>
                 </div>
             </div>
             {/* Card end */}
             {/* Card Start */}
             <div className={Class.services__cards}>
-                <div className={Class.service__card}>
+                <div className={`border ${Class.service__card}`}>
                     <div className={Class.card__header} >
                         <div className={Class.room_img}>
                             <img src="/Entwickler/cartoonDevRoom.jpeg" alt="Hintergrund Designzimmer" />
@@ -93,18 +98,20 @@ const Services = () => {
                             <img src="/Entwickler/calendar.svg" alt="Farbpallette" />
                         </div>
                     </div>
-                    <div className="card__body">
+                    <div className={Class.card__body}>
                         <ProjectTitle>
-                            <span>DOM</span>-<span className="underline txt-call-100 uppercase">Dompteur</span>
+                            <span>DOM</span>-<span className="underline txt-txt-100 uppercase">Dompteur</span>
                         </ProjectTitle>
-                        <p>
-                            Ich bin immer auf der Suche nach den <strong>richtigen Ideen</strong>, den <strong>passenden Lösungen</strong> und den perfekten Mischungen... <br /> 
-                            Wie ein Wahnsinniger im Labor des <strong className="txt-call-100">Webdesigns</strong>! <br />
-                            <strong className="txt-call-100">Pixel</strong>? Mein Elixier! <strong className="txt-call-100">Code</strong>? Mein geheimnisvolles Serum! <br />
-                            Jede <strong>Webseite</strong>, die ich erschaffe, ist eine Fusion aus Logik und Chaos – exakt berechnet, aber voller kreativer Explosionen! <br />
-                            MUAHAHA! 😈💻⚡ <br></br>
-                            ... Ja! Ich bin <small><small><small>42Jahre alte</small></small></small>
-                        </p>
+                        <ProjectText>
+                            <p>
+                                Ich bin immer auf der Suche nach den <strong>richtigen Ideen</strong>, den <strong>passenden Lösungen</strong> und den perfekten Mischungen... <br /> 
+                                Wie ein Wahnsinniger im Labor des <strong className="txt-call-100">Webdesigns</strong>! <br />
+                                <strong className="txt-call-100">Pixel</strong>? Mein Elixier! <strong className="txt-call-100">Code</strong>? Mein geheimnisvolles Serum! <br />
+                                Jede <strong>Webseite</strong>, die ich erschaffe, ist eine Fusion aus Logik und Chaos – exakt berechnet, aber voller kreativer Explosionen! <br />
+                                MUAHAHA! 😈💻⚡ <br></br>
+                                ... Ja! Ich bin <small><small><small>42Jahre alte</small></small></small>
+                            </p>
+                        </ProjectText>
                     </div>
                 </div>
             </div>

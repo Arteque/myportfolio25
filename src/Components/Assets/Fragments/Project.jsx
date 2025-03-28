@@ -2,6 +2,7 @@ import Class from "./Project.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCalendarAlt, faCircleInfo, faLandmark, faLanguage } from "@fortawesome/free-solid-svg-icons"
 import ProjectTitle from "./ProjectTitle"
+import ProjectText from "./ProjectText"
 
 const Project = ({img, title, content, tags, urls, date, autor, subtitle, language, imgUrlLiveWebsite}) => {
 
@@ -46,20 +47,18 @@ const Project = ({img, title, content, tags, urls, date, autor, subtitle, langua
               {tags}
            </ul>
         </header>
-        <div className={`${Class.content}`}>
-          
-           <p>
-             <FontAwesomeIcon icon={faCircleInfo} /> {content}
-           </p>
-           {
-            language && (
-              <p className={Class.projectdate}>
-                {language}   
-              </p>
-            )
-          }
-           
-        </div>
+        <ProjectText>
+            <p>
+              <FontAwesomeIcon icon={faCircleInfo} /> {content}
+            </p>
+            {
+              language && (
+                <p className={Class.projectdate}>
+                  {language}   
+                </p>
+              )
+            }
+        </ProjectText>
     </article>
   )
 }

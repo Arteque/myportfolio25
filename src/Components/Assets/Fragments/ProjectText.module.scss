@@ -1,0 +1,24 @@
+.content{
+    p{
+        font-size: 0.8rem;
+        letter-spacing: -0.01ch;
+        opacity: 0;
+        line-height: 3rem;
+        scrollbar-width: 10px;
+        padding-inline-end: 1rem;
+        animation: fideinFromBottom linear forwards;
+        animation-timeline: view();
+        animation-range: 20svh cover 50svh;
+    }
+}
+@supports (animation-timeline: view()){
+    @media (prefers-reduced-motion: no-preference){
+        @keyframes fideinFromBottom{
+            to{
+                opacity: 1;
+                line-height: 1.8rem;  
+            }
+            
+        }
+    }
+}
