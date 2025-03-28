@@ -444,7 +444,10 @@ header.section__header {
     z-index: 555;
     border-inline: 1px solid var(--clr-bg-200);
     h2{
-        font-size: 1rem;
+        font-size: 1.5rem;
+        @include mixin.mid{
+            font-size: 2.24rem;
+        }
     }
 }
 .skills__container{
