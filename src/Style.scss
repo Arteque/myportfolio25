@@ -51,6 +51,7 @@ html, body{
   background-color:var(--clr-bg-100);
   color: var(--clr-txt-100);
   transition: all 0.5s;
+  scroll-behavior: smooth;
 }
 
 
@@ -154,6 +155,8 @@ body[data-mode="dark"]{
             to{
                 opacity: 1;
                 scale: 1;
+                filter:blur(0) brightness(1) grayscale(0);
+                transform: perspective(3000px) rotatex(0);
                 box-shadow: 0 0px 0px #00000000, 0 0px 0px #00000000;
             }
            
@@ -161,10 +164,12 @@ body[data-mode="dark"]{
         .scroll__fadein{
             opacity: 0;
             scale: 1.1;
+            filter:blur(2px) brightness(10) grayscale(1);
+            transform: perspective(3000px) rotatex(100deg);
             box-shadow: 0 -170px 100px #00000050, 0 -50px 50px #00000070;
-            animation: appear linear forwards;
+            animation: appear ease-out forwards;
             animation-timeline: view();
-            animation-range: entry 10% cover 30%;
+            animation-range: entry 0% cover 50%;
         }
 
 

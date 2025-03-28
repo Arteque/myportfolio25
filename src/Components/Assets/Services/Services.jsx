@@ -69,12 +69,7 @@ const Services = () => {
                         </ProjectTitle>
                         <ProjectText>
                             <p>
-                                Ich bin immer auf der Suche nach den <strong>richtigen Ideen</strong>, den <strong>passenden Lösungen</strong> und den perfekten Mischungen... <br /> 
-                                Wie ein Wahnsinniger im Labor des <strong className="txt-call-100">Webdesigns</strong>! <br />
-                                <strong className="txt-call-100">Pixel</strong>? Mein Elixier! <strong className="txt-call-100">Code</strong>? Mein geheimnisvolles Serum! <br />
-                                Jede <strong>Webseite</strong>, die ich erschaffe, ist eine Fusion aus Logik und Chaos – exakt berechnet, aber voller kreativer Explosionen! <br />
-                                MUAHAHA! 😈💻⚡ <br></br>
-                                ... Ja! Ich bin <small><small><small>42Jahre alte</small></small></small>
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus laborum porro veniam quas ducimus corporis illo non perferendis dolor. 
                             </p>
                         </ProjectText>
                     </div>
