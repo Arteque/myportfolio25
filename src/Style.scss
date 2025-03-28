@@ -155,21 +155,39 @@ body[data-mode="dark"]{
             to{
                 opacity: 1;
                 scale: 1;
-                filter:blur(0) brightness(1) grayscale(0);
-                transform: perspective(3000px) rotatex(0);
+                filter:blur(0) brightness(1);
+                transform: perspective(1000px) rotatex(0) translateY(0);
                 box-shadow: 0 0px 0px #00000000, 0 0px 0px #00000000;
             }
            
         }
+        @include mixin.mid{
+            @keyframes appear {
+            
+                to{
+                    opacity: 1;
+                    scale: 1;
+                    filter:blur(0) brightness(1);
+                    transform:translateY(0);
+                    box-shadow: 0 0px 0px #00000000, 0 0px 0px #00000000;
+                }
+               
+            }
+        }
         .scroll__fadein{
             opacity: 0;
             scale: 1.1;
-            filter:blur(2px) brightness(10) grayscale(1);
-            transform: perspective(3000px) rotatex(100deg);
-            box-shadow: 0 -170px 100px #00000050, 0 -50px 50px #00000070;
-            animation: appear ease-out forwards;
+            filter:blur(1px) brightness(10);
+            transform: perspective(3000px) rotatex(50deg) translateY(10px);
+            box-shadow: 0 -170px 100px #000000, 0 -50px 20px #00000050;
+            animation: appear cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
             animation-timeline: view();
-            animation-range: entry 0% cover 50%;
+            animation-range: entry 5% cover 35%;
+            transition: all 2s;
+            @include mixin.mid{
+                scale: 1.2;
+                transform:translateY(10px);
+            }
         }
 
 

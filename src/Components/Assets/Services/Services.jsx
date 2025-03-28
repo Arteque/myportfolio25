@@ -25,7 +25,7 @@ const Services = () => {
                             <img src="/Erfinder/LaborMischFlasche1.svg" alt="Labor Mischflasche" />
                             <img src="/Erfinder/Element 3.svg" alt="Labor Mischflasche" />
                             <img src="/Erfinder/Mikroskop.svg" alt="Mikroskop" />
-                        </div>
+                        </div> 
                     </div>
                     <div className={Class.card__body}>
                         <ProjectTitle>
@@ -68,8 +68,12 @@ const Services = () => {
                             <span>Pixel</span>-<span className="underline txt-txt-100 uppercase">Artiste</span>
                         </ProjectTitle>
                         <ProjectText>
+                            
                             <p>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus laborum porro veniam quas ducimus corporis illo non perferendis dolor. 
+                                <q> 
+                                    Ich träume von meinen Gemälden und dann male ich meine Träume. 
+                                </q> – Dalí🎨✨ <br />
+                            Genauso ist es mit <strong>Webdesign</strong>! Erst träumen wir, dann <strong>designen wir</strong> – und manchmal schmilzt <strong>das Layout</strong> dahin wie eine Dalí-Uhr. 😅 Doch mit klarem Konzept, guter Recherche und einem Hauch Magie 🎭 wird aus jeder Website ein <strong>surreales Meisterwerk</strong>. 🚀
                             </p>
                         </ProjectText>
                     </div>
@@ -98,14 +102,11 @@ const Services = () => {
                             <span>DOM</span>-<span className="underline txt-txt-100 uppercase">Dompteur</span>
                         </ProjectTitle>
                         <ProjectText>
-                            <p>
-                                Ich bin immer auf der Suche nach den <strong>richtigen Ideen</strong>, den <strong>passenden Lösungen</strong> und den perfekten Mischungen... <br /> 
-                                Wie ein Wahnsinniger im Labor des <strong className="txt-call-100">Webdesigns</strong>! <br />
-                                <strong className="txt-call-100">Pixel</strong>? Mein Elixier! <strong className="txt-call-100">Code</strong>? Mein geheimnisvolles Serum! <br />
-                                Jede <strong>Webseite</strong>, die ich erschaffe, ist eine Fusion aus Logik und Chaos – exakt berechnet, aber voller kreativer Explosionen! <br />
-                                MUAHAHA! 😈💻⚡ <br></br>
-                                ... Ja! Ich bin <small><small><small>42Jahre alte</small></small></small>
-                            </p>
+                            <p>Der Browser ist eine wilde Bestie – unberechenbar, launisch und jederzeit bereit, aus der Manege zu brechen! 🦁🔥 Doch keine Sorge, als erfahrener Webdompteur zähme ich ihn mit präzisem Code und geschmeidigen Animationen.</p>  
+
+                            <p><strong>HTML</strong>? Das ist die Peitsche, die Struktur gibt! <strong>CSS</strong>? Der elegante Tanz, der die Bestie in Form bringt! <strong>JavaScript</strong>? Die Magie, die sie zum Springen bringt! 🎩✨ Doch wehe, du gibst ihm fehlerhaften Code – dann brüllt er mit Fehlermeldungen und zerreißt dein Design in Stücke! 😱</p>  
+
+                            <p>Aber keine Angst! Mit Disziplin, Geduld und einem scharfen Blick bringe ich <strong>Chrome</strong>, <strong>Firefox</strong> & <strong>Safari</strong> dazu, genau das zu tun, was sie sollen – eine perfekte Show liefern! 🎪🚀</p>
                         </ProjectText>
                     </div>
                 </div>
