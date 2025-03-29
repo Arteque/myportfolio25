@@ -19,7 +19,7 @@
             color:  var(--clr-#{$clr}-#{$cl});
         }
         .bg-#{$clr}-#{$cl}{
-            color:  var(--clr-#{$clr}-#{$cl});
+            background:  var(--clr-#{$clr}-#{$cl});
         }
     }
 }
@@ -35,7 +35,7 @@ body[data-mode="dark"]{
                 color:  var(--clr-#{$clr}-#{$cl});
             }
             .bg-#{$clr}-#{$cl}{
-                color:  var(--clr-#{$clr}-#{$cl});
+                background:  var(--clr-#{$clr}-#{$cl});
             }
         }
     }
@@ -147,6 +147,16 @@ body[data-mode="dark"]{
     border-radius: 10px;
 }
 
+
+.grid--2cols{
+    @include mixin.mid{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--gap);
+        justify-items: end;
+        align-items: start;
+    }
+}
 /*######################Animation#########################*/
 @supports (animation-timeline: view()){
     @media (prefers-reduced-motion: no-preference){
@@ -208,6 +218,19 @@ body[data-mode="dark"]{
             animation-range: 25% cover 50%;
         }
         
+        .blur_fadein{
+            filter: blur(10px);
+            opacity: 0;
+            animation: blurfadein linear forwards;
+            animation-timeline: view();
+            animation-range: entry 10% cover 25%;
+        }
+        @keyframes blurfadein {
+            to{
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
         
     }
 }

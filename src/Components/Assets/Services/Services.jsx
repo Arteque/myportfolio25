@@ -28,8 +28,8 @@ const Services = () => {
                         </div> 
                     </div>
                     <div className={Class.card__body}>
-                        <ProjectTitle>
-                            <span> Ideen</span>-<span className="underline txt-txt-100 uppercase">Erfinder</span>
+                        <ProjectTitle >
+                            <span className="txt-txt-100"> Ideen</span>-<span className="underline txt-txt-200 bg-call-400 uppercase">Erfinder</span>
                         </ProjectTitle>
                         <ProjectText>
                             <p>
@@ -64,8 +64,8 @@ const Services = () => {
                         </div>
                     </div>
                     <div className={Class.card__body}>
-                        <ProjectTitle>
-                            <span>Pixel</span>-<span className="underline txt-txt-100 uppercase">Artiste</span>
+                        <ProjectTitle >
+                            <span className="txt-txt-100">Pixel</span>-<span className="underline txt-txt-200 bg-call-400 uppercase">Artiste</span>
                         </ProjectTitle>
                         <ProjectText>
                             
@@ -73,7 +73,8 @@ const Services = () => {
                                 <q> 
                                     Ich träume von meinen Gemälden und dann male ich meine Träume. 
                                 </q> – Dalí🎨✨ <br />
-                            Genauso ist es mit <strong>Webdesign</strong>! Erst träumen wir, dann <strong>designen wir</strong> – und manchmal schmilzt <strong>das Layout</strong> dahin wie eine Dalí-Uhr. 😅 Doch mit klarem Konzept, guter Recherche und einem Hauch Magie 🎭 wird aus jeder Website ein <strong>surreales Meisterwerk</strong>. 🚀
+                            Genauso ist es mit <strong>Webdesign</strong>! Erst träumen wir, dann <strong>designen wir</strong> – und manchmal schmilzt <strong>das Layout</strong> dahin wie eine "Dalí-Uhr" - <i><samp>#u got the ref.?</samp></i> -. 😅 <br />
+                            Doch mit klarem Konzept, guter Recherche und einem Hauch Magie 🎭 wird aus jeder Website ein <strong>surreales Meisterwerk</strong>. 🚀
                             </p>
                         </ProjectText>
                     </div>
@@ -98,15 +99,13 @@ const Services = () => {
                         </div>
                     </div>
                     <div className={Class.card__body}>
-                        <ProjectTitle>
-                            <span>DOM</span>-<span className="underline txt-txt-100 uppercase">Dompteur</span>
+                        <ProjectTitle >
+                            <span className="txt-txt-100">DOM</span>-<span className="underline txt-txt-200 bg-call-400 uppercase">Dompteur</span>
                         </ProjectTitle>
                         <ProjectText>
-                            <p>Der Browser ist eine wilde Bestie – unberechenbar, launisch und jederzeit bereit, aus der Manege zu brechen! 🦁🔥 Doch keine Sorge, als erfahrener Webdompteur zähme ich ihn mit präzisem Code und geschmeidigen Animationen.</p>  
-
-                            <p><strong>HTML</strong>? Das ist die Peitsche, die Struktur gibt! <strong>CSS</strong>? Der elegante Tanz, der die Bestie in Form bringt! <strong>JavaScript</strong>? Die Magie, die sie zum Springen bringt! 🎩✨ Doch wehe, du gibst ihm fehlerhaften Code – dann brüllt er mit Fehlermeldungen und zerreißt dein Design in Stücke! 😱</p>  
-
-                            <p>Aber keine Angst! Mit Disziplin, Geduld und einem scharfen Blick bringe ich <strong>Chrome</strong>, <strong>Firefox</strong> & <strong>Safari</strong> dazu, genau das zu tun, was sie sollen – eine perfekte Show liefern! 🎪🚀</p>
+                        <p>Als <strong>Web</strong>dompteur zähme ich mit <strong>präzisem Code</strong> die <strong>Browser</strong>-Bestie.&#129409; &#128526;</p> 
+                        <p>Mit Disziplin, Geduld und einem scharfen Blick bringe ich <strong>Chrome</strong>, <strong>Firefox</strong> & <strong>Safari</strong> dazu, genau das zu tun, was sie sollen – eine perfekte Show liefern! 🎪🚀 &#129299;</p> 
+                        <p>Doch wenn es um den Browser geht, dessen Name nicht genannt werden darf... <small></small><small></small><samp><code>Expl***</code></samp><small></small><small></small> &#128128; ? Da sind selbst meine Künste machtlos! 😅</p>
                         </ProjectText>
                     </div>
                 </div>

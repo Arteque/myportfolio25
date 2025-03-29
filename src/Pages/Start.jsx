@@ -13,6 +13,7 @@ import Video from "../Components/Assets/Videos/Video"
 import SectionHeader from "../Components/Assets/Fragments/SectionHeader"
 import Contact from "../Components/Assets/Contact/Contact"
 import Services from "../Components/Assets/Services/Services"
+import About from "../Components/Assets/About/About"
 const Start = () => {
 
 
@@ -176,7 +177,10 @@ const Start = () => {
                       title1="Überzeugt?"
                       title2="Kontaktieren Sie mich"
                    />
-                   <Contact />
+                   <div className="section_content grid--2cols">
+                    <About />
+                    <Contact />
+                   </div>
                 </Wrapper>
         </Section>
         {/*

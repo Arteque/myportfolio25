@@ -1,8 +1,10 @@
+@use '../../../Vars/mixin';
 .form{
     background:var(--clr-bg-200);
     padding: 2rem 1rem;
-    max-width: 450px;
+    width: 100%;
     border-radius: 10px;
+
     fieldset{
         border: 1px solid var(--clr-bg-300);
         padding: 1rem;
