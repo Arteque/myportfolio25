@@ -255,18 +255,6 @@ body[data-mode="dark"]{
         gap: var(--mid_gap);
 
     }
-    .main-header__logo{
-        margin-inline-end: auto;
-        display:flex;
-        gap: 0.5rem;
-        align-items:center;
-        img{
-            width: 20px;
-        }
-        h1{
-            font-size: .8rem;
-        }
-    }
 }
 
 

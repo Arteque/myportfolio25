@@ -15,6 +15,10 @@
     position:sticky;
     top: 100px;
     z-index: 10;
+    @include mixin.mid{
+        position: unset;
+        top: unset;
+    }
     img{
         display: block;
         transform: translateY(20px);

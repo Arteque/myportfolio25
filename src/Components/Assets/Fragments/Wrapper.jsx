@@ -1,6 +1,6 @@
-function Wrapper({children}) {
+function Wrapper({children, classname}) {
   return (
-    <div className="wrapper">
+    <div className={`wrapper ${classname?classname:null}`}>
       {children}
     </div>
   )

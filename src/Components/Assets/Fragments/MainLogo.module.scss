@@ -1,0 +1,17 @@
+.main_logo{
+    margin-inline-end: auto;
+    display:flex;
+    gap: 0.5rem;
+    align-items:center;
+    img{
+        width: 20px;
+    }
+    h1{
+        font-size: .8rem;
+    }
+}
+footer{
+    .main_logo{
+        filter:brightness(100);
+    }
+}

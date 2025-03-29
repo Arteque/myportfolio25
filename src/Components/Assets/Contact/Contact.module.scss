@@ -75,4 +75,10 @@
             }
         }
     }
+    .name_container {
+        @include mixin.mid{
+            display: flex;
+            gap: var(--mid_gap);
+        }
+    }
 }

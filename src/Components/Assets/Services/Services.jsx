@@ -4,6 +4,7 @@ import Section from "../Fragments/Section"
 import SectionHeader from "../Fragments/SectionHeader"
 import Wrapper from "../Fragments/Wrapper"
 import Class from './Services.module.scss'
+import Age from "../../../Tools/Age"
 
 const Services = () => {
   return (
@@ -38,7 +39,7 @@ const Services = () => {
                                 <strong className="txt-txt-200">Pixel</strong>? Mein Elixier! <strong className="txt-txt-200">Code</strong>? Mein geheimnisvolles Serum! <br />
                                 Jede <strong>Webseite</strong>, die ich erschaffe, ist eine Fusion aus Logik und Chaos – exakt berechnet, aber voller kreativer Explosionen! <br />
                                 MUAHAHA! 😈💻⚡ <br></br>
-                                ... Ja! Ich bin <small><small><small>42Jahre alte</small></small></small>
+                                ... Ja! Ich bin <small><small><small>{Age()} Jahre alt</small></small></small>
                             </p>
                         </ProjectText>
                     </div>

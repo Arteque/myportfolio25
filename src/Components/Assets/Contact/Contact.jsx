@@ -4,8 +4,9 @@ import {faMessage } from "@fortawesome/free-solid-svg-icons"
 
 const Contact = () => {
   return (
-    <>
-      <form className={Class.form}>
+    <div className={Class.form}>
+      <h3>Kontaktformular</h3>
+      <form>
         <div className="personal">
           <fieldset>
             <legend>Persönliche Informationen</legend>
@@ -20,7 +21,7 @@ const Contact = () => {
               </select>
             </div>
 
-            <div className="name-container">
+            <div className={Class.name_container}>
               <div className="vorname-container">
                 <label className="vorname" htmlFor="vorname" >
                   <span>Vorname*:</span>
@@ -80,7 +81,7 @@ const Contact = () => {
             </button>
         </div>
       </form>
-    </>
+    </div>
   )
 }
 

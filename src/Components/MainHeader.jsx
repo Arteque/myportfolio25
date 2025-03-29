@@ -3,6 +3,8 @@ import { faSun, faMoon  } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faMastodon, faYoutube, faGithub} from "@fortawesome/free-brands-svg-icons"
 import { useEffect, useState} from "react"
+import MainLogo from "./Assets/Fragments/MainLogo"
+import Wrapper from "./Assets/Fragments/Wrapper"
 
 const MainHeader = () => {
     /*
@@ -61,11 +63,8 @@ const MainHeader = () => {
 
     return (
     <header className="main-header">
-        <div className="wrapper">
-            <div className="main-header__logo">
-                <img src="./logo.svg" alt="Ahmed Lemssiah" />
-                <h1 className="website-title">Ahmed <span className="uppercase">Lemssiah</span></h1>
-            </div>
+        <Wrapper>
+            <MainLogo position="header" />
             
             <ul className="main-header__socials">
                 <li>
@@ -98,7 +97,7 @@ const MainHeader = () => {
                     <FontAwesomeIcon icon={faMoon} className="moon" />
                 </button>
             </div>
-        </div>
+        </Wrapper>
     </header>
   )
 }
