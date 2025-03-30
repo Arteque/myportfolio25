@@ -9,11 +9,12 @@ import { Link, useSearchParams } from "react-router-dom"
 import Project from "../Components/Assets/Fragments/Project"
 import dateFormat from "../Tools/dateFormat"
 import ProjectListing from "../Projects/Projects.json"
-import Video from "../Components/Assets/Videos/Video"
+// import Video from "../Components/Assets/Videos/Video"
 import SectionHeader from "../Components/Assets/Fragments/SectionHeader"
 import Contact from "../Components/Assets/Contact/Contact"
 import Services from "../Components/Assets/Services/Services"
 import About from "../Components/Assets/About/About"
+
 const Start = () => {
 
 
