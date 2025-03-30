@@ -49,6 +49,17 @@
         resize: vertical;
         max-lines: 3;
     }
+    .discl_container{
+        display: flex;
+        align-items:flex-start;
+        gap: var(--gap);
+        input{
+            height: unset;
+            padding: unset;
+            width: unset;
+            margin-block-start: 7px;
+        }
+    }
     button{
         display: block;
         margin-inline: auto;

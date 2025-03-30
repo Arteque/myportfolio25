@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MainLogo from "./Assets/Fragments/MainLogo";
 import Wrapper from "./Assets/Fragments/Wrapper";
 import Class from "./MainFooter.module.scss";
-import { faCalendarAlt, faClock, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 
 const MainFooter = () => {
   const date = new Date().toLocaleDateString("de-DE", { year: "numeric" });
@@ -13,13 +13,13 @@ const MainFooter = () => {
           <p>
             <small>
               <samp>
-              <FontAwesomeIcon icon={faCalendarAlt} /> {date}  | by:
+             by:
               </samp>
             </small>
           </p>
           <MainLogo position="footer" />
           <p>
-            <samp>with &#129505; </samp>
+            <small>with &#129505;</small> | <small><samp> <FontAwesomeIcon icon={faCalendarAlt} /> {date}</samp></small>
           </p>
         </Wrapper>
       </div>

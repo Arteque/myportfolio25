@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faSun, faMoon, faSmile, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -12,7 +12,7 @@ import MainLogo from "./Assets/Fragments/MainLogo";
 import Wrapper from "./Assets/Fragments/Wrapper";
 import { toast } from "react-toastify";
 import ToastLayout from "./Assets/ToastLayout/ToastLayout";
-import ToastSetup from "./Assets/ToastLayout/ToastSetup";
+import { ToastSetup } from "../Tools/ToastSetup";
 
 const MainHeader = () => {
   /*
@@ -51,19 +51,9 @@ const MainHeader = () => {
       return localStorage.getItem("themeMode") == "dark" ? true : false;
     });
 
-    toast.success(<ToastLayout message={`${colorMode ? "Lightmode" : "Darkmode"} ist aktiv!`} />,
-      {
-        icon: "🌒",
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: false,
-        theme: `${clrMode}`,
-      }
-    );
+   
+
+    ToastSetup("success", <FontAwesomeIcon icon={faThumbsUp} color="var(--txt-sub-100)"/>, 2000, false, false, false, false, clrMode, <ToastLayout message={`${colorMode ? "Lightmode" : "Darkmode"} ist aktiv!`} />)
     
     
   };

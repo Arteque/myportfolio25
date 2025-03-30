@@ -1,88 +1,90 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Class from "./Contact.module.scss"
-import {faMessage } from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react";
+import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Class from "./Contact.module.scss";
+import { faMessage } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    anrede: "Frau",
+    vorname: "",
+    nachname: "",
+    mail: "",
+    tel: "",
+    betreff: "",
+    nachricht: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("/api/send-email", formData);
+      setStatus(response.data.message);
+    } catch (error) {
+      setStatus("Fehler beim Senden der Nachricht.");
+    }
+  };
+
   return (
     <div className={Class.form}>
       <h3>Kontaktformular</h3>
-      <form>
-        <div className="personal">
-          <fieldset>
-            <legend>Persönliche Informationen</legend>
-            
-            <div className="anrede-container">
-              <label htmlFor="anrede" className="anrede">
-                <span>Anrede*:</span>
-              </label>
-              <select name="anrede" id="anrede" required>
-                <option value="Frau">Frau</option>
-                <option value="Herr">Herr</option>
-              </select>
-            </div>
+      <form onSubmit={handleSubmit}>
+        <fieldset>
+          <legend>Persönliche Informationen</legend>
+          <label>Anrede*:</label>
+          <select name="anrede" onChange={handleChange} required>
+            <option value="Frau">Frau</option>
+            <option value="Herr">Herr</option>
+          </select>
 
-            <div className={Class.name_container}>
-              <div className="vorname-container">
-                <label className="vorname" htmlFor="vorname" >
-                  <span>Vorname*:</span>
-                </label>
-                <input type="text" name="vorname" id="vorname" autoComplete="first-name" required/>
-              </div>
-              
-              <div className="nachname-container">
-                <label className="nachname" htmlFor="nachname">
-                  <span>Nachname*:</span>
-                </label>
-                <input type="text" name="nachname" id="nachname" autoComplete="last-name" required/>
-              </div>
+          <label>Vorname*:</label>
+          <input type="text" name="vorname" required onChange={handleChange} />
 
-            </div>
+          <label>Nachname*:</label>
+          <input type="text" name="nachname" required onChange={handleChange} />
+        </fieldset>
 
-          </fieldset>
+        <fieldset>
+          <legend>Kontaktdaten</legend>
+          <label>E-Mail*:</label>
+          <input type="email" name="mail" required onChange={handleChange} />
+
+          <label>Telefon*:</label>
+          <input type="text" name="tel" required onChange={handleChange} />
+        </fieldset>
+
+        <fieldset>
+          <legend>Nachricht</legend>
+          <label>Betreff*:</label>
+          <input type="text" name="betreff" required onChange={handleChange} />
+
+          <label>Nachricht*:</label>
+          <textarea name="nachricht" rows="5" required onChange={handleChange} />
+        </fieldset>
+
+        <div className={Class.discl_container}>
+          <input type="checkbox" name="discl" required />
+          <label>
+            * Die von Ihnen eingegebenen Daten werden <strong>ausschließlich</strong> zum Beantworten Ihrer Nachricht gespeichert und in keinem Fall an Dritte weitergegeben!
+          </label>
         </div>
-        <div className="contact">
-          <fieldset>
-            <legend>Kontaktdaten</legend>
-            <div className="mail-container">
-              <label className="mail" htmlFor="mail">
-                <span>E-Mail*:</span>
-              </label>
-              <input type="email" name="mail" id="mail" autoComplete="mail" required/>
-            </div>
-            <div className="tel-container">
-              <label className="tel" htmlFor="tel">
-                <span>Tel*:</span>
-              </label>
-              <input type="text" name="tel" id="tel" pattern="[0-9\s]{13,19}" inputMode="numeric" autoComplete="tel" required/>
-            </div>
-          </fieldset>
-        </div>
-        <div className="message">
-          <fieldset>
-            <legend>Nachricht</legend>
-            <div className="betreff-container">
-              <label htmlFor="betreff">
-                <span>Betreff*:</span>
-              </label>
-              <input type="text" name="betreff" id="betreff" required/>
-            </div>
-            <div className="nachricht-container">
-              <label htmlFor="nachricht">
-                <span>Nachricht*:</span>
-              </label>
-              <textarea name="nachricht" id="nachricht" rows="5" required></textarea>
-            </div>
-          </fieldset>
-        </div>
-        <div className="send">
-           <button className="call__full" type="submit">
-              <FontAwesomeIcon icon={faMessage} />
-              <span>Nachricht senden</span>
-            </button>
-        </div>
+
+        <button type="submit">
+          <FontAwesomeIcon icon={faMessage} />
+          <span>Nachricht senden</span>
+        </button>
+
+        {status && <p>{status}</p>}
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -1,5 +1,5 @@
 
-const ToastLayout = ({message,}) => {
+const ToastLayout = ({message}) => {
   return (
     <>
      <p>
