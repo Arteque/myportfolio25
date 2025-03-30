@@ -46,9 +46,9 @@
         }
       ],
       "lang": ["en"],
-      "teaser": "Dieses Projekt visualisiert Daten der REST Countries API, ermöglicht die Ländersuche und Filterung nach Region. Es bietet einen praktischen Farbthemen-Umschalter und nutzt HTML, CSS sowie JavaScript, um eine interaktive Webanwendung zu erstellen. Mit Leaflet.js wird zusätzlich eine Kartenansicht der Länder bereitgestellt. Die Wikimedia API ermöglicht es, wenn verfügbar, die Landeshymne im Audioformat anzuhören.",
+      "teaser": "Dieses Projekt visualisiert Daten der REST Countries API, ermöglicht die Ländersuche und Filterung nach Regionen. Es bietet einen praktischen Farbthemen-Umschalter und nutzt HTML, CSS sowie JavaScript, um eine interaktive Webanwendung zu erstellen. Mit Leaflet.js wird zusätzlich eine Kartenansicht der Länder bereitgestellt. Die Wikimedia API ermöglicht es, wenn verfügbar, die Landeshymne im Audioformat anzuhören.",
       "thumb": "/Projects/Countries-api/screenshot.png",
-      "tags": ["HTML", "Css", "Javascript", "API", "Leaflet"],
+      "tags": ["HTML", "Css", "Javascript", "API", "Leafletjs"],
       "autor": ["Ahmed LEMSSIAH"]
     },
     {
@@ -98,7 +98,7 @@
         }
       ],
       "lang": ["en"],
-      "teaser": "Diese englische Wörterbuch-Webapp ermöglicht es den Nutzern, Wörter zu suchen. Die App ist responsiv und bietet einen Dark- und Light-Mode. Außerdem kann die Schriftart zwischen Sans- und Serif-Stilen gewechselt werden!",
+      "teaser": "Diese englische Wörterbuch-Webapp ermöglicht es den Nutzern, Wörter zu suchen. Die App ist responsiv und bietet einen Dark- und Light-Mode. Außerdem kann die Schriftart zwischen Sans-Serif und Serif gewechselt werden!",
       "thumb": "/Projects/Dictionary-api/screenshot.png",
       "tags": [
         "ReactJS + Vite",
@@ -156,7 +156,7 @@
         }
       ],
       "lang": ["en"],
-      "teaser": "Die Herausforderung besteht darin, eine E-Commerce-Startseite basierend auf dem von Frontend Mentor heruntergeladenen Design zu erstellen und sie so nah wie möglich am Originaldesign umzusetzen.",
+      "teaser": "Die Herausforderung besteht darin, eine E-Commerce-Startseite, basierend auf dem von Frontend Mentor heruntergeladenen Design, zu erstellen und sie so nah wie möglich am Originaldesign umzusetzen.",
       "thumb": "./Projects/Room/screenshot.png",
       "tags": [
         "HTML","Css / Scss", "Javascript"

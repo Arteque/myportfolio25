@@ -86,7 +86,7 @@ const MainHeader = () => {
 
           <ul className="main-header__socials">
             <li>
-              <Link to="/" target="_blank" title="Github">
+              <Link to="https://github.com/Arteque" target="_blank" title="Github">
                 <FontAwesomeIcon icon={faGithub} />
               </Link>
             </li>

@@ -3,7 +3,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
 import Section from "../Fragments/Section"
 import Wrapper from "../Fragments/Wrapper"
+
+import Class from './Hero.module.scss'
+
 const Hero = () => {
+
+    const clickHandler = (e) => {
+        e.preventDefault()
+        const target = e.target.dataset.target
+        console.log(target)
+        document.querySelector(target).scrollIntoView({ behavior: "smooth" })
+    }
+
     return (
     <Section classname="hero" id="hero">
         <Wrapper>
@@ -15,11 +26,11 @@ const Hero = () => {
                     Ich bin <span className="underline">Frontend Web Entwickler</span> 
                 </p>
                 <div className="call">
-                    <Link to="/" className="call__full">
+                    <Link to="/" className={`call__full ${Class.call__full}`} onClick={clickHandler} data-target="#contact">
                         <FontAwesomeIcon icon={faCaretRight} />
                         <span className="text underline">Kontakt</span>
                     </Link>
-                    <Link to="/" className="call__full">
+                    <Link to="/" className={`call__full ${Class.call__full}`} onClick={clickHandler} data-target="#projects">
                         <FontAwesomeIcon icon={faCaretRight} />
                         <span className="underline">Portfolio</span>
                     </Link>

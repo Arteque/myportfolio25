@@ -17,8 +17,8 @@ const About = () => {
       <ProjectText>
         <h3>&Uuml;ber mich: </h3>
         <p>
-          Hey! Schön, dass du es bis hierher geschafft hast! Ich Danke dir für
-          deine Interesse!😊
+          Hey! Schön, dass du es bis hierher geschafft hast! Ich danke dir für
+          dein Interesse!😊
         </p>
 
         <p>
@@ -28,15 +28,15 @@ const About = () => {
           </strong>
           , bin <strong>{Age()}</strong> Jahre alt, komme aus{" "}
           <strong>Marokko</strong> und lebe derzeit in{" "}
-          <strong>Deutschland Thüringen</strong>. Glücklicher Papa von zwei
-          Kindern &#128111; und Ehemann einer wundervollen Frau 🤗
+          <strong>Deutschland/Thüringen</strong>. Glücklicher Papa von zwei
+          Kindern &#128111; und Ehemann einer wundervollen Frau. 🤗
         </p>
         <p>
           Ich habe französische Literatur und Kommunikation studiert und sogar
           eine Zeit lang als Französischlehrer gearbeitet &#127979;. Doch meine
           wahre Leidenschaft liegt im{" "}
           <strong>Gestalten und Programmieren</strong> – und genau das habe ich
-          zu meinem Beruf eingearbeitet. 🫡
+          zu meinem Beruf gemacht. 🫡
         </p>
       </ProjectText>
     </div>

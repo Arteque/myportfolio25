@@ -12,6 +12,7 @@ import {
   faFilter,
   faTag,
   faLanguage,
+  faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -23,6 +24,9 @@ import SectionHeader from "../Components/Assets/Fragments/SectionHeader";
 import Contact from "../Components/Assets/Contact/Contact";
 import Services from "../Components/Assets/Services/Services";
 import About from "../Components/Assets/About/About";
+import { ToastSetup } from "../Tools/ToastSetup";
+import { faThumbsDown } from "@fortawesome/free-solid-svg-icons/faThumbsDown";
+
 
 const Start = () => {
   const [sortProjects, setSortProjects] = useState(ProjectListing);
@@ -48,10 +52,12 @@ const Start = () => {
     setProjectsfilter({
       sort: getTargetDataset,
     });
+
   };
 
   useEffect(() => {
     setSearchParamas({ sort: projectsFilter.sort });
+    ToastSetup("success", <FontAwesomeIcon icon={faThumbsUp} color="orangered"/>, 1000, false, false, true, false, 'light', "Die Projektliste wurde angepasst!")
   }, [projectsFilter]);
 
   useEffect(() => {
