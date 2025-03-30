@@ -1,8 +1,11 @@
 import { Outlet } from "react-router-dom"
 import MainHeader from "../Components/MainHeader"
 import MainFooter from "../Components/MainFooter"
+import { ToastContainer } from "react-toastify"
 
 export const Root = () => {
+
+
   return (
     <>
         {/* Main Header  Start*/}
@@ -16,6 +19,7 @@ export const Root = () => {
         {/* Main Footer Start */}
         <MainFooter />
         {/* Main Footer End */}
+        <ToastContainer />
     </>
   )
 }

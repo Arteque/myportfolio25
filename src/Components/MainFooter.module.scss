@@ -1,3 +1,4 @@
+@use '../Vars/mixin';
 
 .main_footer{
     margin-block-start: 10rem;
@@ -12,6 +13,10 @@
 }
 .wrapper{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: var(--mid_gap);
+    @include mixin.mid{
+        justify-content: flex-end;
+    }
 }

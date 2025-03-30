@@ -5,7 +5,7 @@ const MainLogo = ({position}) => {
     <>
         {
             position == 'header' && (
-                <div className={Class.main_logo}>
+                <div className={`${Class.main_logo} ${Class.main_logo__header}`}>
                     <img src="./logo.svg" alt="Ahmed Lemssiah" />
                     <h1 className="website-title">Ahmed <span className="uppercase">Lemssiah</span></h1>
                 </div>

@@ -1,17 +1,19 @@
-.main_logo{
+.main_logo {
+  &.main_logo__header {
     margin-inline-end: auto;
-    display:flex;
-    gap: 0.5rem;
-    align-items:center;
-    img{
-        width: 20px;
-    }
-    h1{
-        font-size: .8rem;
-    }
+  }
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  img {
+    width: 20px;
+  }
+  h1 {
+    font-size: 0.8rem;
+  }
 }
-footer{
-    .main_logo{
-        filter:brightness(100);
-    }
+footer {
+  .main_logo {
+    filter: brightness(100);
+  }
 }
