@@ -1,3 +1,4 @@
+@use './Vars/fonts';
 @use './Vars/mixin';
 @use './Vars/colors';
 
@@ -10,6 +11,7 @@
     }
     --gap: 1rem;
     --mid_gap: 0.5rem;
+    --inter : "Inter", sans-serif;
 }
 
 
@@ -46,8 +48,13 @@ body[data-mode="dark"]{
     box-sizing: border-box;
 }
 html, body{
-  font-family: "Inter", serif;
-  font-size: 1.02em;
+  font-family: var(--inter);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.02rem;
+  font-style: normal;
+  letter-spacing: 0.02em; /* Etwas mehr Abstand für bessere Lesbarkeit */
   background-color:var(--clr-bg-100);
   color: var(--clr-txt-100);
   transition: all 0.5s;
@@ -470,7 +477,7 @@ header.section__header {
     @include mixin.mid{
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: center;
         gap: 1rem;
         .icon-text-container{
             max-width: 350px;
@@ -480,6 +487,9 @@ header.section__header {
                 height: 4rem;
             }
         }
+    }
+    @include mixin.lg{
+        justify-content: space-between;
     }
 }
 .icon-text-container{
@@ -532,6 +542,9 @@ header.section__header {
     background: var(--clr-bg-400);
     backdrop-filter: blur(15px);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1254901961);
+    @include mixin.mid{
+        top: 103px;
+    }
      > svg{
         color: var(--clr-bg-300);
         cursor: not-allowed;

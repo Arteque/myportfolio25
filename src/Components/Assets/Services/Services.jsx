@@ -16,7 +16,7 @@ const Services = () => {
                 <div className={`border ${Class.service__card}`}>
                     <div className={Class.card__header} >
                         <div className={Class.room_img}>
-                            <img src="/Erfinder/cartoonFinderRoom.jpeg" alt="Labor Cartoon style" />
+                            <img src="/Erfinder/cartoonFinderRoom.jpg" alt="Labor Cartoon style" />
                         </div>
                         <div className={Class.header__main_image}>
                             <img src="/Erfinder/ErfinderAvatar.svg" alt="Erfinder à la Einstein" />
@@ -52,10 +52,10 @@ const Services = () => {
                 <div className={`border ${Class.service__card}`}>
                     <div className={Class.card__header} >
                         <div className={Class.room_img}>
-                            <img src="/Designer/cartoonDesignerRoom.jpeg" alt="Hintergrund Designzimmer" />
+                            <img src="/Designer/cartoonDesignerRoom.jpg" alt="Hintergrund Designzimmer" />
                         </div>
                         <div className={Class.header__main_image}>
-                            <img src="/Designer/DesignerAvatar.svg" alt="Erfinder à la Einstein" />
+                            <img src="/Designer/DesignerAvatar.svg" alt="Avtar eines Designers. Er sieht wie Dali aus" />
                         </div>
                         <div className={Class.header__assets_images}>
                             <img src="/Designer/piplette.svg" alt="Piplette" />
@@ -87,10 +87,10 @@ const Services = () => {
                 <div className={`border ${Class.service__card}`}>
                     <div className={Class.card__header} >
                         <div className={Class.room_img}>
-                            <img src="/Entwickler/cartoonDevRoom.jpeg" alt="Hintergrund Designzimmer" />
+                            <img src="/Entwickler/cartoonDevRoom.jpg" alt="Zimmer eines Programmiers" />
                         </div>
                         <div className={Class.header__main_image}>
-                            <img src="/Entwickler/EntwicklerAvatar.svg" alt="Erfinder à la Einstein" />
+                            <img src="/Entwickler/EntwicklerAvatar.svg" alt="Avatar Programierer" />
                         </div>
                         <div className={Class.header__assets_images}>
                             <img src="/Entwickler/keyboard.svg" alt="Piplette" />
