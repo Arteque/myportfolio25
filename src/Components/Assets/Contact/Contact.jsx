@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Class from "./Contact.module.scss";
 import { faMessage, faThumbsDown, faWarning } from "@fortawesome/free-solid-svg-icons";
 import ToastLayout from "../ToastLayout/ToastLayout";
 import { ToastSetup } from "../../../Tools/ToastSetup";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,26 +17,31 @@ const Contact = () => {
     nachricht: "",
   });
 
+  const submitButton = useRef()
 
   const [formStatus, setFormStatus] = useState("")
+  const [buttonState, setButtonState] = useState(false)
 
   const formInputHandler = (e) => {
     e.preventDefault();
-
     setFormData({ ...formData, [e.target.name]: e.target.value })
-    
   }
 
 
   const formSubmitHandler = async (e) => {
     e.preventDefault()
-    try{
-      const response = await axios.post("/api/send-email", formData);
-      setStatus(response.data.message);
-    }
-    catch (err){
-      setFormStatus(ToastSetup("error", "", 10000, false, true, true, true, 'dark', <ToastLayout message={`Fehler beim Senden der Nachricht. ${err}`} />))
-    }
+    emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, import.meta.env.VITE_PUBLIC_KEY)
+    .then(() => {
+     setButtonState(true)
+      ToastSetup("success", "", 1000, false, true, true, false, 'dark', <ToastLayout message={`Deine Nachricht wurde versendet. Vielen Dank!`} />)
+      setTimeout(() => {
+        window.location.reload()
+      setButtonState(false)
+      },5000)
+    },(err) => {
+      ToastSetup("error", "", 10000, false, true, true, true, 'dark', <ToastLayout message={`Fehler beim Senden der Nachricht. ${err}`} />)
+    } )
+    
   }
 
   return (
@@ -86,7 +91,7 @@ const Contact = () => {
                   type="text"
                   name="nachname"
                   id="nachname"
-                  autoComplete="last-name"
+                  autoComplete="name"
                   required
                   onChange={formInputHandler}
                 />
@@ -105,7 +110,7 @@ const Contact = () => {
                 type="email"
                 name="mail"
                 id="mail"
-                autoComplete="mail"
+                autoComplete="email"
                 required
                 onChange={formInputHandler}
               />
@@ -118,9 +123,8 @@ const Contact = () => {
                 type="text"
                 name="tel"
                 id="tel"
-                pattern="[0-9\s]{13,19}"
                 inputMode="numeric"
-                autoComplete="tel"
+                autoComplete="on"
                 required
                 onChange={formInputHandler}
               />
@@ -139,6 +143,7 @@ const Contact = () => {
                 name="betreff"
                 id="betreff"
                 required
+                autoComplete="off"
                 onChange={formInputHandler}
               />
             </div>
@@ -151,6 +156,7 @@ const Contact = () => {
                 id="nachricht"
                 rows="5"
                 required
+                autoComplete="off"
                 onChange={formInputHandler}
               ></textarea>
             </div>
@@ -177,7 +183,7 @@ const Contact = () => {
           </fieldset>
         </div>
         <div className="send">
-          <button className="call__full" type="submit">
+          <button className="call__full" type="submit" ref={submitButton} disabled={buttonState}> 
             <FontAwesomeIcon icon={faMessage} />
             <span>Nachricht senden</span>
           </button>
