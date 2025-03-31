@@ -9,7 +9,7 @@ const About = () => {
       <figure className={`blur_fadein about_figure ${Class.about_figure}`}>
         <img
           loading="lazzy"
-          src="https://res.cloudinary.com/www-arteque-de/image/upload/v1581433762/arteque/profil/amdprofil.png"
+          src="/Profil/amd.png"
           alt="Ahmed Lemssiah Profilbild"
         />
         <figcaption>Ahmed Lemssiah</figcaption>
