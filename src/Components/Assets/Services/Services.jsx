@@ -94,10 +94,10 @@ const Services = () => {
                             <img src="/Entwickler/EntwicklerAvatar.svg" alt="Avatar Programierer" />
                         </div>
                         <div className={Class.header__assets_images}>
-                            <img src="/Entwickler/keyboard.svg" alt="Piplette" />
-                            <img src="/Entwickler/mouse.svg" alt="Malpinsel" />
-                            <img src="/Entwickler/screen.svg" alt="Orangefarbe" />
-                            <img src="/Entwickler/calendar.svg" alt="Farbpallette" />
+                            <img src="/Entwickler/keyboard.png" alt="Computer Tastatur" />
+                            <img src="/Entwickler/mouse.svg" alt="Rechner Mouse" />
+                            <img src="/Entwickler/screen.png" alt="Bildschirm" />
+                            <img src="/Entwickler/calendar.svg" alt="Kalendar" />
                         </div>
                     </div>
                     <div className={Class.card__body}>
