@@ -26,8 +26,6 @@ import Services from "../Components/Assets/Services/Services";
 import About from "../Components/Assets/About/About";
 import { ToastSetup } from "../Tools/ToastSetup";
 
-
-
 const Start = () => {
   const [sortProjects, setSortProjects] = useState(ProjectListing);
   const [maxProject, setMaxProject] = useState(3);
@@ -52,12 +50,21 @@ const Start = () => {
     setProjectsfilter({
       sort: getTargetDataset,
     });
-
   };
 
   useEffect(() => {
     setSearchParamas({ sort: projectsFilter.sort });
-    ToastSetup("success", <FontAwesomeIcon icon={faThumbsUp} color="orangered"/>, 1000, false, false, true, false, 'light', "Die Projektliste wurde angepasst!")
+    ToastSetup(
+      "success",
+      <FontAwesomeIcon icon={faThumbsUp} color="orangered" />,
+      1000,
+      false,
+      false,
+      true,
+      false,
+      "light",
+      "Die Projektliste wurde angepasst!"
+    );
   }, [projectsFilter]);
 
   useEffect(() => {
@@ -105,10 +112,8 @@ const Start = () => {
     maxProject >= sortProjects.length && e.target.parentElement.remove();
   };
 
-  
-
   return (
-    <> 
+    <>
       <Hero />
 
       <Skills />
@@ -127,23 +132,38 @@ const Start = () => {
               }}
             >
               <li className="filter__item atoz">
-                <button data-sort="atoz">
+                <button
+                  data-sort="atoz"
+                  aria-label="Projekt von A nach Z alphabetisch sortieren"
+                >
                   <FontAwesomeIcon icon={faArrowDownAZ} size="2x" />
                 </button>
               </li>
+
               <li className="filter__item ztoa">
-                <button data-sort="ztoa">
+                <button
+                  data-sort="ztoa"
+                  aria-label="Projekt von Z nach A alphabetisch sortieren"
+                >
                   <FontAwesomeIcon icon={faArrowDownZA} size="2x" />
                 </button>
               </li>
+
               <li className="filter__item dateup">
-                <button data-sort="dateup">
+                <button
+                  data-sort="dateup"
+                  aria-label="Projekte nach Datum aufsteigend sortieren"
+                >
                   <FontAwesomeIcon icon={faArrowUp} size="1x" />
                   <FontAwesomeIcon icon={faCalendarAlt} size="2x" />
                 </button>
               </li>
+
               <li className="filter__item datedown current">
-                <button data-sort="datedown">
+                <button
+                  data-sort="datedown"
+                  aria-label="Projekte nach Datum absteigend sortieren"
+                >
                   <FontAwesomeIcon icon={faArrowDown} size="1x" />
                   <FontAwesomeIcon icon={faCalendarAlt} size="2x" />
                 </button>
@@ -213,7 +233,11 @@ const Start = () => {
             )}
           </div>
           <div className="call">
-            <button className="call__full" onClick={showProjectHandler} aria-label="Zeige mehr Projekte" >
+            <button
+              className="call__full"
+              onClick={showProjectHandler}
+              aria-label="Zeige mehr Projekte"
+            >
               Zeige mehr Projekte
             </button>
           </div>

@@ -262,40 +262,11 @@ body[data-mode="dark"]{
         padding-block:0.5rem;
         gap: var(--gap);
     }
-    .main-header__socials{
-        display:flex;
-        gap: var(--mid_gap);
-
-    }
 }
 
 
-.main-header__color-mode{
-    button{
-        display:block;
-        width: 1rem;
-        aspect-ratio: 1;
-        overflow: hidden;
-        cursor:pointer;
-        
-        .sun, .moon{
-           
-            transition: all 0.5s;
-            path{
-                fill: var(--clr-txt-100);
-            }
-        }
-    }
-}
-body[data-mode="dark"]{
-    .main-header__color-mode{
-        button{
-           .sun, .moon{
-             transform:translatey(-15px);
-           }
-        }
-    }
-}
+
+
 
 
 /*##################################### Main Header##############*/

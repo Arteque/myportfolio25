@@ -1,0 +1,19 @@
+@use '../../../Vars/mixin';
+
+
+.main_header__socials{
+    display:flex;
+    gap: var(--gap);
+    a{
+        transition: all 0.3s;
+        display: block;
+        
+        &:hover{
+            scale:1.2;
+        }
+    }
+    svg{
+        font-size: 1.8rem;
+    }
+
+}
