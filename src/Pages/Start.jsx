@@ -26,6 +26,7 @@ import Services from "../Components/Assets/Services/Services";
 import About from "../Components/Assets/About/About";
 import { ToastSetup } from "../Tools/ToastSetup";
 import { faThumbsDown } from "@fortawesome/free-solid-svg-icons/faThumbsDown";
+import Loader from "../Components/Assets/Loader/Loader";
 
 
 const Start = () => {
@@ -105,8 +106,10 @@ const Start = () => {
     maxProject >= sortProjects.length && e.target.parentElement.remove();
   };
 
+  
+
   return (
-    <>
+    <> 
       <Hero />
 
       <Skills />
