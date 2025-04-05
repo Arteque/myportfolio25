@@ -213,8 +213,8 @@ const Start = () => {
             )}
           </div>
           <div className="call">
-            <button className="call__full" onClick={showProjectHandler}>
-              showMore
+            <button className="call__full" onClick={showProjectHandler} aria-label="Zeige mehr Projekte" >
+              Zeige mehr Projekte
             </button>
           </div>
         </Wrapper>

@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
-import { faSun, faMoon, faSmile, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSun,
+  faMoon,
+  faSmile,
+  faThumbsUp,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -51,11 +56,19 @@ const MainHeader = () => {
       return localStorage.getItem("themeMode") == "dark" ? true : false;
     });
 
-   
-
-    ToastSetup("success", <FontAwesomeIcon icon={faThumbsUp} color="var(--txt-sub-100)"/>, 2000, false, false, false, false, clrMode, <ToastLayout message={`${colorMode ? "Lightmode" : "Darkmode"} ist aktiv!`} />)
-    
-    
+    ToastSetup(
+      "success",
+      <FontAwesomeIcon icon={faThumbsUp} color="var(--txt-sub-100)" />,
+      2000,
+      false,
+      false,
+      false,
+      false,
+      clrMode,
+      <ToastLayout
+        message={`${colorMode ? "Lightmode" : "Darkmode"} ist aktiv!`}
+      />
+    );
   };
 
   // Run the first time calling the app.
@@ -86,8 +99,13 @@ const MainHeader = () => {
 
           <ul className="main-header__socials">
             <li>
-              <Link to="https://github.com/Arteque" target="_blank" title="Github">
-                <FontAwesomeIcon icon={faGithub} />
+              <Link
+                to="https://github.com/Arteque"
+                target="_blank"
+                title="Github"
+                aria-label="Besuche mein Github-Profil"
+              >
+                <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
               </Link>
             </li>
             <li>
@@ -95,8 +113,9 @@ const MainHeader = () => {
                 to="https://mastodon.social/@lemssiah"
                 target="_blank"
                 title="Mastodon"
+                aria-label="Folge mir auf Mastodon"
               >
-                <FontAwesomeIcon icon={faMastodon} />
+                <FontAwesomeIcon icon={faMastodon} aria-hidden="true" />
               </Link>
             </li>
             <li>
@@ -104,8 +123,9 @@ const MainHeader = () => {
                 to="https://www.instagram.com/artt3k/"
                 target="_blank"
                 title="Instagram"
+                aria-label="Folge mir auf Instagram"
               >
-                <FontAwesomeIcon icon={faInstagram} />
+                <FontAwesomeIcon icon={faInstagram} aria-hidden="true" />
               </Link>
             </li>
             <li>
@@ -113,21 +133,31 @@ const MainHeader = () => {
                 to="https://www.youtube.com/@artecke99999"
                 target="_blank"
                 title="Youtube"
+                aria-label="Abonniere meinen Youtube-Kanal"
               >
-                <FontAwesomeIcon icon={faYoutube} />
+                <FontAwesomeIcon icon={faYoutube} aria-hidden="true" />
               </Link>
             </li>
           </ul>
 
           <div className="main-header__color-mode">
-            <button onClick={handleColorMode}>
-              <FontAwesomeIcon icon={faSun} className="sun" />
-              <FontAwesomeIcon icon={faMoon} className="moon" />
+            <button onClick={handleColorMode} aria-label="Farbmodus wechseln">
+              <FontAwesomeIcon
+                icon={faSun}
+                className="sun"
+                aria-hidden="true"
+                focusable="false"
+              />
+              <FontAwesomeIcon
+                icon={faMoon}
+                className="moon"
+                aria-hidden="true"
+                focusable="false"
+              />
             </button>
           </div>
         </Wrapper>
       </header>
-      
     </>
   );
 };
