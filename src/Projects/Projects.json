@@ -162,5 +162,33 @@
         "HTML","Css / Scss", "Javascript"
       ],
       "autor": ["Ahmed LEMSSIAH"]
+    },
+    {
+      "id": 6,
+      "title": "Photosnap",
+      "subtitle": "",
+      "type": "Web",
+      "date": "2025-04-06",
+      "urls": [
+        {
+            "id":1,
+            "name":"GitHub",
+            "icon":"Github",
+            "url":"https://github.com/Arteque/photosnapwebsite" 
+        },
+        {
+            "id":2,
+            "name":"Live Website",
+            "icon":"Extern",
+            "url":"https://photosnapwebsite.vercel.app/"
+        }
+      ],
+      "lang": ["en"],
+      "teaser": "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
+      "thumb": "./Projects/Photosnap/screenshot.png",
+      "tags": [
+        "Reactjs/vite","Tailwind","HTML","Css", "Javascript"
+      ],
+      "autor": ["Ahmed LEMSSIAH"]
     }
 ]
