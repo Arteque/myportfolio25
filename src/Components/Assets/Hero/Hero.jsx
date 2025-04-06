@@ -37,7 +37,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className="hero__media">
-                <img src="./Main/AvatarMainAnimation_2.gif" alt="Ahmed Lemssiah Animation" />
+                <img src="./Main/AvatarMainAnimation_3.gif" alt="Ahmed Lemssiah Animation" />
             </div>
         </Wrapper>
         <div className="fixed-media">
