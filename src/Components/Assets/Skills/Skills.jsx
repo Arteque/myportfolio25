@@ -259,12 +259,12 @@ function Skills() {
  return <>
     <Section id="skills" classname="skills">
         <Wrapper>
-            <SectionHeader title1="Design, Web" title2="&amp; Kommunikation"/>
+            <SectionHeader title1="Mein digitales" title2="Werkzeugset"/>
             
             <div className="skills">
             <div className="skill skill__design">
                     <div className="skill__header">
-                        <h3>Design</h3>
+                        <h3>- Design:  </h3>
                     </div>
                     <div className="skills__container">
                     {
@@ -300,7 +300,7 @@ function Skills() {
                 </div>
                 <div className="skill skill__web">
                     <div className="skill__header">
-                        <h3>Web</h3>
+                        <h3>- Entwicklung:</h3>
                     </div>
                     <div className="skills__container">
                     {
@@ -336,7 +336,7 @@ function Skills() {
                 </div>
                 <div className="skill skill__comm">
                     <div className="skill__header">
-                        <h3>Kommunikation</h3>
+                        <h3>- Kommunikation:</h3>
                         
                     </div>
                     <div className="skills__container">

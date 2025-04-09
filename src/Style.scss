@@ -11,7 +11,8 @@
     }
     --gap: 1rem;
     --mid_gap: 0.5rem;
-    --inter : "Inter", sans-serif;
+    // --inter : "Inter", sans-serif;
+    --inter : "Figtree", sans-serif;
 }
 
 
@@ -54,7 +55,7 @@ html, body{
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.02rem;
   font-style: normal;
-  letter-spacing: 0.02em; /* Etwas mehr Abstand für bessere Lesbarkeit */
+  letter-spacing: 0.01em; /* Etwas mehr Abstand für bessere Lesbarkeit */
   background-color:var(--clr-bg-100);
   color: var(--clr-txt-100);
   transition: all 0.5s;
@@ -396,6 +397,10 @@ body[data-mode="dark"]{
     padding: var(--gap);
     max-width: fit-content;
     margin-inline:auto;
+    text-align: center;
+    @include mixin.mid{
+        text-align: unset;
+    }
     h2{
        
         text-shadow: 1px 0 0 var(--clr-bg-400), 
@@ -404,10 +409,16 @@ body[data-mode="dark"]{
                     0 1px 0 var(--clr-bg-400);
         font-weight: 900;
         font-size: 2rem;
+        line-height: 110%;
+        .small{
+            font-size: 1rem;
+            font-weight: normal;
+        }
     }
     p{
-        font-size: 1.2rem;
         padding-block: var(--gap);
+        font-weight: bold;
+        
     }
 }
 
@@ -434,13 +445,15 @@ header.section__header {
     background-color: var(--clr-bg-100);
     margin-block: 3rem 1rem;
     position:sticky;
-    top: 26px;
+    top: 35px;
     z-index: 555;
     border-inline: 1px solid var(--clr-bg-200);
     h2{
-        font-size: 1.5rem;
+        font-size: 1.45rem;
+        font-weight: 900;
+        color: var(--clr-txt-300);
         @include mixin.mid{
-            font-size: 2.24rem;
+            font-size: 2rem;
         }
     }
 }
