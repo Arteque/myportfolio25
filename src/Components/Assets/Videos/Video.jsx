@@ -27,11 +27,11 @@ const Video = () => {
         );
         const data = await response.json();
         const videos = data.items;
+        console.log(videos)
         const sortVideos = videos.sort((a, b) => {
-          a.snippet.date - b.snippet.date;
+         return new Date(b.snippet.publishedAt).getTime() - new Date(a.snippet.publishedAt).getTime();
         });
-        console.log(sortVideos);
-        setYoutubeData(videos);
+        setYoutubeData(sortVideos);
       } catch (err) {
         console.error("Error fetching YouTube data:", err);
       }
@@ -139,7 +139,7 @@ const Video = () => {
                 <button onClick={() => setPlayer(false)}>
                   <FontAwesomeIcon icon={faTimes} size="xl" />
                 </button>
-                <h2>{videoUrl.title}</h2>
+                <h2 style={{textAlign:"center", marginBlockEnd:"1rem", fontSize:"1rem"}}>{videoUrl.title}</h2>
               </div>
               <VideoPlayer videoUrl={videoUrl.url} />
             </div>

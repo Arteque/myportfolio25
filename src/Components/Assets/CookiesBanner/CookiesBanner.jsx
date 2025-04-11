@@ -50,11 +50,11 @@ const CookiesBanner = () => {
   }
 
   return (
-    <div className={`${Class.cookies_container} border bg-bg-200 txt-txt-100`}>
+    <div className={`${Class.cookies_container} border bg-bg-100 txt-txt-300 `}>
       <p>Unsere Website verwendet Cookies, um Inhalte, Animationen und externe Inhalte anzeigen zu können</p>
       <div className="call">
         <button className="call__full" onClick={acceptCookies}>Annehmen</button>
-        <button className="call__full" onClick={clearAllData}>Verweigern</button>
+        <button className={`call__full`} onClick={clearAllData} >Verweigern</button>
       </div>
     </div>
   );

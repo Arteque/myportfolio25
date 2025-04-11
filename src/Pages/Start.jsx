@@ -255,7 +255,8 @@ const Start = () => {
       </Section>
        <Section classname="media-section" id="media-section">
         <Wrapper>
-          <SectionHeader title1="Noch mehr?" title2="Hier noch was ich gerne tue!" />
+          <SectionHeader title1="Schon so weit gescrollt? 😉  " title2=" Ein kleines Extra für dich:" />
+          <p>Timelapse: Digitales Zeichnen & Fotomontagen 🎨🖼️</p>
           <Video />
         </Wrapper>
       </Section> 
