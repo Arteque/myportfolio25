@@ -10,10 +10,7 @@ const CookiesBanner = () => {
 
   const [showBanner, setShowBanner] = useState(!cookiesAccepted);
 
-  // Sync local banner visibility with context state
-  useEffect(() => {
-    cookiesAccepted === "true" ? setShowBanner(false) : setShowBanner(true);
-  }, [cookiesAccepted]);
+
 
   const clearAllData = () => {
     // Alle Cookies löschen
@@ -31,13 +28,22 @@ const CookiesBanner = () => {
 
     // Dann den Context informieren
     rejectCookies();
+
+  
+    showBanner && setShowBanner(false)
+
   };
 
   const openBannerHandler = (e) => {
     e.preventDefault();
-    setShowBanner(true);
-    clearAllData();
+    setShowBanner(cookiesAccepted);
   };
+
+
+    // Sync local banner visibility with context state
+    useEffect(() => {
+      cookiesAccepted === "true" && setShowBanner(false);
+    }, [cookiesAccepted]);
 
   if (!showBanner) {
     return (

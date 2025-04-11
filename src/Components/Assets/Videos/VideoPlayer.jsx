@@ -8,7 +8,9 @@ const VideoPlayer = ({videoUrl}) => {
             playerVars:{
                 showinfo:0,
                 modestbranding:0,
-                autoplay:1
+                autoplay:1,
+                controls:1,
+                pip:0,
             },
             embedOptions:{AbortController}
         }
