@@ -19,7 +19,7 @@ const MainFooter = () => {
           </p>
           <MainLogo position="footer" />
           <p>
-            <small>with &#129505;</small> | <small><samp> <FontAwesomeIcon icon={faCalendarAlt} /> {date}</samp></small>
+           <small>| <samp> <FontAwesomeIcon icon={faCalendarAlt} /> {date}</samp></small>
           </p>
         </Wrapper>
       </div>
