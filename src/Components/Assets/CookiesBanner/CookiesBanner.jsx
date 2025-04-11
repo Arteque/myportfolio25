@@ -1,17 +1,18 @@
 import { useContext, useEffect, useState } from "react";
 import { CookieContext } from "../../../Context/CookiesContext";
-import Class from './CookiesBanner.module.scss';
+import Class from "./CookiesBanner.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFingerprint } from "@fortawesome/free-solid-svg-icons";
 
 const CookiesBanner = () => {
-  const { cookiesAccepted, acceptCookies, rejectCookies } = useContext(CookieContext);
+  const { cookiesAccepted, acceptCookies, rejectCookies } =
+    useContext(CookieContext);
 
   const [showBanner, setShowBanner] = useState(!cookiesAccepted);
 
   // Sync local banner visibility with context state
   useEffect(() => {
-    cookiesAccepted === "true" ? setShowBanner(false) : setShowBanner(true)
+    cookiesAccepted === "true" ? setShowBanner(false) : setShowBanner(true);
   }, [cookiesAccepted]);
 
   const clearAllData = () => {
@@ -21,29 +22,36 @@ const CookiesBanner = () => {
       const name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
       document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
     });
-  
+
     // localStorage leeren
     localStorage.clear();
-  
+
     // Optionale: SessionStorage auch leeren
     sessionStorage.clear();
-  
+
     // Dann den Context informieren
     rejectCookies();
   };
 
-
   const openBannerHandler = (e) => {
     e.preventDefault();
-    setShowBanner(true)
-    clearAllData()
+    setShowBanner(true);
+    clearAllData();
   };
 
   if (!showBanner) {
     return (
       <div className={Class.cookies_container}>
-        <button title="Cookies Einstellungen" onClick={openBannerHandler} style={{cursor:'pointer'}}>
-          <FontAwesomeIcon icon={faFingerprint} size="3x" color="var(--clr-call-100)" />
+        <button
+          title="Cookies Einstellungen"
+          onClick={openBannerHandler}
+          style={{ cursor: "pointer" }}
+        >
+          <FontAwesomeIcon
+            icon={faFingerprint}
+            size="3x"
+            color="var(--clr-call-100)"
+          />
         </button>
       </div>
     );
@@ -51,10 +59,19 @@ const CookiesBanner = () => {
 
   return (
     <div className={`${Class.cookies_container} border bg-bg-100 txt-txt-300 `}>
-      <p>Unsere Website verwendet Cookies, um Inhalte, Animationen und externe Inhalte anzeigen zu können</p>
+      <p>
+        "Ich esse Keks, nom nom nom!"
+        <br />
+        🍪 Nur für Animationen und die
+        YouTube-Videos! Nom nom nom! 🎥
+      </p>
       <div className="call">
-        <button className="call__full" onClick={acceptCookies}>Annehmen</button>
-        <button className={`call__full`} onClick={clearAllData} >Verweigern</button>
+        <button className="call__full" onClick={acceptCookies}>
+          Annehmen
+        </button>
+        <button className={`call__full`} onClick={clearAllData}>
+          Verweigern
+        </button>
       </div>
     </div>
   );
