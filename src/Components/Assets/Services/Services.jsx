@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <Section classname="section__services" id="section__services">
         <Wrapper>
-            <SectionHeader title1="Erfinde, entwerfe, kodiere" title2="&amp; REPEAT" />
+            <SectionHeader title1="Erfinde, entwerfe" title2="kodiere & 🔁" />
             {/* Card Start */}
             <div className={Class.services__cards}>
                 <div className={`border ${Class.service__card}`}>

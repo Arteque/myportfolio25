@@ -23,7 +23,8 @@ const Hero = () => {
                     <span className="block small">Ich heiße</span> <span className="name">Ahmed </span> <span className="uppercase name">Lemssiah</span>
                 </h2>
                 <p>
-                    Ich bin <span className="underline">Frontend Web Entwickler</span> 
+                    ich bin <span className="underline">Frontend Web Entwickler</span>
+                    
                 </p>
                 <div className="call">
                     <Link to="/" className={`call__full ${Class.call__full}`} onClick={clickHandler} data-target="#contact">
