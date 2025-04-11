@@ -1,99 +1,122 @@
 import { useState, useEffect } from "react";
 import VideoPlayer from "./VideoPlayer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCircle, faPlay, faTimes } from "@fortawesome/free-solid-svg-icons";
-import Class from './Video.module.scss'
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarAlt, faCircle, faPlay, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import Class from "./Video.module.scss";
+import dateFormat from "../../../Tools/dateFormat";
 const Video = () => {
+  const YOUTUBE_PLAYLIST_ITEMS_API =
+    "https://www.googleapis.com/youtube/v3/playlistItems";
+  const [youtubeData, setYoutubeData] = useState([]);
+  const [videoUrl, setVideoUrl] = useState(null);
+  const [player, setPlayer] = useState(false);
 
-    const YOUTUBE_PLAYLIST_ITEMS_API = "https://www.googleapis.com/youtube/v3/playlistItems";
-    const [youtubeData, setYoutubeData] = useState([]);
-    const [videoUrl, setVideoUrl] = useState(null);
-    const [player, setPlayer] = useState(false);
-
-    useEffect(() => {
-        const fetchYoutubeData = async () => {
-          try {
-            const response = await fetch(
-              `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLRSKNDpLx5fIMfpQI6-2y7WtShBHfLL_u&maxResults=50&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
-            );
-            const data = await response.json();
-            const videos = data.items;
-            setYoutubeData(videos)
-          } catch (err) {
-            console.error("Error fetching YouTube data:", err);
-          }
-        };
-        fetchYoutubeData();
-      }, []);
-
-      const openVideo = (e) => {
-        e.preventDefault();
-        const url = e.target.href;
-        const title = e.target.title;
-        setVideoUrl({ url, title });
-        setPlayer(true);
-      };
-    
-      const videoContainerHandler = (e) => {
-            setPlayer(false)
+  useEffect(() => {
+    const fetchYoutubeData = async () => {
+      try {
+        const response = await fetch(
+          `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLRSKNDpLx5fIMfpQI6-2y7WtShBHfLL_u&maxResults=50&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
+        );
+        const data = await response.json();
+        const videos = data.items;
+        console.log(videos);
+        setYoutubeData(videos);
+      } catch (err) {
+        console.error("Error fetching YouTube data:", err);
       }
+    };
+    fetchYoutubeData();
+  }, []);
 
+  const openVideo = (e) => {
+    e.preventDefault();
+    const url = e.target.href;
+    const title = e.target.title;
+    setVideoUrl({ url, title });
+    setPlayer(true);
+  };
+
+  const videoContainerHandler = (e) => {
+    setPlayer(false);
+  };
 
   return (
     <>
-    {
-    youtubeData.length > 0 ? (
-        youtubeData.map((item, index) => (
-          <div className={Class.cardcontainer} key={index} >
-                <div className={Class.cardheader}>
-                <img
-                    src={item.snippet.thumbnails.high.url}
-                    alt={item.snippet.title}
-                />
-                <a
-                    href={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`}
-                    title={item.snippet.title}
-                    target="_blank"
-                    onClick={(e) => openVideo(e)}
-                    className={Class.playbtn}
+      <div className="skills__container">
+        {youtubeData.length > 0 ? (
+          youtubeData.map((item, index) => (
+            <div
+              className={`${Class.video_container} icon-text-container border scroll__fadein`}
+              key={index}
+              style={{ position: "relative" }}
+            >
+              <div className="skill__header">
+                <div
+                  className="skill__icon"
+                  style={{
+                    position: "relative",
+                    background: `url(${item.snippet.thumbnails.medium.url})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    minWidth: "5rem",
+                    minHeight: "5rem",
+                    borderRadius: "10px",
+                  }}
                 >
-                <span>
-                        <FontAwesomeIcon icon={faPlay} />
-                </span>
-                    
-                </a>
+                  <FontAwesomeIcon
+                    className={Class.play_icon}
+                    icon={faPlay}
+                  />
                 </div>
-                <div className={Class.card__body}>
-                <h3>
-                    {item.snippet.title}
-                </h3>
+                <div className="skill__content">
+                  <p className={Class.projectdate}>
+                    <small>
+                      <FontAwesomeIcon icon={faCalendarAlt} />
+                      <span>
+                        {dateFormat(item.snippet.publishedAt.split("T")[0])}
+                      </span>
+                    </small>
+                  </p>
+                  <h4 className="skill__title">{item.snippet.title}</h4>
                 </div>
-          </div>
-        ))
-      ) : (
-        <p>
-          <FontAwesomeIcon icon={faCircle} />
-          <span>Loading ...</span>
-        </p>
-      )}
-        {player && (
-          <>
-            <div className={`${Class.fixedPlayer} ${player ? 'open' : null}`} onClick={(e) => videoContainerHandler(e)}>
-                <div className={Class.videoctrls}>
-                    <button
-                    onClick={() => setPlayer(false)}
-                    >
-                    <FontAwesomeIcon icon={faTimes} size="xl" />
-                    </button>
-                    <h2 >{videoUrl.title}</h2>
-                </div>
-                <VideoPlayer videoUrl={videoUrl.url} />
+              </div>
+              <Link
+                to={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`}
+                className="video__link"
+                title={item.snippet.title}
+                style={{ position: "absolute", inset: "0", zIndex: "10" }}
+                onClick={openVideo}
+              ></Link>
             </div>
-          </>
-        )} 
+          ))
+        ) : (
+          <p>
+            <FontAwesomeIcon icon={faCircle} />
+            <span>Loading ...</span>
+          </p>
+        )}
+      </div>
+      {player && (
+        <>
+          <div
+            className={`${Class.fixedPlayer} ${player ? "open" : null}`}
+            onClick={(e) => videoContainerHandler(e)}
+            style={{ zIndex: "999" }}
+          >
+            <div className={Class.videoctrls}>
+              <button onClick={() => setPlayer(false)}>
+                <FontAwesomeIcon icon={faTimes} size="xl" />
+              </button>
+              <h2>{videoUrl.title}</h2>
+            </div>
+            <VideoPlayer videoUrl={videoUrl.url} />
+          </div>
+        </>
+      )}
     </>
-  )
-}
+  );
+};
 
-export default Video
+export default Video;

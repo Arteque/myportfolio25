@@ -2,6 +2,7 @@ import Skills from "../Components/Assets/Skills/Skills";
 import Hero from "../Components/Assets/Hero/Hero";
 import Section from "../Components/Assets/Fragments/Section";
 import Wrapper from "../Components/Assets/Fragments/Wrapper";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowDown,
@@ -19,7 +20,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import Project from "../Components/Assets/Fragments/Project";
 import dateFormat from "../Tools/dateFormat";
 import ProjectListing from "../Projects/Projects.json";
-// import Video from "../Components/Assets/Videos/Video"
+import Video from "../Components/Assets/Videos/Video"
 import SectionHeader from "../Components/Assets/Fragments/SectionHeader";
 import Contact from "../Components/Assets/Contact/Contact";
 import Services from "../Components/Assets/Services/Services";
@@ -252,12 +253,12 @@ const Start = () => {
           </div>
         </Wrapper>
       </Section>
-      {/* <Section classname="media-section" id="media-section">
+       <Section classname="media-section" id="media-section">
         <Wrapper>
-          <SectionHeader title1="Blog" title2="Youtube" />
+          <SectionHeader title1="Noch mehr?" title2="Hier noch was ich gerne tue!" />
           <Video />
         </Wrapper>
-      </Section> */}
+      </Section> 
     </>
   );
 };
