@@ -17,15 +17,17 @@ const ColorMode = () => {
         Color mode
     */
 
-  const isSystemDarkmodeEnabeld =
-    window.matchMedia &&
-    window.matchMedia(`(prefers-color-scheme: dark)`).matches;
+  const isSystemDarkmodeEnabeld = () => {
+    if(window.matchMedia) return window.matchMedia(`(prefers-color-scheme: dark)`).matches;
+    return false
+  }
+   
 
   const [colorMode, setColorMode] = useState();
 
   const darkOrLight = () => {
     let clrMode = "";
-    isSystemDarkmodeEnabeld ? (clrMode = "dark") : (clrMode = "light");
+    isSystemDarkmodeEnabeld() ? (clrMode = "dark") : (clrMode = "light");
     return clrMode;
   };
 
