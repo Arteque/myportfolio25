@@ -1,5 +1,11 @@
+@use "../../../Vars/mixin";
+
 .video_container{
     transition: all 5s !important;
+    margin-block: 1rem;
+    @include mixin.mid{
+        margin-block: 0;
+    }
     &:hover{
         background: var(--clr-bg-200);
         transition: all 0.3s !important;

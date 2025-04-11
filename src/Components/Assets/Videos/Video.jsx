@@ -1,10 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import VideoPlayer from "./VideoPlayer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarAlt, faCircle, faPlay, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCalendarAlt,
+  faCircle,
+  faPlay,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Class from "./Video.module.scss";
 import dateFormat from "../../../Tools/dateFormat";
+import { CookieContext } from "../../../Context/CookiesContext";
+
 const Video = () => {
   const YOUTUBE_PLAYLIST_ITEMS_API =
     "https://www.googleapis.com/youtube/v3/playlistItems";
@@ -16,11 +23,14 @@ const Video = () => {
     const fetchYoutubeData = async () => {
       try {
         const response = await fetch(
-          `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLRSKNDpLx5fIMfpQI6-2y7WtShBHfLL_u&maxResults=50&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
+          `${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&playlistId=PLRSKNDpLx5fIMfpQI6-2y7WtShBHfLL_u&maxResults=100&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`
         );
         const data = await response.json();
         const videos = data.items;
-        console.log(videos);
+        const sortVideos = videos.sort((a, b) => {
+          a.snippet.date - b.snippet.date;
+        });
+        console.log(sortVideos);
         setYoutubeData(videos);
       } catch (err) {
         console.error("Error fetching YouTube data:", err);
@@ -41,82 +51,103 @@ const Video = () => {
     setPlayer(false);
   };
 
-  return (
-    <>
-      <div className="skills__container">
-        {youtubeData.length > 0 ? (
-          youtubeData.map((item, index) => (
-            <div
-              className={`${Class.video_container} icon-text-container border scroll__fadein`}
-              key={index}
-              style={{ position: "relative" }}
-            >
-              <div className="skill__header">
-                <div
-                  className="skill__icon"
-                  style={{
-                    position: "relative",
-                    background: `url(${item.snippet.thumbnails.medium.url})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    minWidth: "5rem",
-                    minHeight: "5rem",
-                    borderRadius: "10px",
-                  }}
-                >
-                  <FontAwesomeIcon
-                    className={Class.play_icon}
-                    icon={faPlay}
-                  />
-                </div>
-                <div className="skill__content">
-                  <p className={Class.projectdate}>
-                    <small>
-                      <FontAwesomeIcon icon={faCalendarAlt} />
-                      <span>
-                        {dateFormat(item.snippet.publishedAt.split("T")[0])}
-                      </span>
-                    </small>
-                  </p>
-                  <h4 className="skill__title">{item.snippet.title}</h4>
-                </div>
-              </div>
-              <Link
-                to={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`}
-                className="video__link"
-                title={item.snippet.title}
-                style={{ position: "absolute", inset: "0", zIndex: "10" }}
-                onClick={openVideo}
-              ></Link>
-            </div>
-          ))
-        ) : (
-          <p>
-            <FontAwesomeIcon icon={faCircle} />
-            <span>Loading ...</span>
-          </p>
-        )}
+  //Cookies
+
+  const { cookiesAccepted, acceptCookies, rejectCookies } =
+    useContext(CookieContext);
+
+  const [showVideos, setShowVideos] = useState(!cookiesAccepted);
+
+  // Sync local banner visibility with context state
+  useEffect(() => {
+    cookiesAccepted === "true" ? setShowVideos(false) : setShowVideos(true);
+  }, [cookiesAccepted]);
+
+  if (showVideos) {
+    return (
+      <div className="border">
+        <h3 style={{marginBlock:'1rem'}}>Oops! 😬 Keine YouTube-Videos hier – sollte eigentlich anders sein! 📉🎥</h3>
+        <p>Externe Inhalte sind in Cookie Einsttellungen deaktiviert</p>
       </div>
-      {player && (
-        <>
-          <div
-            className={`${Class.fixedPlayer} ${player ? "open" : null}`}
-            onClick={(e) => videoContainerHandler(e)}
-            style={{ zIndex: "999" }}
-          >
-            <div className={Class.videoctrls}>
-              <button onClick={() => setPlayer(false)}>
-                <FontAwesomeIcon icon={faTimes} size="xl" />
-              </button>
-              <h2>{videoUrl.title}</h2>
+    );
+  } else {
+    return (
+      <>
+        <div className={`grid__container`}>
+          {youtubeData.length > 0 ? (
+            youtubeData.map((item, index) => (
+              <div
+                className={`${Class.video_container} icon-text-container border scroll__fadein`}
+                key={index}
+                style={{ position: "relative" }}
+              >
+                <div className="skill__header">
+                  <div
+                    className="skill__icon"
+                    style={{
+                      position: "relative",
+                      background: `url(${item.snippet.thumbnails.medium.url})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                      minWidth: "5rem",
+                      minHeight: "5rem",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <FontAwesomeIcon
+                      className={Class.play_icon}
+                      icon={faPlay}
+                    />
+                  </div>
+                  <div className="skill__content">
+                    <p className={Class.projectdate}>
+                      <small>
+                        <FontAwesomeIcon icon={faCalendarAlt} />
+                        <span>
+                          {dateFormat(item.snippet.publishedAt.split("T")[0])}
+                        </span>
+                      </small>
+                    </p>
+                    <h4 className="skill__title">{item.snippet.title}</h4>
+                  </div>
+                </div>
+                <Link
+                  to={`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`}
+                  className="video__link"
+                  title={item.snippet.title}
+                  style={{ position: "absolute", inset: "0", zIndex: "10" }}
+                  onClick={openVideo}
+                ></Link>
+              </div>
+            ))
+          ) : (
+            <p>
+              <FontAwesomeIcon icon={faCircle} />
+              <span>Loading ...</span>
+            </p>
+          )}
+        </div>
+        {player && (
+          <>
+            <div
+              className={`${Class.fixedPlayer} ${player ? "open" : null}`}
+              onClick={(e) => videoContainerHandler(e)}
+              style={{ zIndex: "999" }}
+            >
+              <div className={Class.videoctrls}>
+                <button onClick={() => setPlayer(false)}>
+                  <FontAwesomeIcon icon={faTimes} size="xl" />
+                </button>
+                <h2>{videoUrl.title}</h2>
+              </div>
+              <VideoPlayer videoUrl={videoUrl.url} />
             </div>
-            <VideoPlayer videoUrl={videoUrl.url} />
-          </div>
-        </>
-      )}
-    </>
-  );
+          </>
+        )}
+      </>
+    );
+  }
 };
 
 export default Video;

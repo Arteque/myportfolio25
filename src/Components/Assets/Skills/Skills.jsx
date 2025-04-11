@@ -266,7 +266,7 @@ function Skills() {
                     <div className="skill__header">
                         <h3>- Design:  </h3>
                     </div>
-                    <div className="skills__container">
+                    <div className="grid__container">
                     {
                         designSkills && (
                             designSkills.map(item => (
@@ -302,7 +302,7 @@ function Skills() {
                     <div className="skill__header">
                         <h3>- Entwicklung:</h3>
                     </div>
-                    <div className="skills__container">
+                    <div className="grid__container">
                     {
                         webSkills && (
                             webSkills.map(item => (
@@ -339,7 +339,7 @@ function Skills() {
                         <h3>- Kommunikation:</h3>
                         
                     </div>
-                    <div className="skills__container">
+                    <div className="grid__container">
                     {
                         commSkills && (
                             commSkills.map(item => (

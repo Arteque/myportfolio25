@@ -1,0 +1,13 @@
+.cookies_container {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 999;
+    max-width: 300px;
+    p{
+        font-size: 1rem;
+    }
+    > div{
+        margin-block: 1rem;
+    }
+}
