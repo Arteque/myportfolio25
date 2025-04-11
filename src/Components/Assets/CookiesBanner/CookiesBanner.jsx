@@ -66,16 +66,13 @@ const CookiesBanner = () => {
   return (
     <div className={`${Class.cookies_container} border bg-bg-100 txt-txt-300 `}>
       <p>
-        "Ich esse Keks, nom nom nom!"
-        <br />
-        🍪 Nur für Animationen und die
-        YouTube-Videos! Nom nom nom! 🎥
+        Mein Portfolio verwendet Cookies, um Funktionen oder externe Inhalte anzeigen zu können.
       </p>
       <div className="call">
-        <button className="call__full" onClick={acceptCookies}>
+        <button style={{cursor:'pointer'}} className="call__full" onClick={acceptCookies}>
           Annehmen
         </button>
-        <button className={`call__full`} onClick={clearAllData}>
+        <button style={{cursor:'pointer'}} className={`call__full`} onClick={clearAllData}>
           Verweigern
         </button>
       </div>
