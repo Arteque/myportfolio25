@@ -66,7 +66,7 @@ const CookiesBanner = () => {
   return (
     <div className={`${Class.cookies_container} border bg-bg-100 txt-txt-300 `}>
       <p>
-        Mein Portfolio verwendet Cookies, um Funktionen oder externe Inhalte anzeigen zu können.
+      Mein Portfolio verwendet Cookies, um Funktionen bereitzustellen und externe Inhalte anzuzeigen.
       </p>
       <div className="call">
         <button style={{cursor:'pointer'}} className="call__full" onClick={acceptCookies}>
