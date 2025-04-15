@@ -1,6 +1,16 @@
 @use '../../../Vars/mixin';
 
 .main_header__color_mode{
+    position: fixed;
+    bottom: 5px;
+    right: 7px;
+    background: var(--clr-bg-100);
+    padding: 4px;
+    border-radius: 6px;
+    @include mixin.mid{
+        position: unset;
+        background: transparent;
+    }
     button{
         display:block;
         width: 1.5rem;
@@ -11,11 +21,11 @@
            font-size: 1.5rem;
             transition: all 0.5s;
             path{
-                fill: orange;
+                fill: rgb(182, 136, 10);
             }
         }
         .moon{
-            filter:drop-shadow(0 0 2px yellow);
+            filter:drop-shadow(0 0 2px rgb(255, 255, 255));
             path{
                 fill: var(--clr-txt-100);
             }

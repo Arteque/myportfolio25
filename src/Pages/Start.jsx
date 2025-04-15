@@ -123,7 +123,7 @@ const Start = () => {
 
       <Section id="projects" classname="projects">
         <Wrapper>
-          <SectionHeader title1="Meine" title2="Projekte" />
+          <SectionHeader title1="Meine" title2="Projekte"  />
           <div className="projects__filter">
             <FontAwesomeIcon icon={faFilter} size="1x" />
             <ul

@@ -5,6 +5,7 @@ import Section from "../Fragments/Section"
 import Wrapper from "../Fragments/Wrapper"
 
 import Class from './Hero.module.scss'
+import Underline from "../Fragments/Underline"
 
 const Hero = () => {
 
@@ -23,8 +24,9 @@ const Hero = () => {
                     <span className="block small">Ich heiße</span> <span className="name">Ahmed </span> <span className="uppercase name">Lemssiah</span>
                 </h2>
                 <p>
-                    ich bin <span className="underline">Frontend Web Entwickler</span>
-                    
+                Ich gestalte und programmiere <Underline>Websites</Underline>.
+                <br /> <br />
+                 Von der ersten Idee bis zum letzten Pixel.
                 </p>
                 <div className="call">
                     <Link to="/" className={`call__full ${Class.call__full}`} onClick={clickHandler} data-target="#contact">

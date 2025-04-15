@@ -1,0 +1,19 @@
+.underline{
+    font-size: 120%;
+    font-weight: 900;
+    position: relative;
+    z-index: 10;
+    // color: var(--clr-call-300);
+    &::after{
+        content:"";
+        background: url("/Main/Underline.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        inset-inline: 0;
+        inset-block-end: -2px;
+        height: 5px;  
+        position:absolute;
+        z-index: -5;
+    }
+}

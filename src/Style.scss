@@ -296,6 +296,9 @@ body[data-mode="dark"]{
             bottom: 50%;
         }
       }
+      .hero__text{
+        background-color: #07273db6;
+      }
     }
 }
 
@@ -369,6 +372,7 @@ body[data-mode="dark"]{
             justify-content: space-between;
             .hero__text{
                 margin-inline-end:auto;
+                transform: translateY(0);
                 .small{
                     font-size: 1rem;
                     font-weight: 400;
@@ -391,12 +395,13 @@ body[data-mode="dark"]{
 
 
 .hero__text{
-    background:var(--clr-txt-400);
-    backdrop-filter: blur(10px);
+    background:#a2e7f077;
+    backdrop-filter: blur(5px);
     border-radius: 0.5rem;
     padding: var(--gap);
     max-width: fit-content;
     margin-inline:auto;
+    transform: translateY(50px);
     text-align: center;
     @include mixin.mid{
         text-align: unset;
@@ -503,10 +508,11 @@ header.section__header {
             }
         }
     .skill__description{
-        font-size:0.7rem;
+        font-size:0.8rem;
         margin-block: 0.5rem;
         color: var(--clr-txt-100);
-        text-align:right;
+        text-align:left;
+        padding-inline-start: 1rem;
     }
 }
 /*########### Skills ##############*/
@@ -625,3 +631,18 @@ header.section__header {
     }
  }
 /* Grid Container */
+
+.Toastify__toast-container.Toastify__toast-container--bottom-right {
+    max-width: 72%;
+    margin-inline: auto;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.icon-text-container {
+    margin-block: 1rem;
+    @include mixin.mid{
+        margin-block:unset;
+        height: 100%;
+        align-items: center;
+    }
+}
