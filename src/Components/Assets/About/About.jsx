@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import ProjectText from "../Fragments/ProjectText";
 import Class from "./About.module.scss";
 import Age from "../../../Tools/Age";
@@ -11,6 +10,7 @@ const About = () => {
           loading="lazzy"
           src="/Profil/amd.png"
           alt="Ahmed Lemssiah Profilbild"
+          area-label="Profilbild von Ahmed Lemssiah"
         />
         <figcaption>Ahmed Lemssiah</figcaption>
       </figure>
@@ -27,7 +27,8 @@ const About = () => {
             Ahmed <span className="uppercase">Lemssiah</span>
           </strong>
           , bin <strong>{Age()}</strong> Jahre alt, komme aus{" "}
-          <strong>Marokko</strong> und lebe derzeit in{" "}
+          <strong>Marokko</strong>, arbeite seit 2019 als{" "}
+          <strong>Frontend Webentickler</strong> und lebe derzeit in{" "}
           <strong>Deutschland/Thüringen</strong>. Glücklicher Papa von zwei
           Kindern &#128111; und Ehemann einer wundervollen Frau. 🤗
         </p>
@@ -36,7 +37,7 @@ const About = () => {
           eine Zeit lang als Französischlehrer gearbeitet &#127979;. Doch meine
           wahre Leidenschaft liegt im{" "}
           <strong>Gestalten und Programmieren</strong> – und genau das habe ich
-          zu meinem Beruf gemacht. 🫡
+          zu meinem Beruf gemacht.
         </p>
       </ProjectText>
     </div>
