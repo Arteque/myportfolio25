@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import {
   faSun,
   faMoon,
-  faSmile,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
