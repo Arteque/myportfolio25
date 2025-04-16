@@ -1,12 +1,12 @@
 # Lemssiah Portfolio
 
-A personal web portfolio showcasing projects in web development and design. * In GERMAN *
+A personal web portfolio showcasing projects in web development and design. *In GERMAN*
 
 ## Overview
 
 This is the official portfolio site of Ahmed Lemssiah – a frontend developer and web designer focused on clean, responsive, and accessible user interfaces.
 
-The site presents a curated selection of past projects, including creative, technical, and client-oriented work. It reflects a strong understanding of modern web standards and design principles.
+The site presents a curated selection of past projects, including creative, technical, and client-oriented work.
 
 ## Live Site
 
@@ -19,32 +19,25 @@ The site presents a curated selection of past projects, including creative, tech
 - Clean typography and modern aesthetics  
 - Dark mode styling  
 - Filtering and sorting capabilities  
-- **Custom animated GIF** on homepage created using **Adobe Animate**  
-- **YouTube API integration** for embedding and dynamically loading video content
+- **Custom animated GIF** created using **Adobe Animate**  
+- **YouTube API integration** for embedding and dynamically loading video content  
+- **Some background images are licensed stock visuals from Adobe Stock**
 
 ## Tech Stack
 
 - **HTML5** / **CSS3**
 - **JavaScript (ES6+)**
 - **React.js** (likely, based on site behavior)
-- **Figma / Adobe XD** (used for UI/UX design)
+- **Adobe Illustrator** (for the avatars and animations)
+- **Adobe XD** (used for UI/UX design)
 - **Adobe Animate** (used for animated content)
 - **YouTube Data API** for video integration
 - **Git** & **GitHub** for version control
 
-## Folder Structure (Assumed)
+## Use it if you need it:
 
-```plaintext
-public/         → Static files and assets
-src/
-  components/   → Reusable React components
-  pages/        → Page-level components
-  styles/       → Global and component-specific styles
-  data/         → Project metadata or content
-  App.js        → Root component
-  index.js      → Entry point
-
-git clone https://github.com/Arteque/lemssiah-portfolio.git
-cd lemssiah-portfolio
+```bash
+git clone https://github.com/Arteque/myportfolio25.git
+cd myportfolio25
 npm install
 npm start
