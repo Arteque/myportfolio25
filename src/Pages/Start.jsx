@@ -246,7 +246,7 @@ const Start = () => {
       </Section>
       <Section classname="contact" id="contact">
         <Wrapper>
-          <SectionHeader title1="Überzeugt?" title2="reden wir darüber" />
+          <SectionHeader title1="Hier" title2="kannst du mehr über mich erfahren oder kontaktieren" />
           <div className="section_content grid--2cols">
             <About />
             <Contact />
