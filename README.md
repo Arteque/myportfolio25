@@ -12,6 +12,8 @@ The site presents a curated selection of past projects, including creative, tech
 
 🔗 [https://www.lemssiah-portfolio.de](https://www.lemssiah-portfolio.de/?sort=datedown)
 
+![Logo](/public/preview-image.jpg)
+
 ## Features
 
 - Project showcase with visual previews and metadata  
