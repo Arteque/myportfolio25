@@ -1,4 +1,4 @@
-# ![Logo](web-app-manifest-192x192.png) Lemssiah Portfolio
+# ![Logo](/public/web-app-manifest-192x192.png) Lemssiah Portfolio
 
 A personal web portfolio showcasing projects in web development and design. *In GERMAN*
 
