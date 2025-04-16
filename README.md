@@ -1,4 +1,4 @@
-# Lemssiah Portfolio
+# ![Logo](web-app-manifest-192x192.png) Lemssiah Portfolio
 
 A personal web portfolio showcasing projects in web development and design. *In GERMAN*
 
@@ -21,7 +21,9 @@ The site presents a curated selection of past projects, including creative, tech
 - Filtering and sorting capabilities  
 - **Custom animated GIF** created using **Adobe Animate**  
 - **YouTube API integration** for embedding and dynamically loading video content  
-- **Some background images are licensed stock visuals from Adobe Stock**
+- **Toast notifications implemented with [React-Toastify](https://fkhadra.github.io/react-toastify/)**  
+- **Some background images are licensed stock visuals from Adobe Stock**  
+- **Dark/Light mode changes the room atmosphere – from night to day – for an immersive user experience** 🌙☀️
 
 ## Tech Stack
 
@@ -32,6 +34,7 @@ The site presents a curated selection of past projects, including creative, tech
 - **Adobe XD** (used for UI/UX design)
 - **Adobe Animate** (used for animated content)
 - **YouTube Data API** for video integration
+- **React-Toastify** (for toast notifications)
 - **Git** & **GitHub** for version control
 
 ## Use it if you need it:
