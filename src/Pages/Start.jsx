@@ -20,7 +20,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import Project from "../Components/Assets/Fragments/Project";
 import dateFormat from "../Tools/dateFormat";
 import ProjectListing from "../Projects/Projects.json";
-import Video from "../Components/Assets/Videos/Video"
+import Video from "../Components/Assets/Videos/Video";
 import SectionHeader from "../Components/Assets/Fragments/SectionHeader";
 import Contact from "../Components/Assets/Contact/Contact";
 import Services from "../Components/Assets/Services/Services";
@@ -123,7 +123,7 @@ const Start = () => {
 
       <Section id="projects" classname="projects">
         <Wrapper>
-          <SectionHeader title1="Meine" title2="Projekte"  />
+          <SectionHeader title1="Meine" title2="Projekte" />
           <div className="projects__filter">
             <FontAwesomeIcon icon={faFilter} size="1x" />
             <ul
@@ -246,20 +246,23 @@ const Start = () => {
       </Section>
       <Section classname="contact" id="contact">
         <Wrapper>
-          <SectionHeader title1="Hier" title2="kannst du mehr über mich erfahren oder kontaktieren" />
+          <SectionHeader title1="Mehr über mich & " title2="Kontakt" />
           <div className="section_content grid--2cols">
             <About />
             <Contact />
           </div>
         </Wrapper>
       </Section>
-       <Section classname="media-section" id="media-section">
+      <Section classname="media-section" id="media-section">
         <Wrapper>
-          <SectionHeader title1="Schon so weit gescrollt? 😉  " title2=" Ein kleines Extra für dich:" />
+          <SectionHeader
+            title1="Schon so weit gescrollt? 😉"
+            title2=" Hier ein kleines Extra für dich:"
+          />
           <p>Timelapse: Digitales Zeichnen & Fotomontagen 🎨🖼️</p>
           <Video />
         </Wrapper>
-      </Section> 
+      </Section>
     </>
   );
 };
