@@ -123,6 +123,10 @@ img {
     display: flex;
     flex-flow: row wrap;
     gap: var(--mid_gap);
+    justify-content: space-around;
+    @include mixin.mid {
+      justify-content: flex-start;
+    }
   }
 }
 .call__full {
