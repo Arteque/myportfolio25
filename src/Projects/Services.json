@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "title": [
+            {
+                "de": [
+                    "Ideen",
+                    "Erfinder"
+                ],
+                "fr": [
+                    "Chercheur",
+                    "d'idée"
+                ],
+                "en": [
+                    "Ideas",
+                    "Searcher"
+                ]
+            }
+        ],
+        "text": [
+            {
+                "de": "Ich suche den perfekten Mix - wie ein Nerd im Design-Labor.\n In der Ideenphase analysiere ich gemeinsam mit dem Kunden Anforderungen, Zielgruppen und Use Cases. Daraus entstehen UI/UX-Konzepte, Wireframes und Nutzerflows – mit Fokus auf intuitive Bedienung und visuelle Klarheit.",
+                "fr": "Je cherche le mélange parfait – comme un nerd dans un labo de design. \n Pendant la phase de conception, j’analyse avec les besoins, les groupes cibles et les cas d’usage adaptés et validés par mes clients. Il en résulte des concepts UI/UX, des wireframes – en ayant l’intuitivité et la clarté visuelle comme objectif.",
+                "en": "I’m searching for the perfect mix – like a nerd in a design lab. \n During the design phase, I work with the client to analyze requirements, target groups, and use cases. This results in UI/UX concepts, wireframes, and user flows – with a focus on intuitive interaction and visual clarity."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": [
+            {
+                "de": [
+                    "Pixel",
+                    "Artiste"
+                ],
+                "fr": [
+                    "Artiste",
+                    "de pixel"
+                ],
+                "en": [
+                    "Pixel",
+                    "Artist"
+                ]
+            }
+        ],
+        "text": [
+            {
+                "de": "„Ich träume mein Bild, und dann male ich meinen Traum.“ — Vincent van Gogh \n So ist es auch mit Webdesign: Wünsche und Träume werden durchdacht und in ein Designkonzept verwandelt. Ich gestalte die Wireframes in enger Abstimmung mit meinen Kollegen und Kunden, bis das Endlayout steht. Das Endprodukt ist ein durchdachtes, konsistentes und effizientes Design-System.",
+                "fr": "Je cherche le mélange parfait – comme un nerd dans un labo de design. \n Pendant la phase de conception, j’analyse avec les besoins, les groupes cibles et les cas d’usage adaptés et validés par mes clients. Il en résulte des concepts UI/UX, des wireframes – en ayant l’intuitivité et la clarté visuelle comme objectif.",
+                "en": "I’m searching for the perfect mix – like a nerd in a design lab. \n During the design phase, I work with the client to analyze requirements, target groups, and use cases. This results in UI/UX concepts, wireframes, and user flows – with a focus on intuitive interaction and visual clarity."
+            }
+        ]
+    }
+]
