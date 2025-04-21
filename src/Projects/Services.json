@@ -46,8 +46,34 @@
         "text": [
             {
                 "de": "„Ich träume mein Bild, und dann male ich meinen Traum.“ — Vincent van Gogh \n So ist es auch mit Webdesign: Wünsche und Träume werden durchdacht und in ein Designkonzept verwandelt. Ich gestalte die Wireframes in enger Abstimmung mit meinen Kollegen und Kunden, bis das Endlayout steht. Das Endprodukt ist ein durchdachtes, konsistentes und effizientes Design-System.",
-                "fr": "Je cherche le mélange parfait – comme un nerd dans un labo de design. \n Pendant la phase de conception, j’analyse avec les besoins, les groupes cibles et les cas d’usage adaptés et validés par mes clients. Il en résulte des concepts UI/UX, des wireframes – en ayant l’intuitivité et la clarté visuelle comme objectif.",
-                "en": "I’m searching for the perfect mix – like a nerd in a design lab. \n During the design phase, I work with the client to analyze requirements, target groups, and use cases. This results in UI/UX concepts, wireframes, and user flows – with a focus on intuitive interaction and visual clarity."
+                "fr": "„Je rêve ma peinture, ensuite je peins mon rêve“ – — Vincent van Gogh🎨✨ \n  Il en va de même pour le webdesign : les souhaits et les rêves sont mûrement réfléchis, adaptés et ransformés en un concept de design. Je conçois, en étroite collaboration avec mes collègues et mes clients, la structure et les wireframes, jusqu’à ce que la mise en page finale soit définie.Le produit final est un système de design réfléchi, cohérent et efficace.",
+                "en": "„I dream my painting, and then I paint my dream.“ — Vincent van Gogh 🎨✨ \n It's the same With web design: wishes and dreams are carefully considered, adapted, and transformed into a design concept. I design the structure and wireframes in close collaboration with my colleagues and clients, until the final layout is defined.The end product is a thoughtful, coherent, and efficient design system."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": [
+            {
+                "de": [
+                    "DOM",
+                    "Dompeteur"
+                ],
+                "fr": [
+                    "Dompteur",
+                    "DOM"
+                ],
+                "en": [
+                    "DOM",
+                    "Tamer"
+                ]
+            }
+        ],
+        "text": [
+            {
+                "de": "Als Webdompteur zähme ich Browser mit präzisem Code, Geduld und Disziplin. \n In der Codierungsphase setze ich Designs präzise um – sowohl mit modernen Frameworks wie React als auch mit CMS-Lösungen wie TYPO3 und WordPress. Dabei ist auch natives Codieren mit HTML5, Css3 oder Javscript ES6 möglich, um maßgeschneiderte Lösungen zu entwickeln. Ich achte auf modularen, wartbaren Code, der auf Performance, Accessibility und Responsiveness optimiert ist. \n Git sorgt für Versionskontrolle, und Staging-Umgebungen ermöglichen zuverlässiges Testen, um eine reibungslose Veröffentlichung und langfristige Funktionalität zu gewährleisten. Zusätzlich übernehme ich die Wartung und regelmäßige Updates von Websites.",
+                "fr": "En Tant que dompteur-web, j'apprivoise les navigateurs avec un code précis, de la patience et de la discipline. \n Lors de cette phase, je code les designs conçus avec précision. Pour se faire, je suis en mesure d'utiliser des frameworks modernes comme React ou CMS comme TYPO3 et WordPress. Je peux aussi coder avec du HTML, CSS ou JavaScript, afin de développer des solutions sur mesure. \n Je veille à ce que le code soit modulaire et maintenable, tout en optimisant la performance, l'accessibilité et la réactivité. Git assure le contrôle de version, et les environnements de staging permettent des tests fiables pour garantir une publication fluide et une fonctionnalité à long terme. \n En plus, je prends en charge la maintenance et les mises à jour régulières des sites web.",
+                "en": ""
             }
         ]
     }

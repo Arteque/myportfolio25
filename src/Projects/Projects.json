@@ -1,194 +1,211 @@
 [
-    {
-      "id": 0,
-      "title": "Space-tourism",
-      "subtitle": "",
-      "type": "Web",
-      "date": "2024-02-01",
-      "urls": [
-        {
-            "id":1,
-            "name":"GitHub",
-            "icon":"Github",
-            "url":"https://github.com/Arteque/Space-tourism" 
-        },
-        {
-            "id":2,
-            "name":"Live Website",
-            "icon":"Extern",
-            "url":"https://arteque.github.io/Space-tourism/index.html"
-        }
-      ],
-      "lang": ["en"],
-      "teaser": "Die Space-Tourismus-Website bietet Informationen über fiktive Reiseziele im Weltall, die Crew sowie die Raumschiffe.",
-      "thumb": "/Projects/Space-tourism/screenshot.png",
-      "tags": ["html", "Css", "Javascript"],
-      "autor": ["Ahmed LEMSSIAH"]
-    },
-    {
-      "id": 1,
-      "title": "Countries-api",
-      "subtitle": "",
-      "type": "Web",
-      "date": "2024-02-21",
-      "urls": [
-        {
-            "id":1,
-            "name":"GitHub",
-            "icon":"Github",
-            "url":"https://github.com/Arteque/Countries-API-One-Pager" 
-        },
-        {
-            "id":2,
-            "name":"Live Website",
-            "icon":"Extern",
-            "url":"https://arteque.github.io/Countries-API-One-Pager/"
-        }
-      ],
-      "lang": ["en"],
-      "teaser": "Dieses Projekt visualisiert Daten der REST Countries API, ermöglicht die Ländersuche und Filterung nach Regionen. Es bietet einen praktischen Farbthemen-Umschalter und nutzt HTML, CSS sowie JavaScript, um eine interaktive Webanwendung zu erstellen. Mit Leaflet.js wird zusätzlich eine Kartenansicht der Länder bereitgestellt. Die Wikimedia API ermöglicht es, wenn verfügbar, die Landeshymne im Audioformat anzuhören.",
-      "thumb": "/Projects/Countries-api/screenshot.png",
-      "tags": ["HTML", "Css", "Javascript", "API", "Leafletjs"],
-      "autor": ["Ahmed LEMSSIAH"]
-    },
-    {
-      "id": 2,
-      "title": "Ptit-Pont",
-      "subtitle": "",
-      "type": "Web",
-      "date": "2022-10-03",
-      "urls": [
-        {
-            "id":1,
-            "name":"GitHub",
-            "icon":"Github",
-            "url":"https://github.com/Arteque/ptitpont" 
-        },
-        {
-            "id":2,
-            "name":"Live Website",
-            "icon":"Extern",
-            "url":"https://ptit-pont.net"
-        }
-      ],
-      "lang": ["fr", "ar"],
-      "teaser": "Diese Website des Kindergartens P'tit-Pont wurde von mir entworfen, anhand von HTML, CSS und JavaScript codiert und als Template in WordPress integriert.",
-      "thumb": "/Projects/Ptit-pont/screenshot.png",
-      "tags": ["HTML", "Css", "Javascript", "Wordpress", "PHP"],
-      "autor": ["Ahmed LEMSSIAH"]
-    },
-    {
-      "id": 3,
-      "title": "Dictionary",
-      "subtitle": "",
-      "type": "Web",
-      "date": "2024-03-09",
-      "urls": [
-        {
-            "id":1,
-            "name":"GitHub",
-            "icon":"Github",
-            "url":"https://github.com/Arteque/dictionary-api?tab=readme-ov-file" 
-        },
-        {
-            "id":2,
-            "name":"Live Website",
-            "icon":"Extern",
-            "url":"https://arteque.github.io/dictionary-api/"
-        }
-      ],
-      "lang": ["en"],
-      "teaser": "Diese englische Wörterbuch-Webapp ermöglicht es den Nutzern, Wörter zu suchen. Die App ist responsiv und bietet einen Dark- und Light-Mode. Außerdem kann die Schriftart zwischen Sans-Serif und Serif gewechselt werden!",
-      "thumb": "/Projects/Dictionary-api/screenshot.png",
-      "tags": [
-        "ReactJS + Vite",
-        "JSON",
-        "REST API"
-      ],
-      "autor": ["Ahmed LEMSSIAH"]
-    },
-    {
-      "id": 4,
-      "title": "Designo website",
-      "subtitle": "",
-      "type": "Web",
-      "date": "2024-10-11",
-      "urls": [
-        {
-            "id":1,
-            "name":"GitHub",
-            "icon":"Github",
-            "url":"https://github.com/Arteque/dictionary-api?tab=readme-ov-file" 
-        },
-        {
-            "id":2,
-            "name":"Live Website",
-            "icon":"Extern",
-            "url":"https://designo-zeta-opal.vercel.app/"
-        }
-      ],
-      "lang": ["en"],
-      "teaser": "Designo | Award-wining custom designs and digital branding Solutions | Designo ist eine Showcase-Website für eine multinationale digitale Branding-Agentur. ",
-      "thumb": "/Projects/Designo/screenshot.png",
-      "tags": [
-        "ReactJS + Vite"
-      ],
-      "autor": ["Ahmed LEMSSIAH"]
-    },
-    {
-      "id": 5,
-      "title": "Room Homepage",
-      "subtitle": "",
-      "type": "Web",
-      "date": "2024-02-24",
-      "urls": [
-        {
-            "id":1,
-            "name":"GitHub",
-            "icon":"Github",
-            "url":"https://github.com/Arteque/room-homepage" 
-        },
-        {
-            "id":2,
-            "name":"Live Website",
-            "icon":"Extern",
-            "url":"https://arteque.github.io/room-homepage/"
-        }
-      ],
-      "lang": ["en"],
-      "teaser": "Die Herausforderung besteht darin, eine E-Commerce-Startseite, basierend auf dem von Frontend Mentor heruntergeladenen Design, zu erstellen und sie so nah wie möglich am Originaldesign umzusetzen.",
-      "thumb": "./Projects/Room/screenshot.png",
-      "tags": [
-        "HTML","Css / Scss", "Javascript"
-      ],
-      "autor": ["Ahmed LEMSSIAH"]
-    },
-    {
-      "id": 6,
-      "title": "Photosnap",
-      "subtitle": "",
-      "type": "Web",
-      "date": "2025-04-06",
-      "urls": [
-        {
-            "id":1,
-            "name":"GitHub",
-            "icon":"Github",
-            "url":"https://github.com/Arteque/photosnapwebsite" 
-        },
-        {
-            "id":2,
-            "name":"Live Website",
-            "icon":"Extern",
-            "url":"https://photosnapwebsite.vercel.app/"
-        }
-      ],
-      "lang": ["en"],
-      "teaser": "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
-      "thumb": "./Projects/Photosnap/screenshot.png",
-      "tags": [
-        "Reactjs/vite","Tailwind","HTML","Css", "Javascript"
-      ],
-      "autor": ["Ahmed LEMSSIAH"]
-    }
+  {
+    "id": 0,
+    "title": "Space-tourism",
+    "subtitle": "",
+    "type": "Web",
+    "date": "2024-02-01",
+    "urls": [
+      {
+        "id": 1,
+        "name": "GitHub",
+        "icon": "Github",
+        "url": "https://github.com/Arteque/Space-tourism"
+      },
+      {
+        "id": 2,
+        "name": "Live Website",
+        "icon": "Extern",
+        "url": "https://arteque.github.io/Space-tourism/index.html"
+      }
+    ],
+    "lang": [
+      "en"
+    ],
+    "teaser": "Die Space-Tourismus-Website bietet Informationen über fiktive Reiseziele im Weltall, die Crew sowie die Raumschiffe.",
+    "thumb": "/Projects/Space-tourism/screenshot.png",
+    "tags": [
+      "html",
+      "Css",
+      "Javascript"
+    ],
+    "autor": [
+      "Ahmed LEMSSIAH"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Countries-api",
+    "subtitle": "",
+    "type": "Web",
+    "date": "2024-02-21",
+    "urls": [
+      {
+        "id": 1,
+        "name": "GitHub",
+        "icon": "Github",
+        "url": "https://github.com/Arteque/Countries-API-One-Pager"
+      },
+      {
+        "id": 2,
+        "name": "Live Website",
+        "icon": "Extern",
+        "url": "https://arteque.github.io/Countries-API-One-Pager/"
+      }
+    ],
+    "lang": [
+      "en"
+    ],
+    "teaser": "Dieses Projekt visualisiert Daten der REST Countries API, ermöglicht die Ländersuche und Filterung nach Regionen. Es bietet einen praktischen Farbthemen-Umschalter und nutzt HTML, CSS sowie JavaScript, um eine interaktive Webanwendung zu erstellen. Mit Leaflet.js wird zusätzlich eine Kartenansicht der Länder bereitgestellt. Die Wikimedia API ermöglicht es, wenn verfügbar, die Landeshymne im Audioformat anzuhören.",
+    "thumb": "/Projects/Countries-api/screenshot.png",
+    "tags": [
+      "HTML",
+      "Css",
+      "Javascript",
+      "API",
+      "Leafletjs"
+    ],
+    "autor": [
+      "Ahmed LEMSSIAH"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Ptit-Pont",
+    "subtitle": "",
+    "type": "Web",
+    "date": "2022-10-03",
+    "urls": [
+      {
+        "id": 1,
+        "name": "GitHub",
+        "icon": "Github",
+        "url": "https://github.com/Arteque/ptitpont"
+      },
+      {
+        "id": 2,
+        "name": "Live Website",
+        "icon": "Extern",
+        "url": "https://ptit-pont.net"
+      }
+    ],
+    "lang": [
+      "fr",
+      "ar"
+    ],
+    "teaser": "Diese Website des Kindergartens P'tit-Pont wurde von mir entworfen, anhand von HTML, CSS und JavaScript codiert und als Template in WordPress integriert.",
+    "thumb": "/Projects/Ptit-pont/screenshot.png",
+    "tags": [
+      "HTML",
+      "Css",
+      "Javascript",
+      "Wordpress",
+      "PHP"
+    ],
+    "autor": [
+      "Ahmed LEMSSIAH"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Dictionary",
+    "subtitle": "",
+    "type": "Web",
+    "date": "2024-03-09",
+    "urls": [
+      {
+        "id": 1,
+        "name": "GitHub",
+        "icon": "Github",
+        "url": "https://github.com/Arteque/dictionary-api?tab=readme-ov-file"
+      },
+      {
+        "id": 2,
+        "name": "Live Website",
+        "icon": "Extern",
+        "url": "https://arteque.github.io/dictionary-api/"
+      }
+    ],
+    "lang": [
+      "en"
+    ],
+    "teaser": "Diese englische Wörterbuch-Webapp ermöglicht es den Nutzern, Wörter zu suchen. Die App ist responsiv und bietet einen Dark- und Light-Mode. Außerdem kann die Schriftart zwischen Sans-Serif und Serif gewechselt werden!",
+    "thumb": "/Projects/Dictionary-api/screenshot.png",
+    "tags": [
+      "ReactJS + Vite",
+      "JSON",
+      "REST API"
+    ],
+    "autor": [
+      "Ahmed LEMSSIAH"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Designo website",
+    "subtitle": "",
+    "type": "Web",
+    "date": "2024-10-11",
+    "urls": [
+      {
+        "id": 1,
+        "name": "GitHub",
+        "icon": "Github",
+        "url": "https://github.com/Arteque/dictionary-api?tab=readme-ov-file"
+      },
+      {
+        "id": 2,
+        "name": "Live Website",
+        "icon": "Extern",
+        "url": "https://designo-zeta-opal.vercel.app/"
+      }
+    ],
+    "lang": [
+      "en"
+    ],
+    "teaser": "Designo | Award-wining custom designs and digital branding Solutions | Designo ist eine Showcase-Website für eine multinationale digitale Branding-Agentur. ",
+    "thumb": "/Projects/Designo/screenshot.png",
+    "tags": [
+      "ReactJS + Vite"
+    ],
+    "autor": [
+      "Ahmed LEMSSIAH"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Photosnap",
+    "subtitle": "",
+    "type": "Web",
+    "date": "2025-04-06",
+    "urls": [
+      {
+        "id": 1,
+        "name": "GitHub",
+        "icon": "Github",
+        "url": "https://github.com/Arteque/photosnapwebsite"
+      },
+      {
+        "id": 2,
+        "name": "Live Website",
+        "icon": "Extern",
+        "url": "https://photosnapwebsite.vercel.app/"
+      }
+    ],
+    "lang": [
+      "en"
+    ],
+    "teaser": "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
+    "thumb": "./Projects/Photosnap/screenshot.png",
+    "tags": [
+      "Reactjs/vite",
+      "Tailwind",
+      "HTML",
+      "Css",
+      "Javascript"
+    ],
+    "autor": [
+      "Ahmed LEMSSIAH"
+    ]
+  }
 ]

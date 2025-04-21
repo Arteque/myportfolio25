@@ -61,26 +61,14 @@ const Services = () => {
               </ProjectTitle>
               <ProjectText>
                 <p>
-                  Ich bin immer auf der Suche nach den{" "}
-                  <strong>richtigen Ideen</strong>, den{" "}
-                  <strong>passenden Lösungen</strong> und den perfekten
-                  Mischungen... <br />
-                  Wie ein Wahnsinniger im Labor des{" "}
-                  <strong className="txt-txt-200">Webdesigns</strong>! <br />
-                  <strong className="txt-txt-200">Pixel</strong>? Mein Elixier!{" "}
-                  <br />
-                  <strong className="txt-txt-200">Code</strong>? Mein
-                  geheimnisvolles Serum! <br />
-                  Jede <strong>Webseite</strong>, die ich erschaffe, ist eine
-                  Fusion aus Logik und Chaos – exakt berechnet, aber voller
-                  kreativer Explosionen! <br />
-                  MUAHAHA! 😈💻⚡ <br></br>
-                  ... Ja! Ich bin{" "}
-                  <small>
-                    <small>
-                      <small>{Age()} Jahre alt</small>
-                    </small>
-                  </small>
+                  Ich suche den perfekten Mix - wie ein Nerd im <b>Design</b>
+                  -Labor.
+                  <br /> <br />
+                  In der Ideenphase analysiere ich gemeinsam mit dem Kunden, die{" "}
+                  <b>Anforderungen</b>, <b>Zielgruppen</b> und <b>Use Cases</b>.
+                  Daraus entstehen <b>UI-Konzepte</b>, Wireframes und
+                  Nutzerflows – mit Fokus auf intuitive Bedienung und visuelle
+                  Klarheit.
                 </p>
               </ProjectText>
             </div>
@@ -138,19 +126,14 @@ const Services = () => {
               </ProjectTitle>
               <ProjectText>
                 <p>
-                  <q>„Ich träume mein Bild, und dann male ich meinen Traum.“</q>{" "}
-                  – Vincent van Gogh🎨✨ <br />
-                  Genauso ist es mit <strong>Webdesign</strong>! Erst träumen
-                  wir, dann <strong>designen wir</strong> – und manchmal
-                  schmilzt <strong>das Layout</strong> dahin wie eine "Dalí-Uhr"
-                  -{" "}
-                  <i>
-                    <samp>#u got the ref.?</samp>
-                  </i>{" "}
-                  -. 😅 <br />
-                  Doch mit klarem Konzept, guter Recherche und einem Hauch Magie
-                  🎭 wird aus jeder Website ein{" "}
-                  <strong>surreales Meisterwerk</strong>. 🚀
+                  <q>Ich träume mein Bild, und dann male ich meinen Traum. </q>—{" "}
+                  <b>Vincent van Gogh</b> <br /> <br />
+                  So ist es auch mit <b>Webdesign</b>: Wünsche und Träume werden
+                  durchdacht und in ein <b>Designkonzept</b> verwandelt. Ich
+                  gestalte die Wireframes in enger Abstimmung mit meinen
+                  Kollegen und Kunden, bis das Endlayout steht. Das Endprodukt
+                  ist ein durchdachtes, konsistentes und <b></b>{" "}
+                  <b>Design-System</b>.
                 </p>
               </ProjectText>
             </div>
@@ -207,26 +190,25 @@ const Services = () => {
               </ProjectTitle>
               <ProjectText>
                 <p>
-                  Als <strong>Web</strong>dompteur zähme ich mit{" "}
-                  <strong>präzisem Code</strong> die <strong>Browser</strong>
-                  -Bestie.&#129409; &#128526;
-                </p>
-                <p>
-                  Mit Disziplin, Geduld und einem scharfen Blick bringe ich{" "}
-                  <strong>Chrome</strong>, <strong>Firefox</strong> &{" "}
-                  <strong>Safari</strong> dazu, genau das zu tun, was sie sollen
-                  – eine perfekte Show liefern! 🎪🚀 &#129299;
-                </p>
-                <p>
-                  Doch wenn es um den Browser geht, dessen Name nicht genannt
-                  werden darf... <small></small>
-                  <small></small>
-                  <samp>
-                    <code>Expl***</code>
-                  </samp>
-                  <small></small>
-                  <small></small> &#128128; ? Da sind selbst meine Künste
-                  machtlos! 😅
+                  Als <b>Webdompteur</b> zähme ich <b>Browser</b> mit präzisem{" "}
+                  <b>Code</b>, <b>Geduld</b> und <b>Disziplin</b>.<br /> <br />
+                  In der <b>Codierungsphase</b> setze ich <b>Designs</b> präzise
+                  um – sowohl mit modernen <b>Frameworks</b> wie <b>React</b>{" "}
+                  als auch mit <b>CMS</b>-Lösungen wie <b>TYPO3</b> und{" "}
+                  <b>WordPress</b>.<br /> <br />
+                  Ich achte auf <b>modularen</b>, <b>wartbaren Code</b>, der auf{" "}
+                  <b>Performance</b>, <b>Accessibility</b> und{" "}
+                  <b>Responsiveness</b> optimiert ist.
+                  <br /> <br />
+                  <b>Git</b> sorgt für <b>Versionskontrolle</b>, und{" "}
+                  <b>Staging-Umgebungen</b> ermöglichen{" "}
+                  <b>zuverlässiges Testen</b>, um eine{" "}
+                  <b>reibungslose Veröffentlichung</b> und{" "}
+                  <b>langfristige Funktionalität</b> zu gewährleisten.
+                  <br />
+                  <br />
+                  Zusätzlich übernehme ich die <b>Wartung</b> und regelmäßige{" "}
+                  <b>Updates</b> von <b>Websites</b>.
                 </p>
               </ProjectText>
             </div>
