@@ -251,6 +251,7 @@ const Start = () => {
                 padding: "2rem",
                 position: "sticky",
                 top: "100px",
+                zIndex: 0,
               }}
             >
               <svg id="Ebene_1" data-name="Ebene 1" viewBox="0 0 430.44 364.92">
