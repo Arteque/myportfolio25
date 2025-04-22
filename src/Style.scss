@@ -294,7 +294,7 @@ body[data-mode="dark"] {
       }
       .moon {
         opacity: 30%;
-        bottom: 50%;
+        bottom: 45%;
       }
     }
     .hero__text {
@@ -337,12 +337,12 @@ body[data-mode="dark"] {
       max-width: 200px;
       filter: drop-shadow(0 0 20px white);
       @include mixin.mid {
-        max-width: 300px;
+        max-height: 60dvh;
       }
       @include mixin.xl {
         max-width: 250px;
         left: 50%;
-        bottom: 50%;
+        bottom: 40%;
       }
     }
     .moon {
@@ -356,7 +356,7 @@ body[data-mode="dark"] {
       }
       @include mixin.xl {
         left: 50%;
-        bottom: 50%;
+        bottom: 100%;
       }
     }
   }
@@ -400,6 +400,12 @@ body[data-mode="dark"] {
         margin-inline: unset;
       }
     }
+  }
+  @include mixin.mid {
+    min-height: 80dvh;
+  }
+  @include mixin.lg {
+    min-height: 70dvh;
   }
 }
 
@@ -599,7 +605,7 @@ header.section__header {
       .card-media {
         grid-column: 1;
         grid-row: 1 / span 2;
-        min-height: 60svh;
+        min-height: 50svh;
         height: 100%;
       }
     }
@@ -640,27 +646,26 @@ header.section__header {
 //Kontakt
 svg {
   g[data-name="dot"] {
-      transform-origin:initial;
-      animation: dotanime 10s linear infinite;
-      &:nth-of-type(1){
-        animation-delay: 0s;
-      }
-      &:nth-of-type(2){
-        animation-delay: 1s;
-      }
-      &:nth-of-type(3){
-        animation-delay: 1.5s;
-      }
-      &:nth-of-type(4){
-        animation-delay: 2s;
-      }
-      &:nth-of-type(5){
-        animation-delay: 2.5s;
-      }
-      &:nth-of-type(6){
-        animation-delay: 3s;
-      }
-
+    transform-origin: initial;
+    animation: dotanime 10s linear infinite;
+    &:nth-of-type(1) {
+      animation-delay: 0s;
+    }
+    &:nth-of-type(2) {
+      animation-delay: 1s;
+    }
+    &:nth-of-type(3) {
+      animation-delay: 1.5s;
+    }
+    &:nth-of-type(4) {
+      animation-delay: 2s;
+    }
+    &:nth-of-type(5) {
+      animation-delay: 2.5s;
+    }
+    &:nth-of-type(6) {
+      animation-delay: 3s;
+    }
   }
 }
 
