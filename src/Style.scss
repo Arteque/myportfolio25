@@ -89,6 +89,9 @@ img {
     padding-inline: 0;
     margin-inline: auto;
   }
+  @include mixin.xl {
+    max-width: 1500px;
+  }
 }
 /*Wrapper*/
 .uppercase {
@@ -631,6 +634,47 @@ header.section__header {
   @include mixin.lg {
     grid-template-columns: 1fr 1fr 1fr;
     padding-inline: unset;
+  }
+}
+
+//Kontakt
+svg {
+  g[data-name="dot"] {
+      transform-origin:initial;
+      animation: dotanime 10s linear infinite;
+      &:nth-of-type(1){
+        animation-delay: 0s;
+      }
+      &:nth-of-type(2){
+        animation-delay: 1s;
+      }
+      &:nth-of-type(3){
+        animation-delay: 1.5s;
+      }
+      &:nth-of-type(4){
+        animation-delay: 2s;
+      }
+      &:nth-of-type(5){
+        animation-delay: 2.5s;
+      }
+      &:nth-of-type(6){
+        animation-delay: 3s;
+      }
+
+  }
+}
+
+@keyframes dotanime {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
   }
 }
 /* Grid Container */

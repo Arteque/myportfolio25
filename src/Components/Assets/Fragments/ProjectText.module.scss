@@ -1,6 +1,7 @@
 .content {
-  p {
+  p, ul, ol {
     font-size: .9rem;
+    margin-block-end: 1rem;;
     letter-spacing: 1.8px;
     opacity: 1;
     color:var(--clr-txt-100);
@@ -14,6 +15,10 @@
       font-weight: 600;
       color: var(--clr-txt-300) !important;
     }
+  }
+  h2,h3,h4,h5,h6 {
+   margin-block: 2rem 0.5rem;
+   color:var(--clr-txt-300);
   }
 }
 @supports (animation-timeline: view()) {

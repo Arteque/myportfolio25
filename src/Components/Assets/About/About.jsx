@@ -4,7 +4,10 @@ import Age from "../../../Tools/Age";
 
 const About = () => {
   return (
-    <div className={`about__container ${Class.about_container}`}>
+    <div
+      className={`about__container grid--2cols border ${Class.about_container}`}
+      style={{ gap: "2rem" }}
+    >
       <figure className={`blur_fadein about_figure ${Class.about_figure}`}>
         <img
           loading="lazzy"
@@ -15,29 +18,56 @@ const About = () => {
         <figcaption>Ahmed Lemssiah</figcaption>
       </figure>
       <ProjectText>
-        <h3>&Uuml;ber mich: </h3>
         <p>
-          Hey! Schön, dass du es bis hierher geschafft hast! Ich danke dir für
-          dein Interesse!😊
+          Hallo, <br />
+          Ich bin <b>Webentwickler</b> mit Fokus auf{" "}
+          <b>Frontend-Technologien</b> und über <b>4 Jahren Berufserfahrung</b>{" "}
+          in der Umsetzung moderner, performanter und benutzerfreundlicher
+          Websites.Ich bringe nicht nur technisches Know-how, sondern auch einen
+          klaren Blick für das Wesentliche und eine strukturierte, zuverlässige
+          Arbeitsweise mit.
+        </p>
+        <p>
+          Ich bin es gewohnt, eigenverantwortlich zu arbeiten, Deadlines
+          einzuhalten und Projekte zielgerichtet zum Erfolg zu führen – ob im
+          Team oder allein.
+        </p>
+        <p>
+          Ich arbeite an allen Phasen eines Webprojekts – vom ersten Konzept
+          über die Entwicklung bis hin zur Integration und Wartung. Dabei ist es
+          mir wichtig, stets den Überblick zu behalten und an den richtigen
+          Stellen flexibel zu bleiben.
         </p>
 
+        <h2>Was mich auszeichnet</h2>
+        <ul>
+          <li>
+            <strong>Zielstrebig:</strong> Ich arbeite lösungsorientiert und mit
+            Fokus auf Ergebnisse.
+          </li>
+          <li>
+            <strong>Akkurat:</strong> Sauberer, wartbarer Code und ein Auge fürs
+            Detail sind für mich selbstverständlich.
+          </li>
+          <li>
+            <strong>Kommunikativ:</strong> Ich lege Wert auf eine klare
+            Abstimmung mit Kunden und Projektpartnern.
+          </li>
+        </ul>
+
+        <h2>Sprachen</h2>
         <p>
-          <strong>Noch einmal zur Form:</strong> Ich heiße{" "}
-          <strong>
-            Ahmed <span className="uppercase">Lemssiah</span>
-          </strong>
-          , bin <strong>{Age()}</strong> Jahre alt, komme aus{" "}
-          <strong>Marokko</strong>, arbeite seit 2019 als{" "}
-          <strong>Frontend Webentickler</strong> und lebe derzeit in{" "}
-          <strong>Deutschland/Thüringen</strong>. Glücklicher Papa von zwei
-          Kindern &#128111; und Ehemann einer wundervollen Frau. 🤗
+          Ich spreche fließend Deutsch, Französisch, Englisch und Arabisch,
+          sowohl in Wort als auch in Schrift. Das hilft mir, Projekte in
+          verschiedenen Sprachräumen und Kulturen zu verstehen und umzusetzen.
         </p>
+
+        <h2>Was mir wichtig ist</h2>
         <p>
-          Ich habe französische Literatur und Kommunikation studiert und sogar
-          eine Zeit lang als Französischlehrer gearbeitet &#127979;. Doch meine
-          wahre Leidenschaft liegt im{" "}
-          <strong>Gestalten und Programmieren</strong> – und genau das habe ich
-          zu meinem Beruf gemacht.
+          Ich arbeite fokussiert, sorgfältig und in enger Abstimmung mit meinen
+          Kunden. Besonders wichtig ist mir eine gute Kommunikation, um
+          sicherzustellen, dass das Endprodukt den Erwartungen entspricht und
+          einen echten Mehrwert bietet.
         </p>
       </ProjectText>
     </div>

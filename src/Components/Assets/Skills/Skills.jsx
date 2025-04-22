@@ -258,7 +258,7 @@ function Skills() {
     <>
       <Section id="skills" classname="skills">
         <Wrapper>
-          <SectionHeader title1="Mein digitales" title2="Werkzeugset" />
+          <SectionHeader title1="Tech Stacks" title2="Tools" />
 
           <div className="skills">
             <div className="skill skill__design">

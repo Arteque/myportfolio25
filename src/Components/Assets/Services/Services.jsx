@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <Section classname="section__services" id="section__services">
       <Wrapper>
-        <SectionHeader title1="Erfinde, entwerfe" title2="kodiere" />
+        <SectionHeader title1="Meine " title2="Leistungen" />
         {/* Card Start */}
         <div className={Class.services__cards}>
           <div className={`border ${Class.service__card}`}>
@@ -126,13 +126,13 @@ const Services = () => {
               </ProjectTitle>
               <ProjectText>
                 <p>
-                  <q>Ich träume mein Bild, und dann male ich meinen Traum. </q>—{" "}
+                  <q>Ich träume mein Bild, und dann male ich meinen Traum.</q> —{" "}
                   <b>Vincent van Gogh</b> <br /> <br />
                   So ist es auch mit <b>Webdesign</b>: Wünsche und Träume werden
                   durchdacht und in ein <b>Designkonzept</b> verwandelt. Ich
                   gestalte die Wireframes in enger Abstimmung mit meinen
                   Kollegen und Kunden, bis das Endlayout steht. Das Endprodukt
-                  ist ein durchdachtes, konsistentes und <b></b>{" "}
+                  ist ein durchdachtes, konsistentes{" "}
                   <b>Design-System</b>.
                 </p>
               </ProjectText>
@@ -199,12 +199,6 @@ const Services = () => {
                   Ich achte auf <b>modularen</b>, <b>wartbaren Code</b>, der auf{" "}
                   <b>Performance</b>, <b>Accessibility</b> und{" "}
                   <b>Responsiveness</b> optimiert ist.
-                  <br /> <br />
-                  <b>Git</b> sorgt für <b>Versionskontrolle</b>, und{" "}
-                  <b>Staging-Umgebungen</b> ermöglichen{" "}
-                  <b>zuverlässiges Testen</b>, um eine{" "}
-                  <b>reibungslose Veröffentlichung</b> und{" "}
-                  <b>langfristige Funktionalität</b> zu gewährleisten.
                   <br />
                   <br />
                   Zusätzlich übernehme ich die <b>Wartung</b> und regelmäßige{" "}

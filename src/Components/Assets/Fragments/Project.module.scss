@@ -1,20 +1,19 @@
 .projectcontainer{
     transition: all 1s !important;
     position:relative;
-    scale: 0.99;
+    // scale: 0.99;
     transition: all 0.3s;
     background:transparent;
     
 }
 .projectcontainer:hover{
-   
-    scale: 1;
-    background: var(--clr-bg-400);
+    background: var(--clr-bg-200);
 }
 .projectcard{
     background-size: cover !important;
     background-repeat: no-repeat !important;
     height: 200px;
+    transition: all 0.3s;
 }
 .project__head{
     margin-block: 1rem;
