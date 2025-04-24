@@ -1,26 +1,20 @@
-import Class from './ColorMode.module.scss'
+import Class from "./ColorMode.module.scss";
 import { useEffect, useState } from "react";
 
-import {
-  faSun,
-  faMoon,
-  faThumbsUp,
-} from "@fortawesome/free-solid-svg-icons";
+import { faSun, faMoon, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import ToastLayout from "../ToastLayout/ToastLayout";
-import { ToastSetup } from "../../../Tools/ToastSetup"
+import { ToastSetup } from "../../../Tools/ToastSetup";
 
 const ColorMode = () => {
-  /*
-        Color mode
-    */
+  /* Color mode */
 
   const isSystemDarkmodeEnabeld = () => {
-    if(window.matchMedia) return window.matchMedia(`(prefers-color-scheme: dark)`).matches;
-    return false
-  }
-   
+    if (window.matchMedia)
+      return window.matchMedia(`(prefers-color-scheme: dark)`).matches;
+    return false;
+  };
 
   const [colorMode, setColorMode] = useState();
 

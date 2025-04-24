@@ -1,0 +1,47 @@
+.lang {
+  border: unset;
+  border-radius: 3px;
+  position: relative;
+  padding: 3px;
+  transform: translateY(2px);
+  .choosenImg {
+    cursor: pointer;
+    display: block;
+    width: 32px;
+    height: 25px;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2px;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  .langList {
+    background: whitesmoke;
+    padding: 5px;
+    position: absolute;
+    opacity: 0;
+    inset-inline: 0;
+    inset-block-start: 50%;
+    pointer-events: none;
+    border-radius: 2px;
+    transition: all 0.3s;
+    &.open {
+      opacity: 1;
+      pointer-events: all;
+      inset-block-start: 120%;
+    }
+    li {
+      margin-block-end: 5px;
+      transition: all 0.3;
+      opacity: 0.8;
+      scale: 0.8;
+      transition: all 0.3s;
+      cursor: pointer;
+      &.current {
+        scale: 1;
+        opacity: 1;
+      }
+    }
+  }
+}
