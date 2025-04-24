@@ -11,7 +11,6 @@ const Project = ({
   tags,
   urls,
   date,
-  autor,
   subtitle,
   language,
   imgUrlLiveWebsite,
@@ -45,10 +44,17 @@ const Project = ({
         <ul className={Class.tags}>{tags}</ul>
       </header>
       <ProjectText>
-        <p>
-          <FontAwesomeIcon icon={faCircleInfo} /> {content}
-        </p>
-        {language && <p className={Class.projectdate}>{language}</p>}
+        <div
+          style={{
+            margin: "0",
+            padding: "0 0 1rem 1rem",
+            borderBlockEnd: "1px solid var(--clr-txt-400)",
+            marginBlockEnd: "1rem",
+          }}
+        >
+          {content}
+        </div>
+      {language && <p className={Class.projectdate}><small>{language}</small></p>}
       </ProjectText>
     </article>
   );

@@ -2,6 +2,7 @@ import Skills from "../Components/Assets/Skills/Skills";
 import Hero from "../Components/Assets/Hero/Hero";
 import Section from "../Components/Assets/Fragments/Section";
 import Wrapper from "../Components/Assets/Fragments/Wrapper";
+import ReactMarkdown from 'react-markdown'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -30,6 +31,7 @@ import About from "../Components/Assets/About/About";
 
 import Project from "../Components/Assets/Fragments/Project";
 import { ToastSetup } from "../Tools/ToastSetup";
+import MarkdownLoader from "../Components/Assets/Fragments/MarkdownLoader";
 
 const Start = () => {
 
@@ -113,6 +115,7 @@ const Start = () => {
     }
   }, [searchParams]);
 
+
   return (
     <>
       <Hero />
@@ -120,6 +123,8 @@ const Start = () => {
       <Section id="projects" classname="projects">
         <Wrapper>
           <SectionHeader title1="Meine" title2="Projekte" />
+          
+          {/* Projects Filter */}
           <div className="projects__filter">
             <FontAwesomeIcon icon={faFilter} size="1x" />
             <ul
@@ -167,6 +172,9 @@ const Start = () => {
               </li>
             </ul>
           </div>
+          {/* Projects Filter */}
+
+          {/* Projects Listing */}
           <div className="projects__content">
             {sortProjects ? (
               sortProjects.map(
@@ -215,7 +223,7 @@ const Start = () => {
                             </Link>
                           ))
                         }
-                        content={project.teaser}
+                        content={<MarkdownLoader mdsrc={project.text.de} />}
                         tags={project.tags.map((el, i) => (
                           <li key={i}>
                             <FontAwesomeIcon icon={faTag} /> {el}

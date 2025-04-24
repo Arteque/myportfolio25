@@ -1,3 +1,4 @@
+@use "../../../Vars/mixin";
 .projectcontainer {
   transition: all 1s !important;
   position: relative;
@@ -13,6 +14,11 @@
   background-repeat: no-repeat !important;
   height: 45svh;
   transition: all 0.3s;
+  max-height: 60dvh;
+  @include mixin.lg{
+    position:sticky !important;
+    top: 160px;
+  }
 }
 .project__head {
   margin-block: 1rem;
@@ -50,3 +56,4 @@
     gap: 0.2rem;
   }
 }
+
