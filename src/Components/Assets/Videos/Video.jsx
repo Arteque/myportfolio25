@@ -27,7 +27,6 @@ const Video = () => {
         );
         const data = await response.json();
         const videos = data.items;
-        console.log(videos)
         const sortVideos = videos.sort((a, b) => {
          return new Date(b.snippet.publishedAt).getTime() - new Date(a.snippet.publishedAt).getTime();
         });

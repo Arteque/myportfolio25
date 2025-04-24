@@ -6,6 +6,7 @@ import Start from './Pages/Start'
 import "./Style.scss"
 
 const router = createBrowserRouter([{
+  
   path:"/",
   element:<Root />,
   errorElement:<Error />,
@@ -19,6 +20,9 @@ const router = createBrowserRouter([{
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider future={{
+      v7_startTransition: true,
+      v7_relativeSplatPath: true,
+    }} router={router} />
   </StrictMode>,
 )

@@ -9,7 +9,6 @@ const CookiesProvider = ({children}) => {
     //Check if Cookies were accepted
     useEffect(()=> {
         const accepted = localStorage.getItem('cookiesAccepted')
-        console.log(cookiesAccepted)
         if(accepted === 'true'){
             setCookiesAccepted('true')
         }

@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 
 const Lang = () => {
 
-  const [currentLang, setCurrentLang] = useState("de");
-  const [flag, setFlag] = useState("/Icons/de.svg");
+  const [currentLang, setCurrentLang] = useState(localStorage.getItem("lang") ? localStorage.getItem("lang") : "de");
+  const [flag, setFlag] = useState(`/Icons/${currentLang}.svg`);
   const [langMenu, setLangMenu] = useState(false);
 
 
@@ -28,12 +28,11 @@ const Lang = () => {
     <div className={Class.lang} id="lang" area-label="lang">
 
       <button
-      
+        title="Sprache wählen"
         className={Class.choosenImg}
         onClick={() => setLangMenu(!langMenu)}
         style={{backgroundImage:`url(${flag})`}}
       >
-       {/* <img src={flag} alt="flag" /> */}
       </button>
       <ul
         className={Class.langList + (langMenu ? ` ${Class.open}` : "")}
@@ -41,22 +40,25 @@ const Lang = () => {
       >
         <li
           datavalue="de"
-          className={currentLang === "de" && Class.current}
+          className={currentLang === "de" ?  Class.current : ""}
           onClick={() => setCurrentLang("de")}
+          title="Deutsch"
         >
           <img src="/Icons/de.svg" alt="Detusch" />
         </li>
         <li
           datavalue="fr"
-          className={currentLang === "fr" && Class.current}
+          className={currentLang === "fr" ? Class.current : ""}
           onClick={() => setCurrentLang("fr")}
+          title="Français"
         >
           <img src="/Icons/fr.svg" alt="Français" />
         </li>
         <li
           datavalue="en"
-          className={currentLang === "en" && Class.current}
+          className={currentLang === "en" ? Class.current : ""}
           onClick={() => setCurrentLang("en")}
+          title="English"
         >
           <img src="/Icons/en.svg" alt="English" />
         </li>
