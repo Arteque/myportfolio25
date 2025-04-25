@@ -1,20 +1,20 @@
 {
   "hero": {
     "title": {
-      "top": "Ich heiße",
-      "text": "/md/de/heroText.md"
+      "top": "Je m'appelle",
+      "text": "/md/fr/heroText.md"
     },
     "calls": {
-      "1": "Kontakt",
+      "1": "Contact",
       "2": "Portfolio"
     }
   },
-  "portfolio": {
-    "title": "Meine Projekte"
+  "portfolio":{
+    "title":"Mes projets"
   },
-  "about": {
-    "title": "Über mich",
-    "text": "/md/de/about.md"
+  "about":{
+    "title":"À propos",
+    "text":"/md/fr/about.md"
   },
   "techstack": {
     "title": "Technologie-Stack",

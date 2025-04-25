@@ -1,2 +1,6 @@
-### Modern Web Application for Photographers  
-The website **Photosnap** is a modern, multi-page web application aimed at photographers and visual storytellers. It was developed using **React.js** and **Vite**, with a strong focus on **responsive design** and **user-friendliness**.
+**P'tit Pont** is a kindergarten website that I designed, developed, and integrated into **WordPress**.
+
+It presents the P'tit Pont preschool in Kenitra, Morocco, and highlights its playful and participatory educational approach for children aged  from 1 to 6. The site provides informations about events, enrollment, and the school’s educational philosophy.
+
+### 🛠️ Technical Implementation
+I designed this website using **Adobe XD**, **Illustrator**, and **Photoshop**. For the frontend, I used **HTML**, **CSS**, and **JavaScript**, while **PHP** and **WordPress functions** were used to integrate it as a custom theme.

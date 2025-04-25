@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import Class from "./Lang.module.scss";
 
 import { useState, useEffect } from "react";
@@ -5,15 +6,30 @@ import { useState, useEffect } from "react";
 
 const Lang = () => {
 
+  const {t, i18n} = useTranslation()
+
   const [currentLang, setCurrentLang] = useState(localStorage.getItem("lang") ? localStorage.getItem("lang") : "de");
   const [flag, setFlag] = useState(`/Icons/${currentLang}.svg`);
   const [langMenu, setLangMenu] = useState(false);
 
 
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+  const setCurrentLangHandler = (e) => {
+    e.preventDefault()
+    const lang = e.target.dataset.value
+    setCurrentLang(String(lang))
+    
+  }
+
   useEffect(() =>{
     const l = localStorage.getItem("lang") ? localStorage.getItem("lang") : "de"
     setCurrentLang(l)
     setFlag(`/Icons/${l}.svg`)
+    changeLanguage(currentLang)
   },[])
 
 
@@ -21,6 +37,7 @@ const Lang = () => {
     localStorage.setItem("lang", currentLang)
     setFlag(`/Icons/${currentLang}.svg`)
     document.documentElement.lang = currentLang
+    changeLanguage(currentLang)
  },[currentLang]) 
 
 
@@ -39,25 +56,25 @@ const Lang = () => {
         onClick={() => setLangMenu(!langMenu)}
       >
         <li
-          datavalue="de"
+          data-value="de"
           className={currentLang === "de" ?  Class.current : ""}
-          onClick={() => setCurrentLang("de")}
+          onClick={setCurrentLangHandler}
           title="Deutsch"
         >
           <img src="/Icons/de.svg" alt="Detusch" />
         </li>
         <li
-          datavalue="fr"
+          data-value="fr"
           className={currentLang === "fr" ? Class.current : ""}
-          onClick={() => setCurrentLang("fr")}
+          onClick={setCurrentLangHandler}
           title="Français"
         >
           <img src="/Icons/fr.svg" alt="Français" />
         </li>
         <li
-          datavalue="en"
+          data-value="en"
           className={currentLang === "en" ? Class.current : ""}
-          onClick={() => setCurrentLang("en")}
+          onClick={setCurrentLangHandler}
           title="English"
         >
           <img src="/Icons/en.svg" alt="English" />

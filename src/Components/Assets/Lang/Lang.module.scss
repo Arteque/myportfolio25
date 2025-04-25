@@ -4,6 +4,9 @@
   position: relative;
   padding: 3px;
   transform: translateY(0px);
+  img{
+    pointer-events: none;
+  }
   .choosenImg {
       cursor: pointer;
     display: block;

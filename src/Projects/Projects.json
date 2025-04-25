@@ -2,9 +2,9 @@
   {
     "id": 0,
     "title": {
-      "de":"Space-tourism",
-      "fr":"Space-tourism",
-      "en":"Space-tourism"
+      "de": "Space-tourism",
+      "fr": "Space-tourism",
+      "en": "Space-tourism"
     },
     "subtitle": "",
     "type": "Web",
@@ -25,10 +25,12 @@
     ],
     "lang": ["en"],
     "text": {
+      "translation": {
         "de": "/Projects/Space-tourism/lang/de/description.md",
         "fr": "/Projects/Space-tourism/lang/fr/description.md",
         "en": "/Projects/Space-tourism/lang/en/description.md"
-      },
+      }
+    },
     "thumb": "/Projects/Space-tourism/screenshot.png",
     "tags": ["html", "Css", "Javascript"],
     "autor": ["Ahmed LEMSSIAH"]
@@ -36,9 +38,9 @@
   {
     "id": 1,
     "title": {
-      "de":"Länder API",
-      "fr":"Pays API",
-      "en":"Countries API"
+      "de": "Länder API",
+      "fr": "Pays API",
+      "en": "Countries API"
     },
     "subtitle": "",
     "type": "Web",
@@ -59,10 +61,12 @@
     ],
     "lang": ["en"],
     "text": {
+      "translation": {
         "de": "/Projects/Countries-api/lang/de/description.md",
         "fr": "/Projects/Countries-api/lang/fr/description.md",
         "en": "/Projects/Countries-api/lang/en/description.md"
-      },
+      }
+    },
     "thumb": "/Projects/Countries-api/screenshot.png",
     "tags": ["HTML", "Css", "Javascript", "API", "Leafletjs"],
     "autor": ["Ahmed LEMSSIAH"]
@@ -70,9 +74,9 @@
   {
     "id": 2,
     "title": {
-      "de":"Ptit-pont Website",
-      "fr":"Ptit-pont Siteweb",
-      "en":"Ptit-pont Website"
+      "de": "Ptit-pont Website",
+      "fr": "Ptit-pont Siteweb",
+      "en": "Ptit-pont Website"
     },
     "subtitle": "",
     "type": "Web",
@@ -93,10 +97,12 @@
     ],
     "lang": ["fr", "ar"],
     "text": {
+      "translation": {
         "de": "/Projects/Ptit-pont/lang/de/description.md",
         "fr": "/Projects/Ptit-pont/lang/fr/description.md",
         "en": "/Projects/Ptit-pont/lang/en/description.md"
-      },
+      }
+    },
     "thumb": "/Projects/Ptit-pont/screenshot.png",
     "tags": ["HTML", "Css", "Javascript", "Wordpress", "PHP"],
     "autor": ["Ahmed LEMSSIAH"]
@@ -104,9 +110,9 @@
   {
     "id": 3,
     "title": {
-      "de":"Wörterbuch API",
-      "fr":"Dictionnaire API",
-      "en":"Dictionary API"
+      "de": "Wörterbuch API",
+      "fr": "Dictionnaire API",
+      "en": "Dictionary API"
     },
     "subtitle": "",
     "type": "Web",
@@ -127,10 +133,12 @@
     ],
     "lang": ["en"],
     "text": {
+      "translation": {
         "de": "/Projects/Dictionary-api/lang/de/description.md",
         "fr": "/Projects/Dictionary-api/lang/fr/description.md",
         "en": "/Projects/Dictionary-api/lang/en/description.md"
-      },
+      }
+    },
     "thumb": "/Projects/Dictionary-api/screenshot.png",
     "tags": ["ReactJS + Vite", "JSON", "REST API"],
     "autor": ["Ahmed LEMSSIAH"]
@@ -138,9 +146,9 @@
   {
     "id": 4,
     "title": {
-      "de":"Designo Website",
-      "fr":"Designo Siteweb",
-      "en":"Designo Website"
+      "de": "Designo Website",
+      "fr": "Designo Siteweb",
+      "en": "Designo Website"
     },
     "subtitle": "",
     "type": "Web",
@@ -161,10 +169,12 @@
     ],
     "lang": ["en"],
     "text": {
+      "translation": {
         "de": "/Projects/Designo/lang/de/description.md",
         "fr": "/Projects/Designo/lang/fr/description.md",
         "en": "/Projects/Designo/lang/en/description.md"
-      },
+      }
+    },
     "thumb": "/Projects/Designo/screenshot.png",
     "tags": ["ReactJS + Vite"],
     "autor": ["Ahmed LEMSSIAH"]
@@ -172,9 +182,9 @@
   {
     "id": 6,
     "title": {
-      "de":"Photosnap Website",
-      "fr":"Photosnap Siteweb",
-      "en":"Photosnap Website"
+      "de": "Photosnap Website",
+      "fr": "Photosnap Siteweb",
+      "en": "Photosnap Website"
     },
     "subtitle": "",
     "type": "Web",
@@ -195,10 +205,12 @@
     ],
     "lang": ["en"],
     "text": {
+      "translation": {
         "de": "/Projects/Photosnap/lang/de/description.md",
         "fr": "/Projects/Photosnap/lang/fr/description.md",
         "en": "/Projects/Photosnap/lang/en/description.md"
-      },
+      }
+    },
     "thumb": "/Projects/Photosnap/screenshot.png",
     "tags": ["Reactjs/vite", "Tailwind"],
     "autor": ["Ahmed LEMSSIAH"]

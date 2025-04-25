@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+
 import Skills from "../Components/Assets/Skills/Skills";
 import Hero from "../Components/Assets/Hero/Hero";
 import Section from "../Components/Assets/Fragments/Section";
 import Wrapper from "../Components/Assets/Fragments/Wrapper";
-import ReactMarkdown from 'react-markdown'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,11 +18,7 @@ import {
   faTag,
   faLanguage,
   faThumbsUp,
-  faFolder,
 } from "@fortawesome/free-solid-svg-icons";
-
-import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
 
 import dateFormat from "../Tools/dateFormat";
 import ProjectListing from "../Projects/Projects.json";
@@ -34,6 +33,9 @@ import { ToastSetup } from "../Tools/ToastSetup";
 import MarkdownLoader from "../Components/Assets/Fragments/MarkdownLoader";
 
 const Start = () => {
+  const { t, i18n } = useTranslation();
+
+  const lang = String(i18n.language).trim();
 
 
   const [sortProjects, setSortProjects] = useState(ProjectListing);
@@ -115,15 +117,14 @@ const Start = () => {
     }
   }, [searchParams]);
 
-
   return (
     <>
       <Hero />
 
       <Section id="projects" classname="projects">
         <Wrapper>
-          <SectionHeader title1="Meine" title2="Projekte" />
-          
+          <SectionHeader title1={t("portfolio.title")} />
+
           {/* Projects Filter */}
           <div className="projects__filter">
             <FontAwesomeIcon icon={faFilter} size="1x" />
@@ -180,19 +181,19 @@ const Start = () => {
               sortProjects.map(
                 (project, index) =>
                   index <= maxProject && (
-                    <div className="project" key={`${project.title.de}-${index}`}>
+                    <div className="project" key={`t-${index}`}>
                       <Project
                         img={project.thumb}
                         imgUrlLiveWebsite={
                           project.urls[1].url && (
                             <Link
                               to={project.urls[1].url}
-                              title={`${project.title.de} extern öffnen`}
+                              title={`${project.title[i18n.language]} extern öffnen`}
                               target="_blank"
                             ></Link>
                           )
                         }
-                        title={project.title.de}
+                        title={project.title[i18n.language]}
                         subtitle={project.subtitle}
                         date={dateFormat(project.date)}
                         language={
@@ -223,7 +224,7 @@ const Start = () => {
                             </Link>
                           ))
                         }
-                        content={<MarkdownLoader mdsrc={project.text.de} />}
+                        content={<MarkdownLoader mdsrc={`${t(project.text.translation[i18n.language])}`} />}
                         tags={project.tags.map((el, i) => (
                           <li key={i}>
                             <FontAwesomeIcon icon={faTag} /> {el}
@@ -242,7 +243,7 @@ const Start = () => {
 
       <Section classname="about" id="about">
         <Wrapper>
-          <SectionHeader title1="Über" title2="mich" />
+          <SectionHeader title1={t('about.title')} />
           <About />
         </Wrapper>
       </Section>
