@@ -180,19 +180,19 @@ const Start = () => {
               sortProjects.map(
                 (project, index) =>
                   index <= maxProject && (
-                    <div className="project" key={`${project.title}-${index}`}>
+                    <div className="project" key={`${project.title.de}-${index}`}>
                       <Project
                         img={project.thumb}
                         imgUrlLiveWebsite={
                           project.urls[1].url && (
                             <Link
                               to={project.urls[1].url}
-                              title={`${project.title} extern öffnen`}
+                              title={`${project.title.de} extern öffnen`}
                               target="_blank"
                             ></Link>
                           )
                         }
-                        title={project.title}
+                        title={project.title.de}
                         subtitle={project.subtitle}
                         date={dateFormat(project.date)}
                         language={

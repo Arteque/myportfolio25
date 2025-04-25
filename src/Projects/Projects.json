@@ -1,7 +1,11 @@
 [
   {
     "id": 0,
-    "title": "Space-tourism",
+    "title": {
+      "de":"Space-tourism",
+      "fr":"Space-tourism",
+      "en":"Space-tourism"
+    },
     "subtitle": "",
     "type": "Web",
     "date": "2024-02-01",
@@ -31,7 +35,11 @@
   },
   {
     "id": 1,
-    "title": "Countries-api",
+    "title": {
+      "de":"Länder API",
+      "fr":"Pays API",
+      "en":"Countries API"
+    },
     "subtitle": "",
     "type": "Web",
     "date": "2024-02-21",
@@ -61,7 +69,11 @@
   },
   {
     "id": 2,
-    "title": "Ptit-Pont",
+    "title": {
+      "de":"Ptit-pont Website",
+      "fr":"Ptit-pont Siteweb",
+      "en":"Ptit-pont Website"
+    },
     "subtitle": "",
     "type": "Web",
     "date": "2022-10-03",
@@ -91,7 +103,11 @@
   },
   {
     "id": 3,
-    "title": "Dictionary",
+    "title": {
+      "de":"Wörterbuch API",
+      "fr":"Dictionnaire API",
+      "en":"Dictionary API"
+    },
     "subtitle": "",
     "type": "Web",
     "date": "2024-03-09",
@@ -121,7 +137,11 @@
   },
   {
     "id": 4,
-    "title": "Designo website",
+    "title": {
+      "de":"Designo Website",
+      "fr":"Designo Siteweb",
+      "en":"Designo Website"
+    },
     "subtitle": "",
     "type": "Web",
     "date": "2024-10-11",
@@ -151,7 +171,11 @@
   },
   {
     "id": 6,
-    "title": "Photosnap",
+    "title": {
+      "de":"Photosnap Website",
+      "fr":"Photosnap Siteweb",
+      "en":"Photosnap Website"
+    },
     "subtitle": "",
     "type": "Web",
     "date": "2025-04-06",

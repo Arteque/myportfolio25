@@ -1,0 +1,14 @@
+{
+    "hero": {
+      "title": {
+        "top": "Ich heiße",
+        "main": "Ahmed Lemssiah",
+        "text": "Ich gestalte und programmiere Websites. \n Von der ersten Idee bis zum letzten Pixel."
+      },
+      "calls": {
+        "1": "Kontakt",
+        "2": "Portfolio"
+      }
+    }
+  }
+  

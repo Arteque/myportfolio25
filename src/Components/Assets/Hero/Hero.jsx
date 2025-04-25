@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next"
+
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
@@ -9,10 +11,12 @@ import Underline from "../Fragments/Underline"
 
 const Hero = () => {
 
+    const { t, i18n } = useTranslation()
+
+
     const clickHandler = (e) => {
         e.preventDefault()
         const target = e.target.dataset.target
-        console.log(target)
         document.querySelector(target).scrollIntoView({ behavior: "smooth" })
     }
 
@@ -21,7 +25,7 @@ const Hero = () => {
         <Wrapper>
             <div className="hero__text">
                 <h2>
-                    <span className="block small">Ich heiße</span> <span className="name">Ahmed </span> <span className="uppercase name">Lemssiah</span>
+                    <span className="block small">{t()}</span> <span className="name">Ahmed </span> <span className="uppercase name">Lemssiah</span>
                 </h2>
                 <p>
                 Ich gestalte und programmiere <Underline>Websites</Underline>.

@@ -1,0 +1,14 @@
+{
+    "hero": {
+      "title": {
+        "top": "Je m'appelle",
+        "main": "Ahmed Lemssiah",
+        "text": "Je conçois et code des sites Web. \n De la première idée jusqu'au dernier pixel."
+      },
+      "calls": {
+        "1": "Contact",
+        "2": "Portfolio"
+      }
+    }
+  }
+  
