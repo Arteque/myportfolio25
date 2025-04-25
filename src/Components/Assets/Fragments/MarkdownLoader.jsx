@@ -1,20 +1,41 @@
-import { useEffect, useState } from 'react'
-import ReactMarkdown from 'react-markdown'
-const MarkdownLoader = ({mdsrc}) => {
+import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import Class from "./MarkdownLoader.module.scss";
 
-    const [md, setMd] = useState('')
+const LinkRenderer = ({ children, ...props }) => {
+  return (
+    <a
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      className={Class.externalLink}
+      {...props}
+    >
+      <span>
+        {children}
+        <FontAwesomeIcon icon={faExternalLink} />
+      </span>
+    </a>
+  );
+};
 
-    useEffect(() => {
-        if(!mdsrc) return
-        fetch(mdsrc)
-        .then((res) => res.text())
-        .then(setMd)
-        .catch((err) => console.log("Ooops:" + err))
-    }, [mdsrc])
+const MarkdownLoader = ({ mdsrc }) => {
+  const [md, setMd] = useState("");
+
+  const P = ({ children }) => <p className={Class.p}>{children}</p>;
+
+  useEffect(() => {
+    if (!mdsrc) return;
+    fetch(mdsrc)
+      .then((res) => res.text())
+      .then(setMd)
+      .catch((err) => console.log("Ooops:" + err));
+  }, [mdsrc]);
 
   return (
-    <ReactMarkdown>{md}</ReactMarkdown>
-  )
-}
+    <ReactMarkdown components={{ a: LinkRenderer, p: P }}>{md}</ReactMarkdown>
+  );
+};
 
-export default MarkdownLoader
+export default MarkdownLoader;

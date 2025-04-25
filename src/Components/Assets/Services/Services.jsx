@@ -1,16 +1,19 @@
+import { Translation, useTranslation } from "react-i18next";
+import MarkdownLoader from "../Fragments/MarkdownLoader";
 import ProjectText from "../Fragments/ProjectText";
 import ProjectTitle from "../Fragments/ProjectTitle";
 import Section from "../Fragments/Section";
 import SectionHeader from "../Fragments/SectionHeader";
 import Wrapper from "../Fragments/Wrapper";
 import Class from "./Services.module.scss";
-import Age from "../../../Tools/Age";
 
 const Services = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <Section classname="section__services" id="section__services">
       <Wrapper>
-        <SectionHeader title1="Meine " title2="Leistungen" />
+        <SectionHeader title1={t("services.title")} />
         {/* Card Start */}
         <div className={Class.services__cards}>
           <div className={`border ${Class.service__card}`}>
@@ -54,22 +57,13 @@ const Services = () => {
             </div>
             <div className={Class.card__body}>
               <ProjectTitle>
-                <span className="txt-txt-100"> Ideen</span>-
+                <span className="txt-txt-100"> {t("services.1.title.1")}</span>-
                 <span className="underline txt-txt-200 bg-call-400 uppercase">
-                  Erfinder
+                  {t("services.1.title.2")}
                 </span>
               </ProjectTitle>
               <ProjectText>
-                <p>
-                  Ich suche den perfekten Mix - wie ein Nerd im <b>Design</b>
-                  -Labor.
-                  <br /> <br />
-                  In der Ideenphase analysiere ich gemeinsam mit dem Kunden, die{" "}
-                  <b>Anforderungen</b>, <b>Zielgruppen</b> und <b>Use Cases</b>.
-                  Daraus entstehen <b>UI-Konzepte</b>, Wireframes und
-                  Nutzerflows – mit Fokus auf intuitive Bedienung und visuelle
-                  Klarheit.
-                </p>
+                <MarkdownLoader mdsrc={t("services.1.text")} />
               </ProjectText>
             </div>
           </div>
@@ -125,16 +119,7 @@ const Services = () => {
                 </span>
               </ProjectTitle>
               <ProjectText>
-                <p>
-                  <q>Ich träume mein Bild, und dann male ich meinen Traum.</q> —{" "}
-                  <b>Vincent van Gogh</b> <br /> <br />
-                  So ist es auch mit <b>Webdesign</b>: Wünsche und Träume werden
-                  durchdacht und in ein <b>Designkonzept</b> verwandelt. Ich
-                  gestalte die Wireframes in enger Abstimmung mit meinen
-                  Kollegen und Kunden, bis das Endlayout steht. Das Endprodukt
-                  ist ein durchdachtes, konsistentes{" "}
-                  <b>Design-System</b>.
-                </p>
+                <MarkdownLoader mdsrc={t("services.2.text")} />
               </ProjectText>
             </div>
           </div>
@@ -189,21 +174,7 @@ const Services = () => {
                 </span>
               </ProjectTitle>
               <ProjectText>
-                <p>
-                  Als <b>Webdompteur</b> zähme ich <b>Browser</b> mit präzisem{" "}
-                  <b>Code</b>, <b>Geduld</b> und <b>Disziplin</b>.<br /> <br />
-                  In der <b>Codierungsphase</b> setze ich <b>Designs</b> präzise
-                  um – sowohl mit modernen <b>Frameworks</b> wie <b>React</b>{" "}
-                  als auch mit <b>CMS</b>-Lösungen wie <b>TYPO3</b> und{" "}
-                  <b>WordPress</b>.<br /> <br />
-                  Ich achte auf <b>modularen</b>, <b>wartbaren Code</b>, der auf{" "}
-                  <b>Performance</b>, <b>Accessibility</b> und{" "}
-                  <b>Responsiveness</b> optimiert ist.
-                  <br />
-                  <br />
-                  Zusätzlich übernehme ich die <b>Wartung</b> und regelmäßige{" "}
-                  <b>Updates</b> von <b>Websites</b>.
-                </p>
+                <MarkdownLoader mdsrc={t("services.3.text")} />
               </ProjectText>
             </div>
           </div>

@@ -12,7 +12,6 @@ import ProjectText from "../Fragments/ProjectText";
 import MarkdownLoader from "../Fragments/MarkdownLoader";
 
 const Hero = () => {
-    
   const { t, i18n } = useTranslation();
 
   const clickHandler = (e) => {
@@ -31,7 +30,7 @@ const Hero = () => {
             <span className="uppercase name">Lemssiah</span>
           </h2>
           <ProjectText>
-            <MarkdownLoader mdsrc={t('hero.title.text')} />
+            <MarkdownLoader mdsrc={t("hero.title.text")} />
           </ProjectText>
           <div className="call">
             <Link
@@ -41,7 +40,7 @@ const Hero = () => {
               data-target="#contact"
             >
               <FontAwesomeIcon icon={faCaretRight} />
-              <span className="text underline">Kontakt</span>
+              <span className="text underline">{t("hero.calls.1")}</span>
             </Link>
             <Link
               to="/"
@@ -50,7 +49,7 @@ const Hero = () => {
               data-target="#projects"
             >
               <FontAwesomeIcon icon={faCaretRight} />
-              <span className="underline">Portfolio</span>
+              <span className="underline">{t("hero.calls.2")}</span>
             </Link>
           </div>
         </div>

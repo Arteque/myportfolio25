@@ -1,7 +1,7 @@
 **Photosnap** est une **plateforme de partage** pour les **photographes** et les **narrateurs** visuels.  
 Ce **site vitrine** présente les **fonctionnalités** de la plateforme et sert de **teaser** pour attirer de nouveaux **clients** et **utilisateurs** !
 
-### 🛠️ **Technologies utilisées**
+### Technologies utilisées
 
 Mon rôle était de **développer** et **publier** le site en ligne !  
 Pour cela, j'ai utilisé **Vite**, **React**, **React Router** et **Tailwind CSS**.  

@@ -7,11 +7,7 @@ import CookiesBanner from "../Components/Assets/CookiesBanner/CookiesBanner";
 import { ErrorBoundary } from "react-error-boundary";
 import Error from "../Pages/Error";
 
-
-
 export const Root = () => {
-
-
   return (
     <>
       <ErrorBoundary
@@ -27,7 +23,7 @@ export const Root = () => {
           {/* Main Header End */}
 
           {/* Main Content Start */}
-            <Outlet />
+          <Outlet />
           {/* Main Content End */}
 
           {/* Main Footer Start */}

@@ -2,7 +2,7 @@
 This **showcase website** presents the platform’s **features** and serves as a **teaser**  
 to attract potential **clients** and new **users**!
 
-### 🛠️ **Tech Stack**
+### Tech Stack
 
 My role was to **develop** and **publish** the website online!  
 For this, I chose **Vite**, **React**, **React Router**, and **Tailwind CSS**.  

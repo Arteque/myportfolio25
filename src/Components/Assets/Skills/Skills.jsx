@@ -1,5 +1,5 @@
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Underline from "../Fragments/Underline";
 import SectionHeader from "../Fragments/SectionHeader";
 import {
   faCss3,
@@ -14,11 +14,11 @@ import {
 
 import Section from "../Fragments/Section";
 import Wrapper from "../Fragments/Wrapper";
-import {
-  faCaretRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 function Skills() {
+  const { t, i18n } = useTranslation();
+
   let id = 0;
   const webSkills = [
     {
@@ -30,8 +30,7 @@ function Skills() {
       title: "React",
       color: "#08d9ff",
       bg: "#292929",
-      description:
-        "Komponentenbasierte Benutzeroberflächen, optimiert für Skalierbarkeit und UX.",
+      description: t("techstack.tools.2.stacks.react.text"),
     },
     {
       id: id++,
@@ -42,8 +41,7 @@ function Skills() {
       title: "Typo3",
       color: "#fff",
       bg: "#ff8700",
-      description:
-        "Templates selbst entwickelt und ans Ökosystem flexibel angepasst.",
+      description: t("techstack.tools.2.stacks.typo3.text"),
     },
     {
       id: id++,
@@ -54,8 +52,7 @@ function Skills() {
       title: "Wordpress",
       color: "#fff",
       bg: "#1790C5",
-      description:
-        "Custom-Templates erstellt und in WordPress performant eingebunden.",
+      description: t("techstack.tools.2.stacks.wordpress.text"),
     },
     {
       id: id++,
@@ -210,47 +207,47 @@ function Skills() {
   const commSkills = [
     {
       id: id++,
-      name: "Deutsch",
+      name: t("techstack.tools.3.stacks.deutsch.name"),
       url: "#deutsch",
       icon: "",
       img: "Icons/de.svg",
-      title: "Deutsch",
+      title: t("techstack.tools.3.stacks.deutsch.name"),
       color: "",
       bg: "",
-      description: "in Wort und Schrift",
+      description: t("techstack.tools.3.stacks.deutsch.text"),
     },
     {
       id: id++,
-      name: "Französisch",
+      name: t("techstack.tools.3.stacks.franzoesisch.name"),
       url: "#französisch",
       icon: "",
       img: "Icons/fr.svg",
-      title: "Französisch",
+      title: t("techstack.tools.3.stacks.franzoesisch.name"),
       color: "",
       bg: "",
-      description: "in Wort und Schrift",
+      description: t("techstack.tools.3.stacks.franzoesisch.text"),
     },
     {
       id: id++,
-      name: "Englisch",
+      name: t("techstack.tools.3.stacks.englisch.name"),
       url: "#englisch",
       icon: "",
       img: "Icons/en.svg",
-      title: "Englisch",
+      title: t("techstack.tools.3.stacks.englisch.name"),
       color: "",
       bg: "",
-      description: "in Wort und Schrift",
+      description: t("techstack.tools.3.stacks.englisch.text"),
     },
     {
       id: id++,
-      name: "Arabisch",
+      name: t("techstack.tools.3.stacks.arabisch.name"),
       url: "#arabisch",
       icon: "",
       img: "Icons/ar.svg",
-      title: "Arabisch",
+      title: t("techstack.tools.3.stacks.arabisch.name"),
       color: "",
       bg: "",
-      description: "in Wort und Schrift",
+      description: t("techstack.tools.3.stacks.arabisch.text"),
     },
   ];
 
@@ -258,12 +255,12 @@ function Skills() {
     <>
       <Section id="skills" classname="skills">
         <Wrapper>
-          <SectionHeader title1="Tech Stacks" title2="Tools" />
+          <SectionHeader title1={t("techstack.title")} />
 
           <div className="skills">
             <div className="skill skill__design">
               <div className="skill__header">
-                <h3>- Design: </h3>
+                <h3>{t("techstack.tools.1.title")}</h3>
               </div>
               <div className="grid__container">
                 {designSkills &&
@@ -313,7 +310,7 @@ function Skills() {
             </div>
             <div className="skill skill__web">
               <div className="skill__header">
-                <h3>- Entwicklung:</h3>
+                <h3>{t("techstack.tools.2.title")}</h3>
               </div>
               <div className="grid__container">
                 {webSkills &&
@@ -364,7 +361,7 @@ function Skills() {
             </div>
             <div className="skill skill__comm">
               <div className="skill__header">
-                <h3>- Kommunikation:</h3>
+                <h3>{t("techstack.tools.3.title")}</h3>
               </div>
               <div className="grid__container">
                 {commSkills &&

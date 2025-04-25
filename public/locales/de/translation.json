@@ -20,96 +20,120 @@
     "title": "Technologie-Stack",
     "tools": {
       "1": {
-        "title":"Design",
-        "stacks":[
-          {
-            "name":"Adobe Xd",
-            "text":""
+        "title": "Design",
+        "stacks": {
+          "adobexd": {
+            "name": "Adobe Xd",
+            "text": ""
           },
-          {
-            "name":"Figma",
-            "text":""
+          "figma": {
+            "name": "Figma",
+            "text": ""
           },
-          {
-            "name":"Photoshop",
-            "text":""
+          "photoshop": {
+            "name": "Photoshop",
+            "text": ""
           },
-          {
-            "name":"Illustrator",
-            "text":""
+          "illustrator": {
+            "name": "Illustrator",
+            "text": ""
           },
-          {
-            "name":"Lightroom",
-            "text":""
+          "lightroom": {
+            "name": "Lightroom",
+            "text": ""
           },
-          {
-            "name":"InDesign",
-            "text":""
+          "indesign": {
+            "name": "InDesign",
+            "text": ""
           }
-        ]
+        }
       },
       "2": {
-        "title":"Entwicklung",
-        "stacks":[
-          {
-            "name":"HTML5",
-            "text":""
+        "title": "Entwicklung",
+        "stacks": {
+          "html5": {
+            "name": "HTML5",
+            "text": ""
           },
-          {
-            "name":"Css3",
-            "text":""
+          "css3": {
+            "name": "Css3",
+            "text": ""
           },
-          {
-            "name":"Javascript",
-            "text":""
+          "javascript": {
+            "name": "Javascript",
+            "text": ""
           },
-          {
-            "name":"React",
-            "text":"Komponentenbasierte Benutzeroberflächen, optimiert für Skalierbarkeit und UX."
+          "react": {
+            "name": "React",
+            "text": "Komponentenbasierte Benutzeroberflächen, optimiert für Skalierbarkeit und UX."
           },
-          {
-            "name":"Typo3",
-            "text":"Templates selbst entwickelt und ans Ökosystem flexibel angepasst."
+          "typo3": {
+            "name": "Typo3",
+            "text": "Templates selbst entwickelt und ans Ökosystem flexibel angepasst."
           },
-          {
-            "name":"WordPress",
-            "text":"Custom-Templates erstellt und in WordPress performant eingebunden"
+          "wordpress": {
+            "name": "WordPress",
+            "text": "Custom-Templates erstellt und in WordPress performant eingebunden"
           },
-          {
-            "name":"GitHub",
-            "text":""
+          "github": {
+            "name": "GitHub",
+            "text": ""
           },
-          {
-            "name":"Tailwind Css",
-            "text":""
+          "tailwindcss": {
+            "name": "Tailwind Css",
+            "text": ""
           },
-          {
-            "name":"Bootstrap",
-            "text":""
+          "bootstrap": {
+            "name": "Bootstrap",
+            "text": ""
           }
-        ]
+        }
       },
-      "3":{
+      "3": {
         "title": "Kommunikation",
-        "stacks":[
-          {
-            "name":"Deutsch",
-            "text":"in Wort und Schrift"
+        "stacks": {
+          "deutsch": {
+            "name": "Deutsch",
+            "text": "in Wort und Schrift"
           },
-          {
-            "name":"Französisch",
-            "text":"in Wort und Schrift"
+          "franzoesisch": {
+            "name": "Französisch",
+            "text": "in Wort und Schrift"
           },
-          {
-            "name":"Englisch",
-            "text":"in Wort und Schrift"
+          "englisch": {
+            "name": "Englisch",
+            "text": "in Wort und Schrift"
           },
-          {
-            "name":"Arabisch",
-            "text":"in Wort und Schrift"
+          "arabisch": {
+            "name": "Arabisch",
+            "text": "in Wort und Schrift"
           }
-        ]
+        }
       }
+    }
+  },
+  "services": {
+    "title": "Meine Leistungen",
+    "1": {
+      "title": {
+        "1": "Ideen",
+        "2": "Erfinder"
+      },
+      "text": "/md/de/service_idee.md"
+    },
+    "2": {
+      "title": {
+        "1": "Pixel",
+        "2": "Artist"
+      },
+      "text": "/md/de/service_artist.md"
+    },
+    "3": {
+      "title": {
+        "1": "DOM",
+        "2": "Dompteur"
+      },
+      "text": "/md/de/service_dompteur.md"
     }
   }
 }

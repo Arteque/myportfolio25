@@ -9,107 +9,133 @@
       "2": "Portfolio"
     }
   },
-  "portfolio":{
-    "title":"Mes projets"
+  "portfolio": {
+    "title": "Mes projets"
   },
-  "about":{
-    "title":"À propos",
-    "text":"/md/fr/about.md"
+  "about": {
+    "title": "À propos de moi",
+    "text": "/md/fr/about.md"
   },
   "techstack": {
-    "title": "Technologie-Stack",
+    "title": "Technologies utilisées",
     "tools": {
       "1": {
-        "title":"Design",
-        "stacks":[
+        "title": "Design",
+        "stacks": [
           {
-            "name":"Adobe Xd",
-            "text":""
-          },
-          {
-            "name":"Figma",
-            "text":""
-          },
-          {
-            "name":"Photoshop",
-            "text":""
-          },
-          {
-            "name":"Illustrator",
-            "text":""
-          },
-          {
-            "name":"Lightroom",
-            "text":""
-          },
-          {
-            "name":"InDesign",
-            "text":""
+            "adobexd": {
+              "name": "Adobe Xd",
+              "text": ""
+            },
+            "figma": {
+              "name": "Figma",
+              "text": ""
+            },
+            "photoshop": {
+              "name": "Photoshop",
+              "text": ""
+            },
+            "illustrator": {
+              "name": "Illustrator",
+              "text": ""
+            },
+            "lightroom": {
+              "name": "Lightroom",
+              "text": ""
+            },
+            "indesign": {
+              "name": "InDesign",
+              "text": ""
+            }
           }
         ]
       },
       "2": {
-        "title":"Entwicklung",
-        "stacks":[
-          {
-            "name":"HTML5",
-            "text":""
+        "title": "Développement",
+        "stacks": {
+          "html5": {
+            "name": "HTML5",
+            "text": ""
           },
-          {
-            "name":"Css3",
-            "text":""
+          "css3": {
+            "name": "Css3",
+            "text": ""
           },
-          {
-            "name":"Javascript",
-            "text":""
+          "javascript": {
+            "name": "Javascript",
+            "text": ""
           },
-          {
-            "name":"React",
-            "text":"Komponentenbasierte Benutzeroberflächen, optimiert für Skalierbarkeit und UX."
+          "react": {
+            "name": "React",
+            "text": "Interfaces utilisateur basées sur des composants, optimisées pour la scalabilité et l'UX."
           },
-          {
-            "name":"Typo3",
-            "text":"Templates selbst entwickelt und ans Ökosystem flexibel angepasst."
+          "typo3": {
+            "name": "Typo3",
+            "text": "Modèles développés de manière indépendante et adaptés de manière flexible à l'écosystème."
           },
-          {
-            "name":"WordPress",
-            "text":"Custom-Templates erstellt und in WordPress performant eingebunden"
+          "wordpress": {
+            "name": "WordPress",
+            "text": "Modèles personnalisés créés et intégrés de manière performante dans WordPress."
           },
-          {
-            "name":"GitHub",
-            "text":""
+          "github": {
+            "name": "GitHub",
+            "text": ""
           },
-          {
-            "name":"Tailwind Css",
-            "text":""
+          "tailwindcss": {
+            "name": "Tailwind Css",
+            "text": ""
           },
-          {
-            "name":"Bootstrap",
-            "text":""
+          "bootstrap": {
+            "name": "Bootstrap",
+            "text": ""
           }
-        ]
+        }
       },
-      "3":{
-        "title": "Kommunikation",
-        "stacks":[
-          {
-            "name":"Deutsch",
-            "text":"in Wort und Schrift"
+      "3": {
+        "title": "Communication",
+        "stacks": {
+          "deutsch": {
+            "name": "Allemand",
+            "text": "oral et écrit"
           },
-          {
-            "name":"Französisch",
-            "text":"in Wort und Schrift"
+          "franzoesisch": {
+            "name": "Français",
+            "text": "oral et écrit"
           },
-          {
-            "name":"Englisch",
-            "text":"in Wort und Schrift"
+          "englisch": {
+            "name": "Anglais",
+            "text": "oral et écrit"
           },
-          {
-            "name":"Arabisch",
-            "text":"in Wort und Schrift"
+          "arabisch": {
+            "name": "Arabe",
+            "text": "oral et écrit"
           }
-        ]
+        }
       }
+    }
+  },
+  "services": {
+    "title": "Mes Services",
+    "1": {
+      "title": {
+        "1": "Chercheur",
+        "2": "d'idees"
+      },
+      "text": "/md/fr/service_idee.md"
+    },
+    "2": {
+      "title": {
+        "1": "Artiste",
+        "2": "Pixel"
+      },
+      "text": "/md/fr/service_artist.md"
+    },
+    "3": {
+      "title": {
+        "1": "Dompteur",
+        "2": "du DOM"
+      },
+      "text": "/md/fr/service_dompteur.md"
     }
   }
 }

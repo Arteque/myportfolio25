@@ -2,7 +2,7 @@
 Diese **Schau-Fenster Website** präsentiert die **Platforms-Features** und dient als **Teaser**,  
 um **Kunden** bzw. neue **Users** zu gewinnen!
 
-### 🛠️ **Tech Stack**
+### Tech Stack
 
 **Meine Rolle** war die Website **zuentwickeln** und **Online zu veröffenlichen**!  
 Dafür habe ich mich für **Vite**, **React**, **React Router** und **Tailwind Css** entschieden.  

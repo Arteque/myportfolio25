@@ -35,9 +35,6 @@ import MarkdownLoader from "../Components/Assets/Fragments/MarkdownLoader";
 const Start = () => {
   const { t, i18n } = useTranslation();
 
-  const lang = String(i18n.language).trim();
-
-
   const [sortProjects, setSortProjects] = useState(ProjectListing);
   const [maxProject, setMaxProject] = useState(10);
   const [projectsFilter, setProjectsfilter] = useState({
@@ -102,20 +99,20 @@ const Start = () => {
         break;
       case "atoz":
         newSort = [...ProjectListing].sort((a, b) =>
-          a.title.localeCompare(b.title)
+          a.title[i18n.language].localeCompare(b.title[i18n.language])
         );
         setSortProjects(newSort);
         break;
       case "ztoa":
         newSort = [...ProjectListing].sort((a, b) =>
-          b.title.localeCompare(a.title)
+          b.title[i18n.language].localeCompare(a.title[i18n.language])
         );
         setSortProjects(newSort);
         break;
       default:
         break;
     }
-  }, [searchParams]);
+  }, [searchParams, t]);
 
   return (
     <>
@@ -188,7 +185,7 @@ const Start = () => {
                           project.urls[1].url && (
                             <Link
                               to={project.urls[1].url}
-                              title={`${project.title[i18n.language]} extern öffnen`}
+                              title={`${project.title[i18n.language]}`}
                               target="_blank"
                             ></Link>
                           )
@@ -224,7 +221,11 @@ const Start = () => {
                             </Link>
                           ))
                         }
-                        content={<MarkdownLoader mdsrc={`${t(project.text.translation[i18n.language])}`} />}
+                        content={
+                          <MarkdownLoader
+                            mdsrc={`${t(project.text.translation[i18n.language])}`}
+                          />
+                        }
                         tags={project.tags.map((el, i) => (
                           <li key={i}>
                             <FontAwesomeIcon icon={faTag} /> {el}
@@ -243,7 +244,7 @@ const Start = () => {
 
       <Section classname="about" id="about">
         <Wrapper>
-          <SectionHeader title1={t('about.title')} />
+          <SectionHeader title1={t("about.title")} />
           <About />
         </Wrapper>
       </Section>

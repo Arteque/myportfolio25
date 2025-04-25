@@ -54,7 +54,11 @@ const Project = ({
         >
           {content}
         </div>
-      {language && <p className={Class.projectdate}><small>{language}</small></p>}
+        {language && (
+          <p className={Class.projectdate}>
+            <small>{language}</small>
+          </p>
+        )}
       </ProjectText>
     </article>
   );

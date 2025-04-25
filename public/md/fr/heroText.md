@@ -1,2 +1,2 @@
 Je **designe** et **code** des sites Web.\
-De la première idée jusqu'au dernier pixel.
+De l'**idée de base** jusqu'au dernier **pixel**

@@ -1,0 +1,17 @@
+.externalLink {
+  color: var(--clr-txt-300);
+  padding-inline-end: 5px;
+  span {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    gap: 2px;
+    align-items: center;
+    width: fit-content;
+  }
+}
+.p {
+  padding: 0;
+  &:not(:last-of-type) {
+    margin-block-end: 1rem;
+  }
+}
