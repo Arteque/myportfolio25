@@ -1,12 +1,20 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
+import MarkdownLoader from "../Fragments/MarkdownLoader";
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Class from "./Contact.module.scss";
-import { faMessage, faThumbsDown, faWarning } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMessage,
+  faThumbsDown,
+  faWarning,
+} from "@fortawesome/free-solid-svg-icons";
 import ToastLayout from "../ToastLayout/ToastLayout";
 import { ToastSetup } from "../../../Tools/ToastSetup";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const { t, i18n } = useTranslation();
+
   const [formData, setFormData] = useState({
     anrede: "",
     vorname: "",
@@ -17,44 +25,73 @@ const Contact = () => {
     nachricht: "",
   });
 
-  const submitButton = useRef()
+  const submitButton = useRef();
 
-  const [formStatus, setFormStatus] = useState("")
-  const [buttonState, setButtonState] = useState(false)
+  const [formStatus, setFormStatus] = useState("");
+  const [buttonState, setButtonState] = useState(false);
 
   const formInputHandler = (e) => {
     e.preventDefault();
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const formSubmitHandler = async (e) => {
-    e.preventDefault()
-    emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, import.meta.env.VITE_PUBLIC_KEY)
-    .then(() => {
-     setButtonState(true)
-      ToastSetup("success", "", 1000, false, true, true, false, 'dark', <ToastLayout message={`Deine Nachricht wurde versendet. Vielen Dank!`} />)
-      setTimeout(() => {
-        window.location.reload()
-      setButtonState(false)
-      },5000)
-    },(err) => {
-      ToastSetup("error", "", 10000, false, true, true, true, 'dark', <ToastLayout message={`Fehler beim Senden der Nachricht. ${err}`} />)
-    } )
-    
-  }
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setButtonState(true);
+          ToastSetup(
+            "success",
+            "",
+            1000,
+            false,
+            true,
+            true,
+            false,
+            "dark",
+            <ToastLayout
+              message={`Deine Nachricht wurde versendet. Vielen Dank!`}
+            />
+          );
+          setTimeout(() => {
+            window.location.reload();
+            setButtonState(false);
+          }, 5000);
+        },
+        (err) => {
+          ToastSetup(
+            "error",
+            "",
+            10000,
+            false,
+            true,
+            true,
+            true,
+            "dark",
+            <ToastLayout message={`Fehler beim Senden der Nachricht. ${err}`} />
+          );
+        }
+      );
+  };
 
   return (
     <div className={Class.form}>
-      <h3>Kontaktformular</h3>
+      <h3>{t("contact.form.title")}</h3>
       <form onSubmit={formSubmitHandler}>
         <div className="personal">
           <fieldset>
-            <legend>Persönliche Informationen</legend>
+            <legend>{t("contact.form.legends.1")}</legend>
 
             <div className="anrede-container">
               <label htmlFor="anrede" className="anrede">
-                <span>Anrede*:</span>
+                <span>{t("contact.form.inputs.anrede.title")}*:</span>
               </label>
               <select
                 name="anrede"
@@ -63,15 +100,19 @@ const Contact = () => {
                 onChange={formInputHandler}
               >
                 <option value={null}>---</option>
-                <option value="Frau">Frau</option>
-                <option value="Herr">Herr</option>
+                <option value="Frau">
+                  {t("contact.form.inputs.anrede.options.1")}
+                </option>
+                <option value="Herr">
+                  {t("contact.form.inputs.anrede.options.2")}
+                </option>
               </select>
             </div>
 
             <div className={Class.name_container}>
               <div className="vorname-container">
                 <label className="vorname" htmlFor="vorname">
-                  <span>Vorname*:</span>
+                  <span>{t("contact.form.inputs.vorname.options.1")}*:</span>
                 </label>
                 <input
                   type="text"
@@ -85,13 +126,13 @@ const Contact = () => {
 
               <div className="nachname-container">
                 <label className="nachname" htmlFor="nachname">
-                  <span>Nachname*:</span>
+                  <span>{t("contact.form.inputs.nachname.options.1")}*:</span>
                 </label>
                 <input
                   type="text"
                   name="nachname"
                   id="nachname"
-                  autoComplete="name"
+                  autoComplete="last-name"
                   required
                   onChange={formInputHandler}
                 />
@@ -101,10 +142,10 @@ const Contact = () => {
         </div>
         <div className="contact">
           <fieldset>
-            <legend>Kontaktdaten</legend>
+            <legend>{t("contact.form.legends.2")}</legend>
             <div className="mail-container">
               <label className="mail" htmlFor="mail">
-                <span>E-Mail*:</span>
+                <span>{t("contact.form.inputs.email.options.1")}*:</span>
               </label>
               <input
                 type="email"
@@ -117,7 +158,7 @@ const Contact = () => {
             </div>
             <div className="tel-container">
               <label className="tel" htmlFor="tel">
-                <span>Tel*:</span>
+                <span>{t("contact.form.inputs.tel.options.1")}*:</span>
               </label>
               <input
                 type="text"
@@ -133,10 +174,10 @@ const Contact = () => {
         </div>
         <div className="message">
           <fieldset>
-            <legend>Nachricht</legend>
+            <legend>{t("contact.form.legends.3")}</legend>
             <div className="betreff-container">
               <label htmlFor="betreff">
-                <span>Betreff*:</span>
+                <span>{t("contact.form.inputs.betreff.options.1")}*:</span>
               </label>
               <input
                 type="text"
@@ -149,7 +190,7 @@ const Contact = () => {
             </div>
             <div className="nachricht-container">
               <label htmlFor="nachricht">
-                <span>Nachricht*:</span>
+                <span>{t("contact.form.inputs.nachricht.options.1")}*:</span>
               </label>
               <textarea
                 name="nachricht"
@@ -171,10 +212,9 @@ const Contact = () => {
               <label htmlFor="discl">
                 <span>
                   <samp>
-                    * Die von Ihnen eingegebenen Daten werden{" "}
-                    <strong>ausschließlich</strong> zum Beantworten Ihrer
-                    Nachricht gespeichert und in keinem Fall an Dritte
-                    weitergegeben!
+                    <MarkdownLoader
+                      mdsrc={t("contact.form.inputs.datenschutz.options.text")}
+                    />
                   </samp>{" "}
                   <br />
                 </span>
@@ -183,9 +223,14 @@ const Contact = () => {
           </fieldset>
         </div>
         <div className="send">
-          <button className="call__full" type="submit" ref={submitButton} disabled={buttonState}> 
+          <button
+            className="call__full"
+            type="submit"
+            ref={submitButton}
+            disabled={buttonState}
+          >
             <FontAwesomeIcon icon={faMessage} />
-            <span>Nachricht senden</span>
+            <span>{t("contact.form.inputs.senden.options.1")}</span>
           </button>
         </div>
       </form>

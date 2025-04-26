@@ -135,5 +135,88 @@
       },
       "text": "/md/de/service_dompteur.md"
     }
+  },
+  "contact": {
+    "title": "Überzeugt? Lass-uns reden!",
+    "form": {
+      "title": "Kontaktformular",
+      "legends": {
+        "1": "Persönliche Informationen",
+        "2": "Kontaktdaten",
+        "3": "Nachricht"
+      },
+      "inputs": {
+        "anrede": {
+          "title": "Anrede",
+          "options": {
+            "1": "Frau",
+            "2": "Herr"
+          }
+        },
+        "vorname": {
+          "title": "Vorname",
+          "options": {
+            "1": "Vorname"
+          }
+        },
+        "nachname": {
+          "title": "Nachname",
+          "options": {
+            "1": "Nachname"
+          }
+        },
+        "email": {
+          "title": "E-Mail",
+          "options": {
+            "1": "E-Mail"
+          }
+        },
+        "tel": {
+          "title": "Tel",
+          "options": {
+            "1": "Tel"
+          }
+        },
+        "betreff": {
+          "title": "Betreff",
+          "options": {
+            "1": "Betreff"
+          }
+        },
+        "nachricht": {
+          "title": "Nachricht",
+          "options": {
+            "1": "Nachricht"
+          }
+        },
+        "datenschutz": {
+          "title": "Datenschutz",
+          "options": {
+            "1": "Datenschutz",
+            "text": "/md/de/datenschutz.md"
+          }
+        },
+        "senden": {
+          "title": "Nachricht Senden",
+          "options": {
+            "1": "Nachricht Senden"
+          }
+        }
+      }
+    }
+  },
+  "videos": {
+    "title": "Schon so weit gescrollt? Hier ein kleines Extra für dich:",
+    "cookies": {
+      "1": "Oops! 😬 Keine YouTube-Videos hier – sollte eigentlich anders sein! 📉🎥",
+      "2": "Externe Inhalte sind in Cookie Einsttellungen deaktiviert"
+    }
+  },
+  "cookieBanner": {
+    "text": "/md/de/cookieBanner.md",
+    "buttons": {
+      "annehmen": "Annehmen",
+      "verweigern": "Verweigern"
+    }
   }
 }

@@ -252,7 +252,7 @@ const Start = () => {
       <Services />
       <Section classname="contact" id="contact">
         <Wrapper>
-          <SectionHeader title1="Überzeugt? " title2="Lass uns reden!" />
+          <SectionHeader title1={t("contact.title")} />
           <div className="section_content grid--2cols border">
             <div
               className="img_container"
@@ -531,11 +531,7 @@ const Start = () => {
       </Section>
       <Section classname="media-section" id="media-section">
         <Wrapper>
-          <SectionHeader
-            title1="Schon so weit gescrollt? 😉"
-            title2=" Hier ein kleines Extra für dich:"
-          />
-          <p> Timelapse: Digitales Zeichnen & Fotomontagen 🎨🖼️</p>
+          <SectionHeader title1={t("videos.title")} />
           <Video />
         </Wrapper>
       </Section>

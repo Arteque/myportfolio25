@@ -137,5 +137,88 @@
       },
       "text": "/md/fr/service_dompteur.md"
     }
+  },
+  "contact": {
+    "title": "Convaincu ? Parlons-en !",
+    "form": {
+      "title": "Formulaire de contact",
+      "legends": {
+        "1": "Informations personnelles",
+        "2": "Coordonnées",
+        "3": "Message"
+      },
+      "inputs": {
+        "anrede": {
+          "title": "Civilité",
+          "options": {
+            "1": "Madame",
+            "2": "Monsieur"
+          }
+        },
+        "vorname": {
+          "title": "Prénom",
+          "options": {
+            "1": "Prénom"
+          }
+        },
+        "nachname": {
+          "title": "Nom",
+          "options": {
+            "1": "Nom"
+          }
+        },
+        "email": {
+          "title": "E-mail",
+          "options": {
+            "1": "E-mail"
+          }
+        },
+        "tel": {
+          "title": "Téléphone",
+          "options": {
+            "1": "Téléphone"
+          }
+        },
+        "betreff": {
+          "title": "Sujet",
+          "options": {
+            "1": "Sujet"
+          }
+        },
+        "nachricht": {
+          "title": "Message",
+          "options": {
+            "1": "Message"
+          }
+        },
+        "datenschutz": {
+          "title": "Politique de confidentialité",
+          "options": {
+            "1": "Politique de confidentialité",
+            "text": "/md/fr/datenschutz.md"
+          }
+        },
+        "senden": {
+          "title": "Envoyer le message",
+          "options": {
+            "1": "Envoyer le message"
+          }
+        }
+      }
+    }
+  },
+  "videos": {
+    "title": "Tu as scrollé jusqu'içi ? Voici un petit bonus pour toi :",
+    "cookies": {
+      "1": "Oups ! 😬 Pas de vidéos YouTube ici – ça ne devait pas arriver ! 📉🎥",
+      "2": "Le contenu externe est désactivé dans les paramètres de cookies"
+    }
+  },
+  "cookieBanner": {
+    "text": "/md/fr/cookieBanner.md",
+    "buttons": {
+      "annehmen": "Accepter",
+      "verweigern": "Rejeter"
+    }
   }
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react";
+import { useTranslation } from "react-i18next";
 import VideoPlayer from "./VideoPlayer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,6 +14,8 @@ import dateFormat from "../../../Tools/dateFormat";
 import { CookieContext } from "../../../Context/CookiesContext";
 
 const Video = () => {
+  const { t, i18n } = useTranslation();
+
   const YOUTUBE_PLAYLIST_ITEMS_API =
     "https://www.googleapis.com/youtube/v3/playlistItems";
   const [youtubeData, setYoutubeData] = useState([]);
@@ -28,7 +31,10 @@ const Video = () => {
         const data = await response.json();
         const videos = data.items;
         const sortVideos = videos.sort((a, b) => {
-         return new Date(b.snippet.publishedAt).getTime() - new Date(a.snippet.publishedAt).getTime();
+          return (
+            new Date(b.snippet.publishedAt).getTime() -
+            new Date(a.snippet.publishedAt).getTime()
+          );
         });
         setYoutubeData(sortVideos);
       } catch (err) {
@@ -65,8 +71,8 @@ const Video = () => {
   if (showVideos) {
     return (
       <div className="border">
-        <h3 style={{marginBlock:'1rem'}}>Oops! 😬 Keine YouTube-Videos hier – sollte eigentlich anders sein! 📉🎥</h3>
-        <p>Externe Inhalte sind in Cookie Einsttellungen deaktiviert</p>
+        <h3 style={{ marginBlock: "1rem" }}>{t("videos.cookies.1")}</h3>
+        <p>{t("videos.cookies.2")}</p>
       </div>
     );
   } else {
@@ -138,7 +144,15 @@ const Video = () => {
                 <button onClick={() => setPlayer(false)}>
                   <FontAwesomeIcon icon={faTimes} size="xl" />
                 </button>
-                <h2 style={{textAlign:"center", marginBlockEnd:"1rem", fontSize:"1rem"}}>{videoUrl.title}</h2>
+                <h2
+                  style={{
+                    textAlign: "center",
+                    marginBlockEnd: "1rem",
+                    fontSize: "1rem",
+                  }}
+                >
+                  {videoUrl.title}
+                </h2>
               </div>
               <VideoPlayer videoUrl={videoUrl.url} />
             </div>

@@ -3,14 +3,15 @@ import { CookieContext } from "../../../Context/CookiesContext";
 import Class from "./CookiesBanner.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFingerprint } from "@fortawesome/free-solid-svg-icons";
+import MarkdownLoader from "../Fragments/MarkdownLoader";
+import { useTranslation } from "react-i18next";
 
 const CookiesBanner = () => {
+  const { t, i18n } = useTranslation();
   const { cookiesAccepted, acceptCookies, rejectCookies } =
     useContext(CookieContext);
 
   const [showBanner, setShowBanner] = useState(!cookiesAccepted);
-
-
 
   const clearAllData = () => {
     // Alle Cookies löschen
@@ -29,9 +30,7 @@ const CookiesBanner = () => {
     // Dann den Context informieren
     rejectCookies();
 
-  
-    showBanner && setShowBanner(false)
-
+    showBanner && setShowBanner(false);
   };
 
   const openBannerHandler = (e) => {
@@ -39,11 +38,10 @@ const CookiesBanner = () => {
     setShowBanner(cookiesAccepted);
   };
 
-
-    // Sync local banner visibility with context state
-    useEffect(() => {
-      cookiesAccepted === "true" && setShowBanner(false);
-    }, [cookiesAccepted]);
+  // Sync local banner visibility with context state
+  useEffect(() => {
+    cookiesAccepted === "true" && setShowBanner(false);
+  }, [cookiesAccepted]);
 
   if (!showBanner) {
     return (
@@ -65,15 +63,21 @@ const CookiesBanner = () => {
 
   return (
     <div className={`${Class.cookies_container} border bg-bg-100 txt-txt-300 `}>
-      <p>
-      Mein Portfolio verwendet Cookies, um Funktionen bereitzustellen und externe Inhalte anzuzeigen.
-      </p>
+      <MarkdownLoader mdsrc={t("cookieBanner.text")} />
       <div className="call">
-        <button style={{cursor:'pointer'}} className="call__full" onClick={acceptCookies}>
-          Annehmen
+        <button
+          style={{ cursor: "pointer" }}
+          className="call__full"
+          onClick={acceptCookies}
+        >
+          {t("cookieBanner.buttons.annehmen")}
         </button>
-        <button style={{cursor:'pointer'}} className={`call__full`} onClick={clearAllData}>
-          Verweigern
+        <button
+          style={{ cursor: "pointer" }}
+          className={`call__full`}
+          onClick={clearAllData}
+        >
+          {t("cookieBanner.buttons.verweigern")}
         </button>
       </div>
     </div>

@@ -135,5 +135,88 @@
       },
       "text": "/md/en/service_dompteur.md"
     }
+  },
+  "contact": {
+    "title": "Convinced? Let's talk!",
+    "form": {
+      "title": "Contact Form",
+      "legends": {
+        "1": "Personal informations",
+        "2": "Contact informations",
+        "3": "Message"
+      },
+      "inputs": {
+        "anrede": {
+          "title": "Salutation",
+          "options": {
+            "1": "Ms",
+            "2": "Mr"
+          }
+        },
+        "vorname": {
+          "title": "First Name",
+          "options": {
+            "1": "First Name"
+          }
+        },
+        "nachname": {
+          "title": "Last Name",
+          "options": {
+            "1": "Last Name"
+          }
+        },
+        "email": {
+          "title": "Email",
+          "options": {
+            "1": "Email"
+          }
+        },
+        "tel": {
+          "title": "Phone",
+          "options": {
+            "1": "Phone"
+          }
+        },
+        "betreff": {
+          "title": "Subject",
+          "options": {
+            "1": "Subject"
+          }
+        },
+        "nachricht": {
+          "title": "Message",
+          "options": {
+            "1": "Message"
+          }
+        },
+        "datenschutz": {
+          "title": "Privacy Policy",
+          "options": {
+            "1": "Privacy Policy",
+            "text": "/md/en/datenschutz.md"
+          }
+        },
+        "senden": {
+          "title": "Send Message",
+          "options": {
+            "1": "Send Message"
+          }
+        }
+      }
+    }
+  },
+  "videos": {
+    "title": "Scrolled this far? Here's a little extra for you:",
+    "cookies": {
+      "1": "Oops! 😬 No YouTube videos here! – something went wrong! 📉🎥",
+      "2": "External contents are disabled in your cookie settings"
+    }
+  },
+  "cookieBanner": {
+    "text": "/md/en/cookieBanner.md",
+    "buttons": {
+      "annehmen": "Accept",
+      "verweigern": "Reject"
+    }
   }
 }
