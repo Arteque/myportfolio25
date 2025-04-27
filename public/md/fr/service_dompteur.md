@@ -1,4 +1,4 @@
-En véritable **dompteur du web**, je maîtrise les navigateurs avec un code précis, une bonne dose de patience et une rigueur constante.
+> Entant que **dompteur du web**, je maîtrise les navigateurs avec un code précis, une bonne dose de patience et une rigueur constante.
 
 Lors de la phase de développement, je traduis les maquettes en expériences numériques fidèles, en m’appuyant aussi bien sur des frameworks modernes comme **React** que sur des CMS éprouvés tels que **TYPO3** ou **WordPress**.
 

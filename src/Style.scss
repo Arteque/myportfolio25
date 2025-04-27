@@ -441,7 +441,11 @@ body[data-mode="dark"] {
     font-weight: bold;
   }
 }
-
+blockquote {
+  padding-inline-start: 1rem;
+  border-inline-start: 0.5rem solid var(--clr-bg-200);
+  margin-block-end: 1rem;
+}
 .hero__media {
   width: 80%;
   max-width: 350px;
