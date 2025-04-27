@@ -70,8 +70,8 @@ const Start = () => {
       false,
       true,
       false,
-      "light",
-      "Die Projektliste wurde angepasst!"
+      localStorage.getItem("themeMode") || "dark",
+      t("tostify.projects")
     );
   }, [projectsFilter]);
 

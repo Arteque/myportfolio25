@@ -227,5 +227,16 @@
       "annehmen": "Accept",
       "verweigern": "Reject"
     }
+  },
+  "tostify": {
+    "projects": "The project list has been updated!",
+    "colormode": {
+      "light": "The Light Mode is now active!",
+      "dark": "The Dark Mode is now active!"
+    },
+    "contact": {
+      "success": "Your message has been sent. Thank you!",
+      "error": "Error while sending the message."
+    }
   }
 }

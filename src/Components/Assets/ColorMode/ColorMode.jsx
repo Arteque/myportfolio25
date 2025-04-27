@@ -1,6 +1,8 @@
 import Class from "./ColorMode.module.scss";
 import { useEffect, useState } from "react";
 
+import { useTranslation } from "react-i18next";
+
 import { faSun, faMoon, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -8,6 +10,10 @@ import ToastLayout from "../ToastLayout/ToastLayout";
 import { ToastSetup } from "../../../Tools/ToastSetup";
 
 const ColorMode = () => {
+  // Translation
+
+  const { t } = useTranslation();
+
   /* Color mode */
 
   const isSystemDarkmodeEnabeld = () => {
@@ -54,7 +60,7 @@ const ColorMode = () => {
       false,
       clrMode,
       <ToastLayout
-        message={`${colorMode ? "Lightmode" : "Darkmode"} ist aktiv!`}
+        message={`${colorMode ? t("tostify.colormode.light") : t("tostify.colormode.dark")}`}
       />
     );
   };

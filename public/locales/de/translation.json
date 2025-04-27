@@ -227,5 +227,16 @@
       "annehmen": "Annehmen",
       "verweigern": "Verweigern"
     }
+  },
+  "tostify": {
+    "projects": "La liste des projets a été mise à jour!",
+    "colormode": {
+      "light": "Der Hellmodus ist aktiv!",
+      "dark": "Der Dunkelmodus ist aktiv!"
+    },
+    "contact": {
+      "success": "Deine Nachricht wurde versendet. Vielen Dank!",
+      "error": "Fehler beim Senden der Nachricht."
+    }
   }
 }
