@@ -117,7 +117,6 @@ const Start = () => {
   return (
     <>
       <Hero />
-
       <Section id="projects" classname="projects">
         <Wrapper>
           <SectionHeader title1={t("portfolio.title")} />

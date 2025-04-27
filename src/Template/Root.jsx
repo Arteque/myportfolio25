@@ -1,15 +1,30 @@
 import { Outlet } from "react-router-dom";
-import MainHeader from "../Components/MainHeader";
-import MainFooter from "../Components/MainFooter";
+
+import { useEffect } from "react";
+
+import { useTranslation } from "react-i18next";
+
 import { ToastContainer } from "react-toastify";
 import { CookiesProvider } from "../Context/CookiesContext";
-import CookiesBanner from "../Components/Assets/CookiesBanner/CookiesBanner";
 import { ErrorBoundary } from "react-error-boundary";
+
+import MainHeader from "../Components/MainHeader";
+import MainFooter from "../Components/MainFooter";
+
+import CookiesBanner from "../Components/Assets/CookiesBanner/CookiesBanner";
 import Error from "../Pages/Error";
+import HelmetComponent from "../Components/Assets/Helmet/Helmet";
 
 export const Root = () => {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   return (
     <>
+      <HelmetComponent />
       <ErrorBoundary
         FallbackComponent={Error}
         onReset={(details) => {
