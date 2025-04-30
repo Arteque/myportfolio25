@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react"
 
 import { useEffect } from "react";
 
@@ -48,6 +49,7 @@ export const Root = () => {
           <ToastContainer />
         </CookiesProvider>
       </ErrorBoundary>
+      <Analytics />
     </>
   );
 };
