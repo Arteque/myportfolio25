@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 import { useEffect } from "react";
 
@@ -17,7 +17,7 @@ import Error from "../Pages/Error";
 import HelmetComponent from "../Components/Assets/Helmet/Helmet";
 
 export const Root = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     document.documentElement.lang = i18n.language;
