@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import { useTranslation } from "react-i18next";
 
@@ -17,6 +17,7 @@ import Error from "../Pages/Error";
 import HelmetComponent from "../Components/Assets/Helmet/Helmet";
 
 export const Root = () => {
+  //Translation
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
