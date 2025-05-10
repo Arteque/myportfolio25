@@ -117,6 +117,9 @@ const Start = () => {
   return (
     <>
       <Hero />
+
+      <Services />
+
       <Section id="projects" classname="projects">
         <Wrapper>
           <SectionHeader title1={t("portfolio.title")} />
@@ -247,8 +250,9 @@ const Start = () => {
           <About />
         </Wrapper>
       </Section>
+
       <Skills />
-      <Services />
+
       <Section classname="contact" id="contact">
         <Wrapper>
           <SectionHeader title1={t("contact.title")} />
@@ -528,6 +532,7 @@ const Start = () => {
           </div>
         </Wrapper>
       </Section>
+
       <Section classname="media-section" id="media-section">
         <Wrapper>
           <SectionHeader title1={t("videos.title")} />
