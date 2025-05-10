@@ -439,7 +439,8 @@ body[data-mode="dark"] {
   p {
     padding-block: var(--gap);
     font-weight: bold;
-    font-size: clamp(14px, calc(5dvw + 1px), 1.2rem);
+    font-size: clamp(14px, calc(5dvw + 1px), 1.3rem);
+    font-weight: 400;
   }
 }
 blockquote {
