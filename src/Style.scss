@@ -404,9 +404,6 @@ body[data-mode="dark"] {
   @include mixin.mid {
     min-height: 80dvh;
   }
-  @include mixin.lg {
-    min-height: 70dvh;
-  }
 }
 
 .hero__text {
@@ -441,6 +438,9 @@ body[data-mode="dark"] {
     font-weight: bold;
     font-size: clamp(14px, calc(5dvw + 1px), 1.3rem);
     font-weight: 400;
+    @include mixin.xl {
+      font-size: 1rem;
+    }
   }
 }
 blockquote {
