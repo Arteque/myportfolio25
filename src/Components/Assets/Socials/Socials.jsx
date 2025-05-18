@@ -33,7 +33,7 @@ const Socials = () => {
         {
             id:3,
             title:"Instagram",
-            url: "https://www.instagram.com/artt3k/",
+            url: "https://www.instagram.com/ah.lemssiah/",
             aria:"Folge mir auf Instagram",
             font: faInstagram,
             color: "linear-gradient(to bottom, #ffdf9e, #ffc273, #e56969, #c1558b, #8a49a1)"

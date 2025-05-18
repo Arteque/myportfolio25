@@ -1,6 +1,6 @@
 Hallo,
 
-Ich bin **Frontend Webentwickler** und arbeite seit mehr als **4 Jahren** in der Umsetzung moderner, performanter und benutzerfreundlicher Websites.
+Ich bin **Frontend Webentwickler** und arbeite seit mehr als **4 Jahren** in der Umsetzung moderner, performter und benutzerfreundlicher Websites.
 
 Ich bringe nicht nur ein technisches Know-how, sondern auch einen klaren Blick für das Wesentliche und eine strukturierte, zuverlässige Arbeitsweise mit.
 

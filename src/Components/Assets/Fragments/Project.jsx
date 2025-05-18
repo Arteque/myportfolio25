@@ -54,7 +54,6 @@ const Project = ({
         <div
           style={{
             margin: "0",
-            padding: "0 0 1rem 1rem",
             borderBlockEnd: "1px solid var(--clr-txt-400)",
             marginBlockEnd: "1rem",
           }}

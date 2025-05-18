@@ -1,4 +1,13 @@
 {
+  "head": {
+    "title": "Ahmed Lemssiah | Développement Web & Design Web",
+    "meta": {
+      "description": "Je suis Ahmed Lemssiah, développeur et designer web certifié par l'IHK allemande (Industrie- und Handelskammer) ✅. Dans ce portfolio, tu trouveras une liste de mes projets web, mon tech stack, ainsi que plus d'informations sur moi dans le domaine du développement frontend.",
+      "keywords": "Développement Web, Design Web, Frontend, Développement Frontend, HTML, CSS, JavaScript, React, Vite, Design Responsive, Design UI, Design UX, TypeScript, Tailwind CSS, Performance Web, Design Mobile First, Compatibilité Cross Browser, Bases SEO, Git, GitHub, Intégration API, Figma to Code, Adobe XD, Photoshop, Illustrator, Lightroom, InDesign",
+      "ogtitle": "Ahmed Lemssiah | ✅Développement Web & ✅Web Design",
+      "ogdescription": "Je suis Ahmed Lemssiah, développeur web et Web designeur certifié. Découvre mes projets dans le domaine du web moderne. Travaillons ensemble!"
+    }
+  },
   "hero": {
     "title": {
       "top": "Je m'appelle",
@@ -219,6 +228,17 @@
     "buttons": {
       "annehmen": "Accepter",
       "verweigern": "Rejeter"
+    }
+  },
+  "tostify": {
+    "projects": "La liste des projets a été acctualisée!",
+    "colormode": {
+      "light": "Le mode 'Clair' est actif !",
+      "dark": "Le mode 'Sombre' est actif !"
+    },
+    "contact": {
+      "success": "Votre message a été envoyé. Merci beaucoup !",
+      "error": "Erreur lors de l'envoi du message."
     }
   }
 }

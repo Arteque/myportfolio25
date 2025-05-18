@@ -1,15 +1,32 @@
 import { Outlet } from "react-router-dom";
-import MainHeader from "../Components/MainHeader";
-import MainFooter from "../Components/MainFooter";
+import { Analytics } from "@vercel/analytics/react";
+
+import { useEffect, useRef } from "react";
+
+import { useTranslation } from "react-i18next";
+
 import { ToastContainer } from "react-toastify";
 import { CookiesProvider } from "../Context/CookiesContext";
-import CookiesBanner from "../Components/Assets/CookiesBanner/CookiesBanner";
 import { ErrorBoundary } from "react-error-boundary";
+
+import MainHeader from "../Components/MainHeader";
+import MainFooter from "../Components/MainFooter";
+
+import CookiesBanner from "../Components/Assets/CookiesBanner/CookiesBanner";
 import Error from "../Pages/Error";
+import HelmetComponent from "../Components/Assets/Helmet/Helmet";
 
 export const Root = () => {
+  //Translation
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   return (
     <>
+      <HelmetComponent />
       <ErrorBoundary
         FallbackComponent={Error}
         onReset={(details) => {
@@ -33,6 +50,7 @@ export const Root = () => {
           <ToastContainer />
         </CookiesProvider>
       </ErrorBoundary>
+      <Analytics />
     </>
   );
 };

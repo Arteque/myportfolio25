@@ -55,10 +55,8 @@ const Contact = () => {
             true,
             true,
             false,
-            "dark",
-            <ToastLayout
-              message={`Deine Nachricht wurde versendet. Vielen Dank!`}
-            />
+            localStorage.getItem("themeMode") || "light",
+            <ToastLayout message={t("tostify.contact.success")} />
           );
           setTimeout(() => {
             window.location.reload();
@@ -69,13 +67,13 @@ const Contact = () => {
           ToastSetup(
             "error",
             "",
-            10000,
+            50000,
             false,
             true,
             true,
             true,
-            "dark",
-            <ToastLayout message={`Fehler beim Senden der Nachricht. ${err}`} />
+            localStorage.getItem("themeMode") || "light",
+            <ToastLayout message={`${t("tostify.contact.error")} ${err}`} />
           );
         }
       );

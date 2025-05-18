@@ -1,4 +1,13 @@
 {
+  "head": {
+    "title": "Ahmed Lemssiah | Webentwicklung & Webdesign",
+    "meta": {
+      "description": "Hey! Ich bin Ahmed Lemssiah, IHK-anerkannter Webentwickler und Webdesigner ✅. In diesem Portfolio findest du meine Projekte, meinen Tech-Stack sowie mehr über mich im Bereich der Frontend-Entwicklung.",
+      "keywords": "Webentwicklung, Webdesign, Frontend, Frontend-Entwicklung, HTML, CSS, JavaScript, React, Vite, Responsive Design, UI Design, UX Design, TypeScript, Tailwind CSS, Next.js, Web Performance, Mobile First Design, Cross Browser Compatibility, SEO Basics, Git, GitHub, API-Integration, Figma to Code",
+      "ogtitle": "Ahmed Lemssiah | ✅Webdesigner & ✅Frontend Webentwickler",
+      "ogdescription": "Ich bin Ahmed Lemssiah,IHK-anerkannter Webentwickler und Webdesigner. Entdecke meine Projekte im Bereich moderner Webentwicklung. Lass-uns zusammen arbeiten!"
+    }
+  },
   "hero": {
     "title": {
       "top": "Ich heiße",
@@ -217,6 +226,17 @@
     "buttons": {
       "annehmen": "Annehmen",
       "verweigern": "Verweigern"
+    }
+  },
+  "tostify": {
+    "projects": "Die Projektliste wurde aktualisiert!",
+    "colormode": {
+      "light": "Der Hellmodus ist aktiv!",
+      "dark": "Der Dunkelmodus ist aktiv!"
+    },
+    "contact": {
+      "success": "Deine Nachricht wurde versendet. Vielen Dank!",
+      "error": "Fehler beim Senden der Nachricht."
     }
   }
 }

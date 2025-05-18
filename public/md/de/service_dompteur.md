@@ -1,4 +1,4 @@
-Als Webdompteur zähme ich Browser mit präzisem Code, Geduld und Disziplin.
+> Als Webdompteur zähme ich Browser mit präzisem Code, Geduld und Disziplin.
 
 In der Codierungsphase setze ich Designs präzise um – sowohl mit modernen Frameworks wie **React** als auch mit CMS-Lösungen wie **TYPO3** und **WordPress**.
 

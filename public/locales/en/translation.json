@@ -1,4 +1,13 @@
 {
+  "head": {
+    "title": "Ahmed Lemssiah | Web Development & Web Design",
+    "meta": {
+      "description": "Hey! I'm Ahmed Lemssiah, a certified web developer and web designer ✅ by the German IHK (Industrie- und Handelskammer). In this portfolio, you'll find my projects, my tech stack, and more about me in frontend web development field.",
+      "keywords": "Web Development, Web Design, Frontend, Frontend Development, HTML, CSS, JavaScript, React, Vite, Responsive Design, UI Design, UX Design, TypeScript, Tailwind CSS, Next.js, Web Performance, Mobile First Design, Cross Browser Compatibility, SEO Basics, Git, GitHub, API Integration, Figma to Code,  Adobe XD, Photoshop, Illustrator, Lightroom, InDesign",
+      "ogtitle": "Ahmed Lemssiah | ✅Web Development & ✅Web Design",
+      "ogdescription": "I am Ahmed Lemssiah, a certified web developer and web designer. Discover my projects in the modern web development field. Let's work together!"
+    }
+  },
   "hero": {
     "title": {
       "top": "My name is",
@@ -217,6 +226,17 @@
     "buttons": {
       "annehmen": "Accept",
       "verweigern": "Reject"
+    }
+  },
+  "tostify": {
+    "projects": "The project list has been updated!",
+    "colormode": {
+      "light": "The Light Mode is now active!",
+      "dark": "The Dark Mode is now active!"
+    },
+    "contact": {
+      "success": "Your message has been sent. Thank you!",
+      "error": "Error while sending the message."
     }
   }
 }

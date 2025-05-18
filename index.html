@@ -19,26 +19,9 @@
     <!-- Yahoo Search Meta Tags -->
     <meta name="yahoobot" content="index, follow" />
 
-    <!-- SEO Meta-Tags -->
-    <meta
-      name="description"
-      content="Hey! Ich bin Ahmed Lemssiah, ein leidenschaftlicher Webentwickler und Webdesigner ✅. Hier findest du meine Projekte und kreativen Arbeiten im Bereich Frontend-Entwicklung."
-    />
-    <meta
-      name="keywords"
-      content="Webentwicklung, Webdesign, Frontend, HTML, CSS, JavaScript, React, Vite"
-    />
     <meta name="author" content="Ahmed Lemssiah" />
 
     <!-- Open Graph (OG) Tags für Social Media -->
-    <meta
-      property="og:title"
-      content="Ahmed Lemssiah | Webentwicklung & Webdesign"
-    />
-    <meta
-      property="og:description"
-      content="Ich bin Ahmed Lemssiah, ein kreativer Webentwickler und Webdesigner. Schau dir meine Projekte an und lass dich inspirieren!"
-    />
     <meta
       property="og:image"
       content="https://www.lemssiah-portfolio.de/preview-image.jpg"
@@ -47,17 +30,8 @@
     <meta property="og:type" content="website" />
 
     <!-- Twitter Card für bessere Darstellung auf Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Ahmed Lemssiah | Webentwicklung & Webdesign"
-    />
-    <meta
-      name="twitter:description"
-      content="Ich bin Ahmed Lemssiah, Webentwickler und Webdesigner. Schau dir meine Projekte an! 😁"
-    />
-    <meta name="twitter:image" content="./preview-image.jpg" />
 
+    <meta name="twitter:image" content="./preview-image.jpg" />
 
     <link rel="preload" as="image" href="/Bg/customBG__Night.png" />
     <link rel="preload" as="image" href="/Bg/customBG__Day.png" />
@@ -73,7 +47,6 @@
     <meta name="apple-mobile-web-app-title" content="Lemssiah Portfolio" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <title>Ahmed Lemssiah | Webentwicklung & Webdesign</title>
     <style>
       body:has(.loader_container.show) {
         overflow: hidden;
@@ -84,16 +57,16 @@
         z-index: 999999999;
         background: var(--clr-bg-100);
         display: flex;
-        flex-flow:column;
+        flex-flow: column;
         gap: 1rem;
         align-items: center;
-        text-align:center;
+        text-align: center;
         font-size: 0.8rem;
         justify-content: center;
         opacity: 0;
         pointer-events: none;
       }
-      .loader_container p{
+      .loader_container p {
         color: var(--clr-bg-300);
       }
       .loader_container.show {
@@ -106,7 +79,7 @@
       }
       .loader_container svg path {
         fill: var(--clt-bg-100);
-        fill-opacity:0.1;
+        fill-opacity: 0.1;
         stroke: var(--clr-txt-300);
         stroke-width: 2px;
         paint-order: stroke;
@@ -186,9 +159,7 @@
     <script class="loaderscript">
       document.onreadystatechange = function () {
         if (document.readyState === "complete") {
-            document
-              .querySelector(".loader_container")
-              .classList.remove("show");
+          document.querySelector(".loader_container").classList.remove("show");
         }
       };
     </script>

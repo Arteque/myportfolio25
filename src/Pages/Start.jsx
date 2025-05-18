@@ -70,8 +70,8 @@ const Start = () => {
       false,
       true,
       false,
-      "light",
-      "Die Projektliste wurde angepasst!"
+      localStorage.getItem("themeMode") || "dark",
+      t("tostify.projects")
     );
   }, [projectsFilter]);
 
@@ -117,6 +117,8 @@ const Start = () => {
   return (
     <>
       <Hero />
+
+      <Services />
 
       <Section id="projects" classname="projects">
         <Wrapper>
@@ -248,8 +250,9 @@ const Start = () => {
           <About />
         </Wrapper>
       </Section>
+
       <Skills />
-      <Services />
+
       <Section classname="contact" id="contact">
         <Wrapper>
           <SectionHeader title1={t("contact.title")} />
@@ -529,6 +532,7 @@ const Start = () => {
           </div>
         </Wrapper>
       </Section>
+
       <Section classname="media-section" id="media-section">
         <Wrapper>
           <SectionHeader title1={t("videos.title")} />
