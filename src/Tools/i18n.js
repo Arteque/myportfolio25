@@ -11,11 +11,10 @@ i18n
 
   .init({
     supportedLngs: ["de", "en", "fr"],
-    // fallbackLng: "de",
     debug: false,
 
     interpolation: {
-      escapeValue: false, // react already safes from xss
+      escapeValue: false,
     },
   });
 
