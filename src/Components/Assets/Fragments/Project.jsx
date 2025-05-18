@@ -41,7 +41,14 @@ const Project = ({
           </p>
         )}
 
-        <ul className={Class.tags}>{tags}</ul>
+        <ul className={Class.tags}>
+          {tags}
+          <li>
+            {language && (
+                <small>{language}</small>
+            )}
+          </li>
+        </ul>
       </header>
       <ProjectText>
         <div
@@ -54,11 +61,6 @@ const Project = ({
         >
           {content}
         </div>
-        {language && (
-          <p className={Class.projectdate}>
-            <small>{language}</small>
-          </p>
-        )}
       </ProjectText>
     </article>
   );
