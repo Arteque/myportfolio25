@@ -54,9 +54,10 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1.02rem;
+  font-size: 1rem;
   font-style: normal;
-  letter-spacing: 0.01em; /* Etwas mehr Abstand für bessere Lesbarkeit */
+  letter-spacing: 0.02em; /* Etwas mehr Abstand für bessere Lesbarkeit */
+  line-height: 150%;
   background-color: var(--clr-bg-100);
   color: var(--clr-txt-100);
   transition: all 0.5s;
@@ -92,6 +93,9 @@ img {
   @include mixin.xl {
     max-width: 1400px;
   }
+}
+section{
+  margin-block-end: 25dvh;
 }
 /*Wrapper*/
 .uppercase {
@@ -385,12 +389,12 @@ body[data-mode="dark"] {
         margin-inline-end: auto;
         transform: translateY(0);
         .small {
-          font-size: 1rem;
+          font-size:1rem;
           font-weight: 400;
         }
         .name {
-          font-size: 3rem;
-          margin-block-start: 1rem;
+          font-size: 2rem;
+          margin-block-start: .5rem;
           display: inline-block;
         }
       }
@@ -401,14 +405,14 @@ body[data-mode="dark"] {
       }
     }
   }
-  @include mixin.mid {
-    min-height: 80dvh;
-  }
+  // @include mixin.mid {
+  //   min-height: 80dvh;
+  // }
 }
 
 .hero__text {
   background: #a2e7f077;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   border-radius: 0.5rem;
   padding: var(--gap);
   max-width: fit-content;
@@ -426,21 +430,17 @@ body[data-mode="dark"] {
       0 -1px 0 var(--clr-bg-400),
       0 1px 0 var(--clr-bg-400);
     font-weight: 900;
-    font-size: 2rem;
-    line-height: 110%;
+    font-size: 1.5rem;
+    line-height: 120%;
     .small {
       font-size: 1rem;
       font-weight: normal;
     }
   }
   p {
-    padding-block: var(--gap);
-    font-weight: bold;
-    font-size: clamp(14px, calc(5dvw + 1px), 1.3rem);
-    font-weight: 400;
-    @include mixin.xl {
-      font-size: 1rem;
-    }
+    padding-block: 0.8rem;
+    font-size: 1rem;
+    max-width: 280px;
   }
 }
 blockquote {
@@ -553,7 +553,7 @@ header.section__header {
   backdrop-filter: blur(15px);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1254901961);
   @include mixin.mid {
-    top: 103px;
+    top: 91px;
   }
   > svg {
     color: var(--clr-bg-300);

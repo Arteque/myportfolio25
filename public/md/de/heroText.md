@@ -1,2 +1,1 @@
-Ich **gestalte** und **programmiere** Websites.\
-Von der ersten Idee bis zum letzten Pixel.
+**Webdesigner und -entwickler** mit über 4 Jahren Erfahrung.

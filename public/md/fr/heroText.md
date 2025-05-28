@@ -1,2 +1,1 @@
-Je **designe** et **code** des sites Web.\
-De l'**idée de base** jusqu'au dernier **pixel**
+**Webdesigner et développeur web** avec 4 ans d'expérience !
