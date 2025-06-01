@@ -18,7 +18,7 @@
     }
     ul{
         display:flex;
-        gap: 0.5rem;
+        // gap: 0.5rem;
         width:100%;
         z-index: 10;
         position:relative;
@@ -30,7 +30,12 @@
         }
         a{
             display:block;
-            padding: 0.8rem;
+            padding: 1rem;
+            transition: all 1s;
+            &:hover,&[aria-current="true"]{
+                background: var(--clr-bg-300); 
+                transition: all .1s;
+            }
         }
     }
 }

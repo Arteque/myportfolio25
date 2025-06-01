@@ -1,8 +1,8 @@
 .cookies_container {
     position: fixed;
-    bottom: 10px;
-    left: 10px;
-    z-index: 999;
+    bottom: 5px;
+    left: 5px;
+    z-index: 999999;
     max-width: 300px;
     p{
         font-size: 1rem;
@@ -10,4 +10,10 @@
     > div{
         margin-block: 1rem;
     }
+}
+.cookies_container__print{
+    padding: 5px;
+    background:var(--clr-bg-100);
+    color:var(--clr-txt-100);
+    border-radius: 10px;
 }

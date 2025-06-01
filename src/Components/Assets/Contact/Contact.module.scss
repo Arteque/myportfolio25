@@ -108,3 +108,10 @@
         }
     }
 }
+.spinCercle{
+    animation: spinCercle 1s linear infinite;
+}
+
+@keyframes spinCercle {
+    100%{rotate:364deg;}
+}

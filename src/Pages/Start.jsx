@@ -253,7 +253,7 @@ const Start = () => {
         </Wrapper>
       </Section>
 
-      <Section classname="contact" id="contact">
+      <Section classname="contact" id="contact-container">
         <Wrapper>
           <SectionHeader title1={t("contact.title")} />
           <div className="section_content grid--2cols border">

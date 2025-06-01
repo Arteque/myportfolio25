@@ -48,13 +48,14 @@ const CookiesBanner = () => {
       <div className={Class.cookies_container}>
         <button
           title="Cookies Einstellungen"
+          className={Class.cookies_container__print}
           onClick={openBannerHandler}
           style={{ cursor: "pointer" }}
         >
           <FontAwesomeIcon
             icon={faFingerprint}
-            size="3x"
-            color="var(--clr-call-100)"
+            size="2x"
+            color="var(--clr-txt-100)"
           />
         </button>
       </div>

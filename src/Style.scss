@@ -94,8 +94,24 @@ img {
     max-width: 1400px;
   }
 }
-section{
-  margin-block-end: 25dvh;
+section:not(#hero):not(.Toastify){
+  padding-block-end: 25dvh;
+  // min-height: 100svh;
+}
+#about {
+  scroll-margin-block-start: 135svh;
+}
+#contact-container {
+  scroll-margin-block-start: 165svh;
+}
+#projects {
+  scroll-margin-block-start: 0svh;
+}
+#skills {
+  scroll-margin-block-start:0svh;
+}
+#section__services {
+  scroll-margin-block-start: 115svh;
 }
 /*Wrapper*/
 .uppercase {

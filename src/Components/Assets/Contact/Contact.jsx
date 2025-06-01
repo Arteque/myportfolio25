@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Class from "./Contact.module.scss";
 import {
+  faCircle,
+  faCircleNotch,
   faMessage,
   faThumbsDown,
   faWarning,
@@ -37,6 +39,7 @@ const Contact = () => {
 
   const formSubmitHandler = async (e) => {
     e.preventDefault();
+    setButtonState(true);
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
@@ -46,7 +49,6 @@ const Contact = () => {
       )
       .then(
         () => {
-          setButtonState(true);
           ToastSetup(
             "success",
             "",
@@ -58,10 +60,8 @@ const Contact = () => {
             localStorage.getItem("themeMode") || "light",
             <ToastLayout message={t("tostify.contact.success")} />
           );
-          setTimeout(() => {
-            window.location.reload();
-            setButtonState(false);
-          }, 5000);
+          e.target.reset()
+          setButtonState(false);
         },
         (err) => {
           ToastSetup(
@@ -77,6 +77,7 @@ const Contact = () => {
           );
         }
       );
+      
   };
 
   return (
@@ -130,7 +131,7 @@ const Contact = () => {
                   type="text"
                   name="nachname"
                   id="nachname"
-                  autoComplete="last-name"
+                  autoComplete="family-name"
                   required
                   onChange={formInputHandler}
                 />
@@ -227,8 +228,21 @@ const Contact = () => {
             ref={submitButton}
             disabled={buttonState}
           >
-            <FontAwesomeIcon icon={faMessage} />
-            <span>{t("contact.form.inputs.senden.options.1")}</span>
+            {buttonState ? (
+              <>
+                <FontAwesomeIcon
+                  icon={faCircleNotch}
+                  className={Class.spinCercle}
+                />
+                
+              </>
+            ) : (
+              <>
+                <FontAwesomeIcon icon={faMessage} />
+                
+                <span>{t("contact.form.inputs.senden.options.1")}</span>
+              </>
+            )}
           </button>
         </div>
       </form>
