@@ -8,6 +8,36 @@
       "ogdescription": "Ich bin Ahmed Lemssiah,IHK-anerkannter Webentwickler und Webdesigner. Entdecke meine Projekte im Bereich moderner Webentwicklung. Lass-uns zusammen arbeiten!"
     }
   },
+  "header":{
+    "nav":{
+      "links":{
+        "hero":{
+          "text":"Start",
+          "title":"Start"
+        },
+        "skills":{
+          "text":"Fähigkeiten",
+          "title":"Skills"
+        },
+        "projects":{
+          "text":"Projekte",
+          "title":"Meine Projekte"
+        },
+        "services":{
+          "text":"Leistungen",
+          "title":"Meine Leitungen"
+        },
+        "about":{
+          "text":"Über mich",
+          "title":"Über mich"
+        },
+        "contact":{
+          "text":"Kontakt",
+          "title":"Kontaktformular"
+        }
+      }
+    }
+  },
   "hero": {
     "title": {
       "top": "Ich heiße",
