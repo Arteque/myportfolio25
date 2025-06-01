@@ -118,7 +118,7 @@ const Start = () => {
     <>
       <Hero />
 
-      <Services />
+      <Skills />
 
       <Section id="projects" classname="projects">
         <Wrapper>
@@ -244,14 +244,14 @@ const Start = () => {
         </Wrapper>
       </Section>
 
+      <Services />
+
       <Section classname="about" id="about">
         <Wrapper>
           <SectionHeader title1={t("about.title")} />
           <About />
         </Wrapper>
       </Section>
-
-      <Skills />
 
       <Section classname="contact" id="contact">
         <Wrapper>
