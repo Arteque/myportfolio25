@@ -3,7 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Outlet } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import { useTranslation } from "react-i18next";
 
@@ -21,9 +21,9 @@ import HelmetComponent from "../Components/Assets/Helmet/Helmet";
 export const Root = () => {
   //Lenis Smooth scroll
 
-  const lenis = useLenis((lenis) => {
-    console.log(lenis);
-  });
+  // const lenis = useLenis((lenis) => {
+  //   console.log(lenis);
+  // });
 
   //Translation
   const { t, i18n } = useTranslation();
