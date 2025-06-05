@@ -1,3 +1,5 @@
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 import { Outlet } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -51,6 +53,7 @@ export const Root = () => {
         </CookiesProvider>
       </ErrorBoundary>
       <Analytics />
+      <SpeedInsights />
     </>
   );
 };

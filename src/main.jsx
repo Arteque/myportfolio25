@@ -3,9 +3,10 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Root } from "./Template/Root";
 import Start from "./Pages/Start";
+
 import "./Style.scss";
 
-import "./Tools/i18n"
+import "./Tools/i18n";
 
 const router = createBrowserRouter([
   {
