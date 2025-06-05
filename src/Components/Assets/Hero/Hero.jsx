@@ -33,24 +33,14 @@ const Hero = () => {
             <MarkdownLoader mdsrc={t("hero.title.text")} />
           </ProjectText>
           <div className="call">
-            <Link
-              to="/"
-              className={`call__full ${Class.call__full}`}
-              onClick={clickHandler}
-              data-target="#contact"
-            >
+            <a href="#about" className={`call__full ${Class.call__full}`}>
               <FontAwesomeIcon icon={faCaretRight} />
               <span className="text underline">{t("hero.calls.1")}</span>
-            </Link>
-            <Link
-              to="/"
-              className={`call__full ${Class.call__full}`}
-              onClick={clickHandler}
-              data-target="#projects"
-            >
+            </a>
+            <a href="#projects" className={`call__full ${Class.call__full}`}>
               <FontAwesomeIcon icon={faCaretRight} />
               <span className="underline">{t("hero.calls.2")}</span>
-            </Link>
+            </a>
           </div>
         </div>
         <div className="hero__media">

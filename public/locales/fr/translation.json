@@ -8,13 +8,43 @@
       "ogdescription": "Je suis Ahmed Lemssiah, développeur web et Web designeur certifié. Découvre mes projets dans le domaine du web moderne. Travaillons ensemble!"
     }
   },
+  "header": {
+    "nav": {
+      "links": {
+        "hero": {
+          "text": "Accueil",
+          "title": "Accueil"
+        },
+        "skills": {
+          "text": "Compétences",
+          "title": "Mes Compétences"
+        },
+        "projects": {
+          "text": "Portfolio",
+          "title": "Mon Portfolio"
+        },
+        "services": {
+          "text": "Services",
+          "title": "Mes services"
+        },
+        "about": {
+          "text": "À propos de moi",
+          "title": "À propos de moi"
+        },
+        "contact": {
+          "text": "Contact",
+          "title": "Formulaire de contact"
+        }
+      }
+    }
+  },
   "hero": {
     "title": {
       "top": "Je m'appelle",
       "text": "/md/fr/heroText.md"
     },
     "calls": {
-      "1": "Contact",
+      "1": "À propos",
       "2": "Portfolio"
     }
   },

@@ -8,13 +8,43 @@
       "ogdescription": "I am Ahmed Lemssiah, a certified web developer and web designer. Discover my projects in the modern web development field. Let's work together!"
     }
   },
+  "header": {
+    "nav": {
+      "links": {
+        "hero": {
+          "text": "Start",
+          "title": "Start"
+        },
+        "skills": {
+          "text": "Skills",
+          "title": "Skills"
+        },
+        "projects": {
+          "text": "Projects",
+          "title": "My projects"
+        },
+        "services": {
+          "text": "Services",
+          "title": "My services"
+        },
+        "about": {
+          "text": "About me",
+          "title": "About me"
+        },
+        "contact": {
+          "text": "Contact",
+          "title": "Contact form"
+        }
+      }
+    }
+  },
   "hero": {
     "title": {
       "top": "My name is",
       "text": "/md/en/heroText.md"
     },
     "calls": {
-      "1": "Contact",
+      "1": "About me",
       "2": "Portfolio"
     }
   },
